@@ -12,10 +12,11 @@
 	  test = "I use NixOS btw";	 
 
 	 ##  SYSTEM CONFIGURATIONS
-	  NIX = "nano /etc/nixos/configuration.nix";
-	  HNIX = "nano /etc/nixos/hardware-configuration.nix";
+	  NIXOS = "ls -la /etc/nixos && cd /etc/nixos";
+	  NIX = "nano /etc/nixos/hosts/configuration.nix";
+	  HNIX = "bat /etc/nixos/hosts/hardware-configuration.nix";
 	  FLAKE = "nano /etc/nixos/flake.nix";
-	  LOCK = "nano /etc/nixos/flake.lock";
+	  LOCK = "bat /etc/nixos/flake.lock";
 
 	 ##  USER CONFIGURATIONS
 	  KEY = "bat /etc/nixos/user/tquilla/bash.nix";
@@ -36,6 +37,7 @@
           GBG = "nix-collect-garbage";
 	  OPTIMISE = "nix-store --optimise";
 	  GC = "nix-store --gc";
+	  CLEAR = "clear";
 	  
         };
   };
