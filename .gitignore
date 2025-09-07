@@ -12,8 +12,8 @@
 
 # ---- Ignore machine-specific configs ----
 flake.lock
-hardware-configuration.nix
-user/hardware-configuration.nix
+# hardware-configuration.nix
+# user/hardware-configuration.nix
 
 # ---- System & Editor junk ----
 *~

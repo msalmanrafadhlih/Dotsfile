@@ -12,27 +12,27 @@
 	  test = "I use NixOS btw";	 
 
 	 ##  SYSTEM CONFIGURATIONS
-	  NIX = "nano ~/.nixos/configuration.nix";
-	  HNIX = "nano ~/.nixos/hardware-configuration.nix";
-	  FLAKE = "nano ~/.nixos/flake.nix";
-	  LOCK = "nano ~/.nixos/flake.lock";
+	  NIX = "nano /etc/nixos/configuration.nix";
+	  HNIX = "nano /etc/nixos/hardware-configuration.nix";
+	  FLAKE = "nano /etc/nixos/flake.nix";
+	  LOCK = "nano /etc/nixos/flake.lock";
 
 	 ##  USER CONFIGURATIONS
 	  KEY = "bat /etc/nixos/user/tquilla/bash.nix";
-	  TQU = "ls -la ~/.nixos/user/tquilla && cd ~/.nixos/user/tquilla";
-  	  HOME = "nano ~/.nixos/user/tquilla/home.nix";
-	  BASH = "nano ~/.nixos/user/tquilla/bash.nix";
-	  INSTALL = "nano ~/.nixos/user/tquilla/packages.nix";
-	  BAT = "nano ~/.nixos/user/tquilla/bat.nix";
+	  TQU = "ls -la /etc/nixos/user/tquilla && cd /etc/nixos/user/tquilla";
+  	  HOME = "nano /etc/nixos/user/tquilla/home.nix";
+	  BASH = "nano /etc/nixos/user/tquilla/bash.nix";
+	  INSTALL = "nano /etc/nixos/user/tquilla/packages.nix";
+	  BAT = "nano /etc/nixos/user/tquilla/bat.nix";
 
 	 ##  DOTSFILE CONNFIGURATION
-	  BSPWM = "nano ~/.nixos/dots/bspwm/bspwm/bspwmrc";
-	  SXHKD = "nano ~/.nixos/dots/bspwm/sxhkd/sxhkdrc";
-	  ALAC = "nano ~/.nixos/dots/bspwm/alacritty/alacritty.toml";
-	  POLYBAR = "nano ~/.nixos/dots/bspwm/polybar/config.ini";
+	  BSPWM = "nano /etc/nixos/dots/bspwm/bspwm/bspwmrc";
+	  SXHKD = "nano /etc/nixos/dots/bspwm/sxhkd/sxhkdrc";
+	  ALAC = "nano /etc/nixos/dots/bspwm/alacritty/alacritty.toml";
+	  POLYBAR = "nano /etc/nixos/dots/bspwm/polybar/config.ini";
 
 	  SAVE = "sudo nixos-rebuild switch";
-	  SAVEFLAKE = "sudo nixos-rebuild switch --flake ~/.nixos#nixos";
+	  SAVEFLAKE = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
           GBG = "nix-collect-garbage";
 	  OPTIMISE = "nix-store --optimise";
 	  GC = "nix-store --gc";
