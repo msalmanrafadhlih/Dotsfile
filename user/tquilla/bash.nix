@@ -27,7 +27,7 @@
 	  BAT = "nano /etc/nixos/user/tquilla/bat.nix";
 
 	 ##  DOTSFILE CONNFIGURATION
-	  BSPWM = "nano /etc/nixos/dots/bspwm/bspwm/bspwmrc";
+	  BSPWM = "nano /etc/nixos/dots/bspwm/bspwmrc";
 	  SXHKD = "nano /etc/nixos/dots/bspwm/sxhkd/sxhkdrc";
 	  ALAC = "nano /etc/nixos/dots/bspwm/alacritty/alacritty.toml";
 	  POLYBAR = "nano /etc/nixos/dots/bspwm/polybar/config.ini";

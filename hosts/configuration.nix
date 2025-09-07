@@ -22,7 +22,7 @@
 
   services.xserver = {
 	enable = true;
-	autoRepeatDelay = 100;
+	autoRepeatDelay = 200;
 	autoRepeatInterval = 35;
 	videoDrivers = [ "intel" "modesetting" ];
 	
