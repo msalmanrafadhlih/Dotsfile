@@ -3,6 +3,7 @@
 {
   home.packages = (with pkgs; [
         # stable version
+	fastfetch
 	vivaldi
 	brave
 	nixpkgs-fmt

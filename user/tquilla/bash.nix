@@ -12,7 +12,7 @@
 	  test = "I use NixOS btw";	 
 
 	 ##  SYSTEM CONFIGURATIONS
-	  NIXOS = "ls -la /etc/nixos && cd /etc/nixos";
+	  NIXOS = "tree /etc/nixos && cd /etc/nixos";
 	  NIX = "nano /etc/nixos/hosts/configuration.nix";
 	  HNIX = "bat /etc/nixos/hosts/hardware-configuration.nix";
 	  FLAKE = "nano /etc/nixos/flake.nix";

@@ -17,10 +17,12 @@ bspc config gapless_monocle             true
 
 # Autostart apps
 picom --experimental-backends
-xwallpaper --zoom /home/tqu/Pictures/wallpaper/wallpaper.jpg &
+xwallpaper --zoom /home/tquilla/Pictures/wallpaper/wallpaper.jpg &
 
 # kill polybar jika sudah ada
 pkill polybar | ~/.config/bspwm/polybar/launch.sh &
 
 # sxhkd
 pgrep -x sxhkd > /dev/null || sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
+
+bspc wm -r
