@@ -1,7 +1,7 @@
 { config, pkgs, libs, ... }:
 let
 #  dotsfiles = "${config.home.homeDirectory}/"; # mengarah langsung ke ~/.config
-#  create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
+  	create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
 	bspwm = "/etc/nixos/dots/bspwm";
 in
 
@@ -30,7 +30,7 @@ in
 
  xdg.configFile = {
 
-	"alacritty/alacritty.toml".source = config.lib.file.mkOutOfStoreSymlink "${bspwm}/alacritty/alacritty.toml";
+	"alacritty/alacritty.toml".source = create_symlink "${bspwm}/alacritty/alacritty.toml";
 
  };
 
