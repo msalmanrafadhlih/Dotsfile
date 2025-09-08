@@ -20,18 +20,16 @@ in
 
 
  home.file = {
-
 	".config/bspwm" = { 
 		recursive = true;
-		source = lib.file.mkOutOfStoreSymlink "${bspwm}";
+		source = create_symlink "${bspwm}";
 	};
-
  };
 
  xdg.configFile = {
-
-	"alacritty/alacritty.toml".source = create_symlink "${bspwm}/alacritty/alacritty.toml";
-
+	"alacritty/alacritty.toml" = { 
+		source = create_symlink "${bspwm}/alacritty/alacritty.toml";
+	};
  };
 
 
