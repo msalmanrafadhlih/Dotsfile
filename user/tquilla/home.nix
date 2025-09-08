@@ -30,7 +30,7 @@ in
 
  xdg.configFile = {
 
-	"alacritty/alacritty.toml".source = lib.file.mkOutOfStoreSymlink "${bspwm}/alacritty/alacritty.toml";
+	"alacritty/alacritty.toml".source = config.lib.file.mkOutOfStoreSymlink "${bspwm}/alacritty/alacritty.toml";
 
  };
 
