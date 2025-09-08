@@ -1,7 +1,8 @@
-{ config, pkgs, ... }:
+{ config, pkgs, libs, ... }:
 let
 #  dotsfiles = "${config.home.homeDirectory}/"; # mengarah langsung ke ~/.config
- create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
+#  create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
+	bspwm = "/etc/nixos/dots/bspwm";
 in
 
 {
@@ -16,18 +17,23 @@ in
 	./bat.nix
  ];
 
+
+
  home.file = {
+
 	".config/bspwm" = { 
 		recursive = true;
-		source = config.lib.file.mkOutOfStoreSymlink "../../dots/bspwm";
-		force = true;
+		source = lib.file.mkOutOfStoreSymlink "${bspwm}";
 	};
-	".config/alacritty" = {
-		recursive = true;
-		source =  config.lib.file.mkOutOfStoreSymlink "../../dots/bspwm/alacritty";
-		force = true;
-	};
+
  };
+
+ xdg.configFile = {
+
+	"alacritty/alacritty.toml".source = lib.file.mkOutOfStoreSymlink "${bspwm}/alacritty/alacritty.toml";
+
+ };
+
 
 	## BSPWM
 # 	xdg.configFile."bspwm" = {
