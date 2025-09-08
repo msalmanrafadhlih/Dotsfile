@@ -26,6 +26,7 @@ in
 		recursive = true;
 		source =  config.lib.file.mkOutOfStoreSymlink "../../dots/bspwm/alacritty";
 		force = true;
+	};
  };
 
 	## BSPWM
