@@ -55,3 +55,6 @@ killall -q polybar
 while pqrep -x polybar >/dev/null; do sleep 1;
 done
 polybar example &
+
+# dunst untuk widget notifikasi
+pgrep -x dunst > /dev/null || dunst &
