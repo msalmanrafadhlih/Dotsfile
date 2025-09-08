@@ -132,14 +132,35 @@ super + shift + k ; {x,k}
 
 # ==================================================  OTHER
 # ---------------------------------------------------------  Brightness
-XF86MonBrightness{Up,Down}
-	sh Brightness {up,down}
+XF86MonBrightnessUp
+    sh ~/.local/bin/brightness.sh up
+
+XF86MonBrightnessDown
+    sh ~/.local/bin/brightness.sh down
+
 # ---------------------------------------------------------  Volume
-XF86Audio{RaiseVolume,LowerVolume,Mute}
-	Volume{ --inc, --dec, --toggle}
-# ---------------------------------------------------------  Play Music
-XF86Audio{Next,Prev,Play,Stop}
-	MediaControl {--next,--previous,--toggle,--stop}
-# ---------------------------------------------------------  Touchpad
+XF86AudioRaiseVolume
+    sh ~/.local/bin/volume.sh --inc
+
+XF86AudioLowerVolume
+    sh ~/.local/bin/volume.sh --dec
+
+XF86AudioMute
+    sh ~/.local/bin/volume.sh --toggle
+
+# ---------------------------------------------------------- Audio
+XF86AudioNext
+    sh ~/.local/bin/media.sh --next
+
+XF86AudioPrev
+    sh ~/.local/bin/media.sh --previous
+
+XF86AudioPlay
+    sh ~/.local/bin/media.sh --toggle
+
+XF86AudioStop
+    sh ~/.local/bin/media.sh --stop
+
+# ----------------------------------------------------------- Thouchpad
 XF86TouchpadToggle
-	~/.local/bin/toggle_touchpad.sh
+    ~/.local/bin/toggle_touchpad.sh

@@ -1,14 +1,21 @@
 { config, pkgs, libs, ... }:
 
 let
-#	dotsfiles = "${config.home.homeDirectory}/"; # mengarah langsung ke /home/users
+  # bin = "${config.home.homeDirectory}/.local/bin"; # mengarah langsung ke /home/users/.local/bin
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
   dots = "/etc/nixos/dots";
+  
   configs = {
 	bspwm = "bspwm";
 	alacritty = "alacritty";
 	polybar = "polybar";
 	sxhkd = "sxhkd";
+  };
+  locals = {
+    	"brightness.sh" = "brightness.sh";
+    	"volume.sh" = "volume.sh";
+    	"media.sh" = "media.sh";
+    	"toggle_touchpad.sh" = "toggle_touchpad.sh";	
   };
 in
 
@@ -26,11 +33,17 @@ in
 
  xdg.configFile = builtins.mapAttrs 
   	(name: subpath: {
-		source = create_symlink "${dots}/${subpath}";
+		source = create_symlink "${dots}/config/${subpath}";
 		recursive = true;
  	}) 
 	configs;
 
+ home.file."${bin}" = builtins.mapAttrs
+    	(name: subpath: {
+      		source = create_symlink "${dots}/bin/${subpath}";
+      		recursive = true;
+    	})
+    	locals;
 
 	## BSPWM
 #	xdg.configFile."bspwm" = {

@@ -80,6 +80,11 @@
 	xorg.xinit
 	xorg.xsetroot
 	xorg.xrandr
+	xorg.xinput
+	
+	brightnessctl
+	pamixer
+	playerctl
   ];
 
   fonts.packages = with pkgs; [
