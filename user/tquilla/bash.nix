@@ -18,6 +18,9 @@
 	  FLAKE = "nano /etc/nixos/flake.nix";
 	  LOCK = "bat /etc/nixos/flake.lock";
 
+	 ## GIT INTEGRATION
+	  GIT = "git add . && git commit -m";
+
 	 ##  USER CONFIGURATIONS
 	  KEY = "bat /etc/nixos/user/tquilla/bash.nix";
 	  TQU = "ls -la /etc/nixos/user/tquilla && cd /etc/nixos/user/tquilla";
