@@ -1,8 +1,8 @@
 { config, pkgs, libs, ... }:
 
 let
-  ## bin = "${config.home.homeDirectory"}; # mengarah langsung ke /home/users/.local/bin
-  bin = "/.local/bin";
+  # bin = "${config.home.homeDirectory}/.local/bin"; # mengarah langsung ke /home/users/.local/bin
+  bin = ".local/bin";
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
   dots = "/etc/nixos/dots";
   
@@ -39,12 +39,14 @@ in
  	}) 
 	configs;
 
- home.file."${bin}" = builtins.mapAttrs
-    	(name: subpath: {
-      		source = create_symlink "${dots}/bin/${subpath}";
-      		recursive = true;
-    	})
-    	locals;
+
+ home.file = builtins.mapAttrs
+  	(name: subpath: {
+    		source = create_symlink "${dots}/bin/${subpath}";
+  	})(builtins.mapAttrs 
+	(n: v: ".local/bin/${v}") 
+	locals);
+
 
 	## BSPWM
 #	xdg.configFile."bspwm" = {
@@ -52,7 +54,6 @@ in
 #		recursive = true;
 #	};
 
-#	## ALACRITTY
 #	xdg.configFile."alacritty" = {
 #		source = create_symlink "${bspwm}";
 #		recursive = true;
