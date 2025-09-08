@@ -42,6 +42,8 @@
 	  GC = "nix-store --gc";
 	  CLEAR = "clear";
 	  
+	  ## POWER
+	  
         };
   };
 }

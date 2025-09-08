@@ -26,3 +26,5 @@ pkill polybar | ~/.config/bspwm/polybar/launch.sh &
 pgrep -x sxhkd > /dev/null || sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
 
 bspc wm -r
+
+## TEST

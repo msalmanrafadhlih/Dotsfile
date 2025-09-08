@@ -1,4 +1,8 @@
 { config, pkgs, ... }:
+let
+#  dotsfiles = "${config.home.homeDirectory}/"; # mengarah langsung ke ~/.config
+ create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
+in
 
 {
  home.username = "tquilla";
@@ -12,7 +16,26 @@
 	./bat.nix
  ];
 
- 	xdg.configFile."bspwm".source = ../../dots/bspwm;
-	xdg.configFile."alacritty".source = ../../dots/bspwm/alacritty;
+ home.file = {
+
+	".config/bspwm" = { 
+		source =  config.lib.file.mkOutOfStoreSymlink "../../dots/bspwm";
+	};
+
+	".config/alacritty" = {
+		source =  config.lib.file.mkOutOfStoreSymlink "../../dots/bspwm/alacritty";
+	};
+ };
+
+	## BSPWM
+# 	xdg.configFile."bspwm" = {
+#		source = create_symlink "../../dots/bspwm";
+#		recursive = true;
+#	};
+	## ALACRITTY
+#	xdg.configFile."alacritty" = {
+#		source = create_symlink "../../dots/bspwm/alacritty";
+#		recursive = true;
+#	};
 	
 }
