@@ -1,7 +1,8 @@
 { config, pkgs, libs, ... }:
 
 let
-  # bin = "${config.home.homeDirectory}/.local/bin"; # mengarah langsung ke /home/users/.local/bin
+  ## bin = "${config.home.homeDirectory"}; # mengarah langsung ke /home/users/.local/bin
+  bin = "/.local/bin";
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
   dots = "/etc/nixos/dots";
   
