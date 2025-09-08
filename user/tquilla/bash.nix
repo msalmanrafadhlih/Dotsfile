@@ -32,16 +32,22 @@
 
 	 ##  USER CONFIGURATIONS {SAVE}
 	  BASHSAVE = "sudo chmod +x .bashrc";
+	  UTILS = "chmod +x ~/.local/bin/*.sh";
 	  
 
 	 ##  DOTSFILE CONNFIGURATION & BSPWM
 	  DOTS = "tree /etc/nixos/dots/ && cd /etc/nixos/dots/";
-	  ER = "nano /etc/nixos/dots/bspwm/src/ExternalRules";
-	  BSPWM = "nano /etc/nixos/dots/bspwm/bspwmrc";
-	  SXHKD = "nano /etc/nixos/dots/sxhkd/sxhkdrc";
-	  ALAC = "nano /etc/nixos/dots/alacritty/alacritty.toml";
-	  POLYBAR = "nano /etc/nixos/dots/polybar/config.ini";
-
+	  ER = "nano /etc/nixos/dots/config/bspwm/src/ExternalRules";
+	  BSPWM = "nano /etc/nixos/dots/config/bspwm/bspwmrc";
+	  SXHKD = "nano /etc/nixos/dots/config/sxhkd/sxhkdrc";
+	  ALAC = "nano /etc/nixos/dots/config/alacritty/alacritty.toml";
+	  POLYBAR = "nano /etc/nixos/dots/config/polybar/config.ini";
+	  
+	 ##  BIN CONFIGURATION
+	  BRIGHT = "nano /etc/nixos/dots/bin/brightness.sh";
+	  MEDIA = "nano /etc/nixos/dots/bin/media.sh";
+	  PAD = "nano /etc/nixos/dots/bin/toggle_touchpad.sh";
+	  VOLUME = "nano /etc/nixos/dots/bin/volume.sh";
 	  
 	  SAVE = "sudo nixos-rebuild switch";
 	  SAVEFLAKE = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";

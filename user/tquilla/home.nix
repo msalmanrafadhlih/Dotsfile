@@ -5,19 +5,25 @@ let
   bin = ".local/bin";
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
   dots = "/etc/nixos/dots";
+  systemd = "/etc/nixos/dots/config/systemd";
   
   configs = {
 	bspwm = "bspwm";
 	alacritty = "alacritty";
 	polybar = "polybar";
 	sxhkd = "sxhkd";
+	"systemd/user/battery-notif.service" = "systemd/user/battery-notif.service";
+	"systemd/user/battery-notif.timer" = "systemd/user/battery-notif.timer";
   };
+
   locals = {
-    	"brightness.sh" = "brightness.sh";
-    	"volume.sh" = "volume.sh";
-    	"media.sh" = "media.sh";
-    	"toggle_touchpad.sh" = "toggle_touchpad.sh";	
+  	".local/bin/brightness.sh" = "brightness.sh";
+  	".local/bin/volume.sh" = "volume.sh";
+  	".local/bin/media.sh" = "media.sh";
+  	".local/bin/toggle_touchpad.sh" = "toggle_touchpad.sh";
+  	".local/bin/battery.sh" = "battery.sh";
   };
+
 in
 
 {
@@ -31,32 +37,14 @@ in
 	./packages.nix
 	./bat.nix
  ];
-
- xdg.configFile = builtins.mapAttrs 
-  	(name: subpath: {
-		source = create_symlink "${dots}/config/${subpath}";
+	## ~/.config
+	 xdg.configFile = builtins.mapAttrs (name: subpath: {source = 
+		create_symlink "${dots}/config/${subpath}";
 		recursive = true;
- 	}) 
-	configs;
-
-
- home.file = builtins.mapAttrs
-  	(name: subpath: {
-    		source = create_symlink "${dots}/bin/${subpath}";
-  	})(builtins.mapAttrs 
-	(n: v: ".local/bin/${v}") 
-	locals);
-
-
-	## BSPWM
-#	xdg.configFile."bspwm" = {
-#		source = create_symlink "${bspwm}";
-#		recursive = true;
-#	};
-
-#	xdg.configFile."alacritty" = {
-#		source = create_symlink "${bspwm}";
-#		recursive = true;
-#	};
+	 }) configs;	
+	## ~/.local/bin
+	 home.file = builtins.mapAttrs(name: subpath: {source = 
+		create_symlink "${dots}/bin/${subpath}";
+	 }) locals;
 	
 }

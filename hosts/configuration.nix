@@ -8,6 +8,44 @@
       ./hardware-configuration.nix
     ];
 
+  environment.systemPackages = with pkgs; [
+	# BSPWM Stuff
+	polybar
+	sxhkd
+	picom
+	dmenu
+	xfce.thunar
+
+	alacritty
+	feh
+  	vim
+  	wget
+	btop	
+	git
+	tree
+	bat
+
+	killall	
+	xwallpaper
+	xorg.xinit
+	xorg.xsetroot
+	xorg.xrandr
+	xorg.xinput
+	
+	brightnessctl
+	libcanberra-gtk3
+	sound-theme-freedesktop
+	pamixer
+	acpi
+	playerctl
+	libnotify
+	dunst
+  ];
+
+  fonts.packages = with pkgs; [
+	jetbrains-mono
+  ];
+
   networking.networkmanager.enable = true;
   networking.hostName = "nixos";
   time.timeZone = "Asia/Jakarta";
@@ -58,39 +96,6 @@
      extraGroups = [ "wheel" "video" "audio" "networkmanager" ];
   };
   
-  environment.systemPackages = with pkgs; [
-	# BSPWM Stuff
-	polybar
-	sxhkd
-	picom
-	dmenu
-	xfce.thunar
-
-	alacritty
-	feh
-  	vim
-  	wget
-	btop	
-	git
-	tree
-	bat
-
-	killall	
-	xwallpaper
-	xorg.xinit
-	xorg.xsetroot
-	xorg.xrandr
-	xorg.xinput
-	
-	brightnessctl
-	pamixer
-	playerctl
-  ];
-
-  fonts.packages = with pkgs; [
-	jetbrains-mono
-  ];
-
   system.stateVersion = "25.05";
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
