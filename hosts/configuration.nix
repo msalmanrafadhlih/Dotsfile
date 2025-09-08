@@ -77,6 +77,8 @@
 
 	killall	
 	xwallpaper
+	xorg.xinit
+	xorg.xsetroot
 	xorg.xrandr
   ];
 

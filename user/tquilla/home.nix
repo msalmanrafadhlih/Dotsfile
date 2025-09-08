@@ -6,7 +6,9 @@ let
   dots = "/etc/nixos/dots";
   configs = {
 	bspwm = "bspwm";
-	alacritty = "alacrity";
+	alacritty = "alacritty";
+	polybar = "polybar";
+	sxhkd = "sxhkd";
   };
 in
 

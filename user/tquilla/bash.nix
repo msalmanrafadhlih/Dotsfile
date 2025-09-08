@@ -21,20 +21,28 @@
 	 ## GIT INTEGRATION
 	  GIT = "git add . && git commit -m";
 
-	 ##  USER CONFIGURATIONS
+	 ##  USER CONFIGURATIONS {EDIT}
 	  KEY = "bat /etc/nixos/user/tquilla/bash.nix";
 	  TQU = "ls -la /etc/nixos/user/tquilla && cd /etc/nixos/user/tquilla";
   	  HOME = "nano /etc/nixos/user/tquilla/home.nix";
 	  BASH = "nano /etc/nixos/user/tquilla/bash.nix";
 	  INSTALL = "nano /etc/nixos/user/tquilla/packages.nix";
 	  BAT = "nano /etc/nixos/user/tquilla/bat.nix";
+	  XINIT = "nano /etc/nixos/user/tquilla/xinitrc.nix";
 
-	 ##  DOTSFILE CONNFIGURATION
+	 ##  USER CONFIGURATIONS {SAVE}
+	  BASHSAVE = "sudo chmod +x .bashrc";
+	  
+
+	 ##  DOTSFILE CONNFIGURATION & BSPWM
+	  DOTS = "tree /etc/nixos/dots/ && cd /etc/nixos/dots/";
+	  ER = "nano /etc/nixos/dots/bspwm/src/ExternalRules";
 	  BSPWM = "nano /etc/nixos/dots/bspwm/bspwmrc";
-	  SXHKD = "nano /etc/nixos/dots/bspwm/sxhkd/sxhkdrc";
-	  ALAC = "nano /etc/nixos/dots/bspwm/alacritty/alacritty.toml";
-	  POLYBAR = "nano /etc/nixos/dots/bspwm/polybar/config.ini";
+	  SXHKD = "nano /etc/nixos/dots/sxhkd/sxhkdrc";
+	  ALAC = "nano /etc/nixos/dots/alacritty/alacritty.toml";
+	  POLYBAR = "nano /etc/nixos/dots/polybar/config.ini";
 
+	  
 	  SAVE = "sudo nixos-rebuild switch";
 	  SAVEFLAKE = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
           GBG = "nix-collect-garbage";
