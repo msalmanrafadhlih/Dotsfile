@@ -5,6 +5,8 @@ state=$(xinput list-props "$id" | grep "Device Enabled" | awk '{print $4}')
 
 if [ "$state" -eq 1 ]; then
   xinput disable "$id"
+  dunstify -i input-touchpad-symbolic -r 1004 -u low "Touchpad" "Disabled"
 else
   xinput enable "$id"
+  dunstify -i input-touchpad-symbolic -r 1004 -u low "Touchpad" "Enabled"
 fi
