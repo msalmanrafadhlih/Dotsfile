@@ -17,14 +17,8 @@ in
  ];
 
  home.file = {
-
-	".config/bspwm" = { 
-		source =  config.lib.file.mkOutOfStoreSymlink "../../dots/bspwm";
-	};
-
-	".config/alacritty" = {
-		source =  config.lib.file.mkOutOfStoreSymlink "../../dots/bspwm/alacritty";
-	};
+	".config/bspwm".source =  config.lib.file.mkOutOfStoreSymlink "../../dots/bspwm";
+	".config/alacritty".source =  config.lib.file.mkOutOfStoreSymlink "../../dots/bspwm/alacritty";
  };
 
 	## BSPWM
