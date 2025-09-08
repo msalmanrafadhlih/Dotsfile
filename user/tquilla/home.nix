@@ -1,8 +1,13 @@
 { config, pkgs, libs, ... }:
+
 let
-#  dotsfiles = "${config.home.homeDirectory}/"; # mengarah langsung ke ~/.config
-  	create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
-	bspwm = "/etc/nixos/dots/bspwm";
+#	dotsfiles = "${config.home.homeDirectory}/"; # mengarah langsung ke /home/users
+  create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
+  dots = "/etc/nixos/dots";
+  configs = {
+	bspwm = "bspwm";
+	alacritty = "alacrity";
+  };
 in
 
 {
@@ -17,30 +22,23 @@ in
 	./bat.nix
  ];
 
-
-
- home.file = {
-	".config/bspwm" = { 
+ xdg.configFile = builtins.mapAttrs 
+  	(name: subpath: {
+		source = create_symlink "${dots}/${subpath}";
 		recursive = true;
-		source = create_symlink "${bspwm}";
-	};
- };
-
- xdg.configFile = {
-	"alacritty/alacritty.toml" = { 
-		source = create_symlink "${bspwm}/alacritty/alacritty.toml";
-	};
- };
+ 	}) 
+	configs;
 
 
 	## BSPWM
-# 	xdg.configFile."bspwm" = {
-#		source = create_symlink "../../dots/bspwm";
+#	xdg.configFile."bspwm" = {
+#		source = create_symlink "${bspwm}";
 #		recursive = true;
 #	};
-	## ALACRITTY
+
+#	## ALACRITTY
 #	xdg.configFile."alacritty" = {
-#		source = create_symlink "../../dots/bspwm/alacritty";
+#		source = create_symlink "${bspwm}";
 #		recursive = true;
 #	};
 	
