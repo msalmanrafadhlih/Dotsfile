@@ -61,7 +61,9 @@
 		  OPTIMISE = "nix-store --optimise";
 		  GC = "nix-store --gc";
 		  CLEAR = "clear";
+		  
 		  PKG = "nix search nixpkgs";
+		  SRC = "fc-list | grep -i";
 		    
 		  ## POWER
 		  REBOOT = "sudo reboot";

@@ -3,8 +3,8 @@
 {
   home.file.".nanorc" = {
     text = ''
-	include "~/config/nano/*.nanorc"
-	include "~/config/nano/extra/*.nanorc"
+	include "~/.config/nano/*.nanorc"
+	include "~/.config/nano/extra/*.nanorc"
 
 	set linenumbers
 	set tabsize 	4
@@ -13,13 +13,13 @@
     
 	set softwrap
 #	set mouse
-	set smooth
+#	set smooth
 	    
 	set constantshow
 	set indicator
 
 	# Format file dengan Prettier
-    bind ^1 execute "prettier --write %s" main
+    bind ^W execute "prettier --write %s" main
     '';
     executable = true;
   };
