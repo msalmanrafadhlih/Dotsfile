@@ -10,9 +10,12 @@
 
         shellAliases = {
 	  test = "I use NixOS btw";	 
-        
+
+  	  NIXOS = "tree /etc/nixos && cd /etc/nixos";
+
+	        
 	 ##  SYSTEM CONFIGURATIONS
-	  NIXOS = "tree /etc/nixos && cd /etc/nixos";
+	  HOST = "cd /etc/nixos/hosts && tree /etc/nixos/hosts"
 	  NIX = "nano /etc/nixos/hosts/configuration.nix";
 	  HNIX = "bat /etc/nixos/hosts/hardware-configuration.nix";
 	  FLAKE = "nano /etc/nixos/flake.nix";
@@ -22,8 +25,8 @@
 	  GIT = "git add . && git commit -m";
 
 	 ##  USER CONFIGURATIONS {EDIT}
-	  KEY = "bat /etc/nixos/user/tquilla/bash.nix";
 	  TQU = "ls -la /etc/nixos/user/tquilla && cd /etc/nixos/user/tquilla";
+	  KEY = "bat /etc/nixos/user/tquilla/bash.nix";
   	  HOME = "nano /etc/nixos/user/tquilla/home.nix";
 	  BASH = "nano /etc/nixos/user/tquilla/bash.nix";
 	  INSTALL = "nano /etc/nixos/user/tquilla/packages.nix";
