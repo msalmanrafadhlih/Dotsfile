@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 {
-  home.file.".local/bin/battery.sh" = {
+  home.file.".local/bin/media.sh" = {
     text = ''
 	#!/bin/sh
 

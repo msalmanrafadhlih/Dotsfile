@@ -30,7 +30,7 @@
 	  BAT = "nano /etc/nixos/user/tquilla/bat.nix";
 	  XINIT = "nano /etc/nixos/user/tquilla/xinitrc.nix";
 	  MEDIA = "nano /etc/nixos/user/tquilla/media.nix";
-	  PAD = "nano /etc/nixos/user/tquilla/toggle_toushpad.nix";
+	  PAD = "nano /etc/nixos/user/tquilla/toggle_touchpad.nix";
 	  VOL = "nano /etc/nixos/user/tquilla/volume.nix";
 	  BRIGHT = "nano /etc/nixos/user/tquilla/brightness.nix";
 	  BAT0 = "nano /etc/nixos/user/tquilla/battery.nix";

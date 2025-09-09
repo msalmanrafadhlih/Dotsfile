@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 {
-  home.file.".local/bin/battery.sh" = {
+  home.file.".local/bin/toggle_touchpad.sh" = {
     text = ''
 	#!/bin/sh
 	id=$(xinput list | grep -i touchpad | grep -o 'id=[0-9]*' | cut -d= -f2)
