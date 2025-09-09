@@ -15,7 +15,8 @@
 	picom
 	dmenu
 	xfce.thunar
-
+	
+    nodePackages.prettier
 	alacritty
 	feh
   	vim
