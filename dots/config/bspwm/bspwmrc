@@ -57,6 +57,7 @@ done
 polybar top &
 polybar bottom &
 polybar external &
+polybar example &
 
 # dunst untuk widget notifikasi
 pgrep -x dunst > /dev/null || dunst &
