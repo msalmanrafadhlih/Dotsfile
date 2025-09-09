@@ -26,6 +26,7 @@
 	bat
 
 	killall	
+	unzip
 	xwallpaper
 	xorg.xinit
 	xorg.xsetroot

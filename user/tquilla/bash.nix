@@ -48,6 +48,8 @@
 	  MEDIA = "nano /etc/nixos/dots/bin/media.sh";
 	  PAD = "nano /etc/nixos/dots/bin/toggle_touchpad.sh";
 	  VOLUME = "nano /etc/nixos/dots/bin/volume.sh";
+	  BAT0 = "nano /etc/nixos/dots/bin/battery.sh";
+	  
 	  
 	  SAVE = "sudo nixos-rebuild switch";
 	  SAVEFLAKE = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
@@ -57,6 +59,8 @@
 	  CLEAR = "clear";
 	  
 	  ## POWER
+	  REBOOT = "sudo reboot";
+	  END = "poweroff";
 	  
         };
   };
