@@ -20,7 +20,7 @@
 	  dunstify -i audio-volume-high-symbolic \
 	    -h int:value:"$vol" \
 	    -r 1002 \
-	    -u low "Volume" "${vol}%"
+	    -u low "Volume" "''${vol}%"
 	fi
     '';
     executable = true;

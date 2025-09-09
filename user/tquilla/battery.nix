@@ -1,3 +1,4 @@
+ 
 { config, pkgs, lib, ... }:
 
 {
@@ -29,7 +30,7 @@
         dunstify -i "$icon" \
           -h int:value:"$capacity" \
           -r 2001 \
-          -u critical "Battery Low" "${capacity}% remaining"
+          -u critical "Battery Low" "''${capacity}% remaining"
         canberra-gtk-play -i battery-low -d "Battery Warning"
       elif [ "$status" = "Full" ] || { [ "$status" = "Charging" ] && [ "$capacity" -ge 95 ]; }; then
         dunstify -i "$icon" \
@@ -42,4 +43,3 @@
     executable = true;
   };
 }
-

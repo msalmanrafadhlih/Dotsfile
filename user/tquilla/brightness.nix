@@ -17,7 +17,7 @@
 	dunstify -i display-brightness-symbolic \
 	  -h int:value:"$percent" \
 	  -r 1001 \
-	  -u low "Brightness" "${percent}%"
+	  -u low "Brightness" "''${percent}%"
       '';
       executable = true;
  };
