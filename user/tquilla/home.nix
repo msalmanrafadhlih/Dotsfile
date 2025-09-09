@@ -16,13 +16,9 @@ let
 	"systemd/user/battery-notif.timer" = "systemd/user/battery-notif.timer";
   };
 
-  locals = {
-  	".local/bin/brightness.sh" = "brightness.sh";
-  	".local/bin/volume.sh" = "volume.sh";
-  	".local/bin/media.sh" = "media.sh";
-  	".local/bin/toggle_touchpad.sh" = "toggle_touchpad.sh";
-  	".local/bin/battery.sh" = "battery.sh";
-  };
+#  locals = {
+#  	".local/bin/brightness.sh" = "brightness.sh"
+#  };
 
 in
 
@@ -32,19 +28,27 @@ in
  programs.git.enable = true;
  home.stateVersion = "25.05";
 
+## ~/.config
+ xdg.configFile = builtins.mapAttrs (name: subpath: {source = 
+	create_symlink "${dots}/config/${subpath}";
+	recursive = true;
+ }) configs;	
+
+# home.file = builtins.mapAttrs(name: subpath: {source = 
+#	create_symlink "${dots}/bin/${subpath}";
+# }) locals;
+
+
  imports = [
 	./bash.nix
 	./packages.nix
 	./bat.nix
+	./xinitrc.nix	
+	./battery.nix
+	./brightness.nix
+	./toggle_touchpad.nix
+	./volume.nix
+	./media.nix
  ];
-	## ~/.config
-	 xdg.configFile = builtins.mapAttrs (name: subpath: {source = 
-		create_symlink "${dots}/config/${subpath}";
-		recursive = true;
-	 }) configs;	
-	## ~/.local/bin
-	 home.file = builtins.mapAttrs(name: subpath: {source = 
-		create_symlink "${dots}/bin/${subpath}";
-	 }) locals;
 	
 }

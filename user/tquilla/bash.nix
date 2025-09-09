@@ -29,6 +29,11 @@
 	  INSTALL = "nano /etc/nixos/user/tquilla/packages.nix";
 	  BAT = "nano /etc/nixos/user/tquilla/bat.nix";
 	  XINIT = "nano /etc/nixos/user/tquilla/xinitrc.nix";
+	  MEDIA = "nano /etc/nixos/user/tquilla/media.nix";
+	  PAD = "nano /etc/nixos/user/tquilla/toggle_toushpad.nix";
+	  VOL = "nano /etc/nixos/user/tquilla/volume.nix";
+	  BRIGHT = "nano /etc/nixos/user/tquilla/brightness.nix";
+	  BAT0 = "nano /etc/nixos/user/tquilla/battery.nix";
 
 	 ##  USER CONFIGURATIONS {SAVE}
 	  BASHSAVE = "sudo chmod +x .bashrc";
@@ -42,14 +47,7 @@
 	  SXHKD = "nano /etc/nixos/dots/config/sxhkd/sxhkdrc";
 	  ALAC = "nano /etc/nixos/dots/config/alacritty/alacritty.toml";
 	  POLYBAR = "nano /etc/nixos/dots/config/polybar/config.ini";
-	  
-	 ##  BIN CONFIGURATION
-	  BRIGHT = "nano /etc/nixos/dots/bin/brightness.sh";
-	  MEDIA = "nano /etc/nixos/dots/bin/media.sh";
-	  PAD = "nano /etc/nixos/dots/bin/toggle_touchpad.sh";
-	  VOLUME = "nano /etc/nixos/dots/bin/volume.sh";
-	  BAT0 = "nano /etc/nixos/dots/bin/battery.sh";
-	  
+	  	  
 	  
 	  SAVE = "sudo nixos-rebuild switch";
 	  SAVEFLAKE = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
