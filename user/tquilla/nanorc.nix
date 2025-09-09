@@ -12,7 +12,7 @@
 	set autoindent
 
 	set softwrap
-	set mouse
+#	set mouse
 	set smooth
 
 	set constantshow

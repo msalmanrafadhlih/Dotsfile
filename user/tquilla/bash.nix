@@ -10,7 +10,7 @@
 
         shellAliases = {
 	  test = "I use NixOS btw";	 
-
+        
 	 ##  SYSTEM CONFIGURATIONS
 	  NIXOS = "tree /etc/nixos && cd /etc/nixos";
 	  NIX = "nano /etc/nixos/hosts/configuration.nix";
@@ -33,7 +33,8 @@
 	  PAD = "nano /etc/nixos/user/tquilla/toggle_touchpad.nix";
 	  VOL = "nano /etc/nixos/user/tquilla/volume.nix";
 	  BRIGHT = "nano /etc/nixos/user/tquilla/brightness.nix";
-	  BAT0 = "nano /etc/nixos/user/tquilla/battery.nix";
+	  BAT0 = "nano /etc/nixos/user/tquilla/nanorc.nix";
+	  NANO = "nano /etc/nixos/user/tquilla/nanorc.nix";
 
 	 ##  USER CONFIGURATIONS {SAVE}
 	  BASHSAVE = "sudo chmod +x .bashrc";
@@ -51,7 +52,7 @@
 	  
 	  SAVE = "sudo nixos-rebuild switch";
 	  SAVEFLAKE = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
-          GBG = "nix-collect-garbage";
+      GBG = "nix-collect-garbage";
 	  OPTIMISE = "nix-store --optimise";
 	  GC = "nix-store --gc";
 	  CLEAR = "clear";
