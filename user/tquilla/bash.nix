@@ -9,8 +9,8 @@
 		'';
 
         shellAliases = {
+        
 		  test = "I use NixOS btw";	 
-
 	  	  NIXOS = "tree /etc/nixos && cd /etc/nixos";
 
 		        
@@ -54,14 +54,15 @@
 		  ALAC = "nano /etc/nixos/dots/config/alacritty/alacritty.toml";
 		  POLY = "nano /etc/nixos/dots/config/polybar/config.ini";
 		  	  
-		  
+		 ##  OTHER
 		  SAVE = "sudo nixos-rebuild switch";
 		  SAVEFLAKE = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
 	      GBG = "nix-collect-garbage";
 		  OPTIMISE = "nix-store --optimise";
 		  GC = "nix-store --gc";
 		  CLEAR = "clear";
-		  
+		  PKG = "nix search nixpkgs";
+		    
 		  ## POWER
 		  REBOOT = "sudo reboot";
 		  END = "poweroff";
