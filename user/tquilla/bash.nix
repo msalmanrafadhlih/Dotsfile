@@ -46,7 +46,7 @@
 	  BSPWM = "nano /etc/nixos/dots/config/bspwm/bspwmrc";
 	  SXHKD = "nano /etc/nixos/dots/config/sxhkd/sxhkdrc";
 	  ALAC = "nano /etc/nixos/dots/config/alacritty/alacritty.toml";
-	  POLYBAR = "nano /etc/nixos/dots/config/polybar/config.ini";
+	  POLY = "nano /etc/nixos/dots/config/polybar/config.ini";
 	  	  
 	  
 	  SAVE = "sudo nixos-rebuild switch";

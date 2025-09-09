@@ -49,6 +49,7 @@ in
 	./toggle_touchpad.nix
 	./volume.nix
 	./media.nix
+	./nanorc.nix
  ];
 	
 }
