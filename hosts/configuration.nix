@@ -6,6 +6,8 @@
   imports =
     [ 
       ./hardware-configuration.nix
+      ./fonts.nix
+      ./system-packages.nix
     ];
 
   environment.systemPackages = with pkgs; [
@@ -46,6 +48,11 @@
 
   fonts.packages = with pkgs; [
 	jetbrains-mono
+	noto-fonts
+    unifont
+    fontawesome-free
+    material-design-icons
+    termsynu
   ];
 
   networking.networkmanager.enable = true;
