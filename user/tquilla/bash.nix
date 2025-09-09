@@ -15,11 +15,13 @@
 
 	        
 	 ##  SYSTEM CONFIGURATIONS
-	  HOST = "cd /etc/nixos/hosts && tree /etc/nixos/hosts"
+	  HOSTS = "cd /etc/nixos/hosts && tree /etc/nixos/hosts"
 	  NIX = "nano /etc/nixos/hosts/configuration.nix";
 	  HNIX = "bat /etc/nixos/hosts/hardware-configuration.nix";
 	  FLAKE = "nano /etc/nixos/flake.nix";
 	  LOCK = "bat /etc/nixos/flake.lock";
+	  FONTS = "nano /etc/nixos/hosts/fonts.nix";
+	  SYSINSTALL = "nano  /etc/nixos/hosts/system-packages.nix";
 
 	 ## GIT INTEGRATION
 	  GIT = "git add . && git commit -m";
