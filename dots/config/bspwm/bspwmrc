@@ -54,7 +54,9 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 killall -q polybar
 while pqrep -x polybar >/dev/null; do sleep 1;
 done
-polybar example &
+polybar top &
+polybar bottom &
+polybar external &
 
 # dunst untuk widget notifikasi
 pgrep -x dunst > /dev/null || dunst &
