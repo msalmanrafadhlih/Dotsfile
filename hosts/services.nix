@@ -4,9 +4,24 @@
   services = {
   	mpd  = {
   		enable = true;
-  		musicDirectory = "/home/tquilla/Musics";
-  		playlistDirectory = "/home/tquilla/Musics";
-  		dataDir = "/home/tquilla/.config/mpd/mpd.conf";
+		user = "tquilla";
+		group = "users";
+  			
+  		musicDirectory = "/home/tquilla/Music";
+  		playlistDirectory = "/home/tquilla/Music";
+  		dataDir = "/home/tquilla/.local/share/mpd";
+
+  		extraConfig = ''
+  			audio_output {
+				type "alsa"
+				name "ALSA Output"
+				device "default"
+  			}
+  			audio_output {
+				type "pulse"
+				name "PulseAudio Output"
+  			}
+  		'';
   	};
 
   	xserver = {

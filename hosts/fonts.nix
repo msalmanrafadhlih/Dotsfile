@@ -36,7 +36,7 @@
         # Tambahan opsional (bisa dipilih)
         nerd-fonts.hack
         nerd-fonts.ubuntu-mono
-        nerd-fonts.source-code-pro
+        nerd-fonts.sauce-code-pro
       ];
     };
   };
