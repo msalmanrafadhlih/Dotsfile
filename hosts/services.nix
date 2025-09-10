@@ -5,7 +5,7 @@
   	mpd  = {
   		enable = true;
   		musicDirectory = "/home/tquilla/Musics";
-  		musicPlaylistDirectory = "/home/tquilla/Musics";
+  		playlistDirectory = "/home/tquilla/Musics";
   		dataDir = "/home/tquilla/.config/mpd/mpd.conf";
   	};
 
