@@ -4,8 +4,9 @@
   services = {
   	mpd  = {
   		enable = true;
-  		musicPlaylistDirectory = "/${HOME}/Musics";
-  		dataDir = "/${HOME}/.local/share/mpd";
+  		MusicDirectory = "/home/tquilla/Musics";
+  		musicPlaylistDirectory = "/home/tquilla/Musics";
+  		dataDir = "/home/tquilla/.config/mpd/mpd.conf";
   	};
 
   	xserver = {

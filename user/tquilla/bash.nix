@@ -22,6 +22,7 @@
 		  LOCK = "bat /etc/nixos/flake.lock";
 		  FONTS = "nano /etc/nixos/hosts/fonts.nix";
 		  SYSINSTALL = "nano  /etc/nixos/hosts/system-packages.nix";
+		  SERVICE = "nano  /etc/nixos/hosts/services.nix";
 
 		 ## GIT INTEGRATION
 		  GIT = "git add . && git commit -m";
