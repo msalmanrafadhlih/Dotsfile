@@ -1,5 +1,5 @@
 { config, lib, pkgs, ... }:
-
+		
 {
   config = {
     fonts = {
@@ -7,21 +7,51 @@
 
       fontconfig = {
         enable = true;
+
         defaultFonts = {
-          monospace = [ "FiraCode Nerd Font" "JetBrainsMono Nerd Font" ];
-          sansSerif = [ "Noto Sans" "DejaVu Sans" ];
-          serif = [ "Noto Serif" ];
-          emoji = [ "Noto Color Emoji" ];
+          # Monospace → JetBrains dulu, baru fallback ke yang lain
+          monospace = [
+            "JetBrainsMono Nerd Font"
+            "FiraCode Nerd Font"
+            "Hack Nerd Font"
+            "UbuntuMono Nerd Font"
+            "SauceCodePro Nerd Font"
+            "DejaVu Sans Mono"
+            "Unifont"
+          ];
+
+          # Sans Serif → font UI & teks utama
+          sansSerif = [
+            "Noto Sans"
+            "DejaVu Sans"
+            "Symbola"
+            "Unifont"
+          ];
+
+          # Serif → untuk dokumen & teks klasik
+          serif = [
+            "Noto Serif"
+            "DejaVu Serif"
+            "Symbola"
+            "Unifont"
+          ];
+
+          # Emoji → pastikan berwarna + fallback
+          emoji = [
+            "Noto Color Emoji"
+            "Symbola"
+            "Unifont"
+          ];
         };
       };
 
       packages = with pkgs; [
-        # Font dasar
-        dejavu_fonts
-        liberation_ttf
+        # Font universal / fallback
+        unifont
         noto-fonts
         noto-fonts-cjk-sans
         noto-fonts-emoji
+        noto-fonts-extra
 
         # Monospace populer
         jetbrains-mono
@@ -29,11 +59,12 @@
         nerd-fonts.jetbrains-mono
 
         # Untuk Polybar / Rofi / terminal (ikon glyph)
-        font-awesome
+        font-awesome_5
         material-design-icons
-        termsyn
+        dejavu_fonts
+        symbola
 
-        # Tambahan opsional (bisa dipilih)
+        # Tambahan opsional (bisa dipakai kalau mau variasi)
         nerd-fonts.hack
         nerd-fonts.ubuntu-mono
         nerd-fonts.sauce-code-pro
