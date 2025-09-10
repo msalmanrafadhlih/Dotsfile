@@ -1,5 +1,5 @@
-{ pkgs, libs, fonts, ... }:
-
+{ config, lib, pkgs, ... }:
+		
 {
   config = {
     fonts = {
@@ -26,6 +26,7 @@
             "DejaVu Sans"
             "Symbola"
             "Unifont"
+            "Font Awesome 5 free"
           ];
 
           # Serif → untuk dokumen & teks klasik

@@ -54,24 +54,28 @@
 		  SXHKD = "nano /etc/nixos/dots/config/sxhkd/sxhkdrc";
 		  ALAC = "nano /etc/nixos/dots/config/alacritty/alacritty.toml";
 		  POLY = "nano /etc/nixos/dots/config/polybar/config.ini";
+		  FONT = "nano /etc/nixos/dots/config/fontconfig/fonts.conf";
+		  
 		  	  
 		 ##  OTHER
 		  SAVE = "sudo nixos-rebuild switch";
 		  SAVEFLAKE = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
 
-		  LISTOLD = "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";
-		  OLD = "sudo nix-env -p /nix/var/nix/profiles/system --delete-generations +3";
+		  OLD = "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";
+		  GBGOLD = "sudo nix-env -p /nix/var/nix/profiles/system --delete-generations +3";
 	      GBG = "nix-collect-garbage";
 		  OPTIMISE = "nix-store --optimise";
 		  GC = "nix-store --gc";
 		  CLEAR = "clear";
-		  
+
 		  PKG = "nix search nixpkgs";
 		  SRC = "fc-list | grep -i";
+		  FONTLIST = "fc-match -s";
+		  PKGLIST = "nix-store --query --requisites /run/current-system | cut -d- -f2- | sort | uniq";
 		    
 		  ## POWER
 		  REBOOT = "sudo reboot";
-		  OOF = "poweroff";
+		  OFF = "poweroff";
 	  
         };
   };
