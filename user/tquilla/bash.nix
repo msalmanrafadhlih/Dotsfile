@@ -57,6 +57,9 @@
 		 ##  OTHER
 		  SAVE = "sudo nixos-rebuild switch";
 		  SAVEFLAKE = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
+
+		  LISTOLD = "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";
+		  OLD = "sudo nix-env -p /nix/var/nix/profiles/system --delete-generations +3";
 	      GBG = "nix-collect-garbage";
 		  OPTIMISE = "nix-store --optimise";
 		  GC = "nix-store --gc";
@@ -67,7 +70,7 @@
 		    
 		  ## POWER
 		  REBOOT = "sudo reboot";
-		  END = "poweroff";
+		  OOF = "poweroff";
 	  
         };
   };

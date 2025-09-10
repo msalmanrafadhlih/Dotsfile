@@ -26,7 +26,8 @@
       xorg.xsetroot
       xorg.xrandr
       xorg.xinput
- 
+
+ 	  gucharmap
       brightnessctl
       libcanberra-gtk3
       sound-theme-freedesktop

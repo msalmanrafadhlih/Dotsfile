@@ -19,7 +19,7 @@
 	set indicator
 
 	# Format file dengan Prettier
-    bind ^W execute "prettier --write %s" main
+    bind M-2 execute "prettier --write %s" main
     '';
     executable = true;
   };
