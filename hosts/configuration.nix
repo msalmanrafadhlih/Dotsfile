@@ -8,6 +8,7 @@
 		./hardware-configuration.nix
 		./fonts.nix
 		./system-packages.nix
+		./services.nix
 	];
 
 	networking.networkmanager.enable = true;
@@ -21,37 +22,6 @@
 	};
 	boot.loader.systemd-boot.enable = true;
 	boot.loader.efi.canTouchEfiVariables = true;
-
-	services.xserver = {
-		enable = true;
-		autoRepeatDelay = 200;
-		autoRepeatInterval = 35;
-		videoDrivers = [ "intel" "modesetting" ];
-
-		# WINDOW MANAGER
-		windowManager.bspwm.enable = true;
-		displayManager.lightdm.enable = true;
-	};
-
-	services.libinput = {
-		enable = true;
-		touchpad = {
-			tapping = true;
-			naturalScrolling = true;
-			disableWhileTyping = true;
-		};	
-	};
-
-	services.dbus.packages = with pkgs; [ 
-		dconf 
-	];
-
-	services.pipewire = {
-		enable = true;
-		pulse.enable = true;
-		alsa.enable = true;
-	};
-
 	nix.gc = {
 		automatic = true;
 		dates = "daily";

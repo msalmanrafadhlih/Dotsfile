@@ -2,29 +2,38 @@
 
 {
   config = {
-  	fonts.enableDefaultPackages = true;
-    fonts.packages = with pkgs;
-      [
-      	jetbrains-mono
-        dejavu_fonts
-        freefont_ttf
-        gyre-fonts
-        liberation_ttf
-        unifont
-        font-awesome
-        material-design-icons
-        unifont
-		noto-fonts
-        noto-fonts-color-emoji
-		noto-fonts-cjk
-		noto-fonts-emoji
+	fonts = {
+	
+		enableDefaultPackages = true;
+		fontconfig = {
+			enable = true;
+			defaultFonts = {
+				monospace = [ "FiraCode Nerd Font" ];
+				sansSerif = [ "Noto Sans" ];
+				serif = [ "Noto Serif" ];
+				emoji = [ "Noto Color Emoji" ];
+			};
+		};
 
-  		(nerdfonts.override { fonts = 
-	  		[ 
-	  		"FiraCode" 
-	  		"JetBrainsMono" 
-	  		]; 
-  		})
-      ];
+		## FONTS PACKAGES
+		packages = with pkgs;
+		[
+			jetbrains-mono
+			# Font dasar
+			dejavu_fonts
+			liberation_ttf
+			noto-fonts
+			noto-fonts-cjk
+			noto-fonts-emoji
+
+			# Untuk polybar, rofi, terminal (ikon glyph)
+			nerdfonts
+
+			# (opsional) tambahan lain
+			font-awesome
+			material-design-icons
+			termsyn
+		];
+	};
   };
 }

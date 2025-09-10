@@ -8,6 +8,7 @@
 	brave
 	nixpkgs-fmt
 	nodejs
-	gcc	
-        ])  ++ (with nixpkgs-unstable.legacyPackages.x86_64-linux; []);
+	gcc
+  ])  ++ (with nixpkgs-unstable.legacyPackages.x86_64-linux; [
+  ]);
 }
