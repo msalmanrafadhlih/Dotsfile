@@ -14,9 +14,17 @@
         font-awesome
         material-design-icons
         unifont
-        noto-fonts
-        termsyn
+		noto-fonts
         noto-fonts-color-emoji
+		noto-fonts-cjk
+		noto-fonts-emoji
+
+  		(nerdfonts.override { fonts = 
+	  		[ 
+	  		"FiraCode" 
+	  		"JetBrainsMono" 
+	  		]; 
+  		})
       ];
   };
 }

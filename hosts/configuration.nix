@@ -42,11 +42,14 @@
 		};	
 	};
 
-
+	services.dbus.packages = with pkgs; [ 
+		dconf 
+	];
 
 	services.pipewire = {
 		enable = true;
 		pulse.enable = true;
+		alsa.enable = true;
 	};
 
 	nix.gc = {
