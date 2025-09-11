@@ -9,6 +9,9 @@
 	nixpkgs-fmt
 	nodejs
 	gcc
+
+  	font-manager
+  		
   ])  ++ (with nixpkgs-unstable.legacyPackages.x86_64-linux; [
   ]);
 }

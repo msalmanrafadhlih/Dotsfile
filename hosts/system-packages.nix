@@ -1,3 +1,4 @@
+
 { config, lib, pkgs, ... }:
 
 { 
@@ -27,7 +28,6 @@
       xorg.xrandr
       xorg.xinput
 
- 	  gucharmap
       brightnessctl
       libcanberra-gtk3
       sound-theme-freedesktop

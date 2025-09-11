@@ -1,4 +1,4 @@
-{ pkgs, libs, fonts, ... }:
+{ pkgs, ... }:
 
 {
   config = {
@@ -9,39 +9,40 @@
         enable = true;
 
         defaultFonts = {
-          # Monospace → JetBrains dulu, baru fallback ke yang lain
+          # Monospace → fokus buat coding & terminal
           monospace = [
             "JetBrainsMono Nerd Font"
             "FiraCode Nerd Font"
             "Hack Nerd Font"
-            "UbuntuMono Nerd Font"
-            "SauceCodePro Nerd Font"
+            "Source Code Pro"
             "DejaVu Sans Mono"
             "Unifont"
           ];
 
-          # Sans Serif → font UI & teks utama
+          # Sans Serif → buat UI & desktop
           sansSerif = [
             "Noto Sans"
+            "Roboto"
             "DejaVu Sans"
-            "Symbola"
+            "Cantarell"
             "Unifont"
           ];
 
-          # Serif → untuk dokumen & teks klasik
+          # Serif → buat dokumen / teks klasik
           serif = [
             "Noto Serif"
+            "Liberation Serif"
             "DejaVu Serif"
-            "Symbola"
             "Unifont"
           ];
 
-          # Emoji → pastikan berwarna + fallback
-          emoji = [
-            "Noto Color Emoji"
-            "Symbola"
-            "Unifont"
-          ];
+          # Emoji → emoji + ikon
+#          emoji = [
+#            "Noto Color Emoji"
+#            "Font Awesome"
+#            "Material Design Icons"
+#            "Unifont"
+#          ];
         };
       };
 
@@ -53,21 +54,21 @@
         noto-fonts-emoji
         noto-fonts-extra
 
-        # Monospace populer
-        jetbrains-mono
-        nerd-fonts.fira-code
+        # Monospace (coding / terminal)
         nerd-fonts.jetbrains-mono
+        nerd-fonts.fira-code
+        nerd-fonts.hack
+        source-code-pro
 
-        # Untuk Polybar / Rofi / terminal (ikon glyph)
-        font-awesome_5
+        # UI / desktop
+        roboto
+        cantarell-fonts
+        liberation_ttf
+
+        # Icons & Emoji
+        font-awesome
         material-design-icons
         dejavu_fonts
-        symbola
-
-        # Tambahan opsional (bisa dipakai kalau mau variasi)
-        nerd-fonts.hack
-        nerd-fonts.ubuntu-mono
-        nerd-fonts.sauce-code-pro
       ];
     };
   };
