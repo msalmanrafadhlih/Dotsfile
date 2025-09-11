@@ -13,7 +13,6 @@
   	  sxhkd = "sxhkd";
   	  nano = "nano";
 
-	  "fontconfig/fonts.conf" = "fontconfig/fonts.conf";
   	  "systemd/user/battery-notif.service" = "systemd/user/battery-notif.service";
   	  "systemd/user/battery-notif.timer" = "systemd/user/battery-notif.timer";
     };

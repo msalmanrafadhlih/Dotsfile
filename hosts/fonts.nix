@@ -11,12 +11,11 @@
 	    hinting.enable = true;
 	    hinting.style = "full"; # bisa: none, slight, medium, full
 	    subpixel.rgba = "rgb";  # untuk layar LCD biasanya rgb
-		fonts.fontconfig.dpi = 120; # default 96, atur sesuai kebutuhan
 		
         defaultFonts = {
           # Monospace → fokus buat coding & terminal
           monospace = [
-            "JetBrainsMono Nerd Font"
+            "JetBrainsMono Nerd Thin"
             "FiraCode Nerd Font"
             "Hack Nerd Font"
             "Source Code Pro"
@@ -26,6 +25,7 @@
 
           # Sans Serif → buat UI & desktop
           sansSerif = [
+            "JetBrainsMono Nerd Font Thin"
             "Noto Sans"
             "Roboto"
             "DejaVu Sans"

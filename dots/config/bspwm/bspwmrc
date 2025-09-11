@@ -1,7 +1,12 @@
 #!/bin/sh
 
 # monitor setup
-bspc monitor -d I II III IV V
+bspc monitor -d term web code music chat
+
+#bspc rule -a Alacritty desktop=^1
+#bspc rule -a code-oss desktop=^3
+#bspc rule -a firefox desktop=^2
+
 
 # Jalankan perintah environment dasar
 export PATH="$HOME/.local/bin:$PATH"
