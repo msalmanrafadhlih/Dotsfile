@@ -7,7 +7,12 @@
 
       fontconfig = {
         enable = true;
-
+	    antialias = true;
+	    hinting.enable = true;
+	    hinting.style = "full"; # bisa: none, slight, medium, full
+	    subpixel.rgba = "rgb";  # untuk layar LCD biasanya rgb
+		fonts.fontconfig.dpi = 120; # default 96, atur sesuai kebutuhan
+		
         defaultFonts = {
           # Monospace → fokus buat coding & terminal
           monospace = [
@@ -35,15 +40,9 @@
             "DejaVu Serif"
             "Unifont"
           ];
-
-          # Emoji → emoji + ikon
-#          emoji = [
-#            "Noto Color Emoji"
-#            "Font Awesome"
-#            "Material Design Icons"
-#            "Unifont"
-#          ];
         };
+
+        
       };
 
       packages = with pkgs; [

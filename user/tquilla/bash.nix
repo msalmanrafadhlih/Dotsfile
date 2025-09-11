@@ -54,7 +54,6 @@
 		  SXHKD = "nano /etc/nixos/dots/config/sxhkd/sxhkdrc";
 		  ALAC = "nano /etc/nixos/dots/config/alacritty/alacritty.toml";
 		  POLY = "nano /etc/nixos/dots/config/polybar/config.ini";
-		  FONT = "nano /etc/nixos/dots/config/fontconfig/fonts.conf";
 		  
 		  	  
 		 ##  OTHER
