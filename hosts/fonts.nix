@@ -15,7 +15,7 @@
         defaultFonts = {
           # Monospace → fokus buat coding & terminal
           monospace = [
-            "JetBrainsMono Nerd Thin"
+            "JetBrainsMono Nerd Mono"
             "FiraCode Nerd Font"
             "Hack Nerd Font"
             "Source Code Pro"
@@ -25,7 +25,7 @@
 
           # Sans Serif → buat UI & desktop
           sansSerif = [
-            "JetBrainsMono Nerd Font Thin"
+            "JetBrainsMono Nerd Mono"
             "Noto Sans"
             "Roboto"
             "DejaVu Sans"

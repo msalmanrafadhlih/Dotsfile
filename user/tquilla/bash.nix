@@ -48,7 +48,7 @@
 		  
 
 		 ##  DOTSFILE CONNFIGURATION & BSPWM
-		  DOTS = "tree /etc/nixos/dots/ && cd /etc/nixos/dots/";
+		  CONFIG = "tree /etc/nixos/dots/ && cd /etc/nixos/dots/config";
 		  ER = "nano /etc/nixos/dots/config/bspwm/src/ExternalRules";
 		  BSPWM = "nano /etc/nixos/dots/config/bspwm/bspwmrc";
 		  SXHKD = "nano /etc/nixos/dots/config/sxhkd/sxhkdrc";
