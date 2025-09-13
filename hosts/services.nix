@@ -2,12 +2,6 @@
 
 {
   services = {
-  	mpd = {
- 		enable = true;
- 		user = "tquilla";
- 		group = "users";
-  	}
-  	
   	xserver = {
 		enable = true;
 		autoRepeatDelay = 300;
@@ -33,7 +27,6 @@
 
   	pipewire = {
 		enable = true;
-		pulse.enable = true;
 		alsa.enable = true;
   	};
 

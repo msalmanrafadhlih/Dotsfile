@@ -16,5 +16,5 @@ if command -v pactl &>/dev/null; then
 elif command -v aplay &>/dev/null; then
     echo "🎶 ALSA"
 else
-    echo "❌ No sound"
+    echo "No sound"
 fi
