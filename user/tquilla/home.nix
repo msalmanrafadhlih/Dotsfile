@@ -41,7 +41,7 @@
   	./volume.nix
   	./media.nix
   	./nanorc.nix
-  	./mpd/.nix
+  	./mpd.nix
    ];
 	
 }
