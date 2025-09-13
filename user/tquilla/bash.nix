@@ -41,6 +41,7 @@
 		  BRIGHT = "nano /etc/nixos/user/tquilla/brightness.nix";
 		  BAT0 = "nano /etc/nixos/user/tquilla/nanorc.nix";
 		  NANO = "nano /etc/nixos/user/tquilla/nanorc.nix";
+		  MPD = "nano /etc/nixos/user/tquilla/mpd.nix";
 
 		 ##  USER CONFIGURATIONS {SAVE}
 		  BASHSAVE = "sudo chmod +x .bashrc";
