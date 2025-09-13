@@ -7,7 +7,7 @@
   		user = "tquilla";
   		group = "users";
   		musicDirectory = "/home/tquilla/Musics";
-  		playlistDirectory = "home/tquilla/Musics/Playlist";
+  		
   		network.port = 6600;
   		network.listenAddress = "127.0.0.1";
   		

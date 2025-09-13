@@ -15,8 +15,8 @@
         defaultFonts = {
           # Monospace → fokus buat coding & terminal
           monospace = [
-            "FiraCode Nerd Font"
             "JetBrainsMono Nerd Mono"
+            "FiraCode Nerd Font"
             "Hack Nerd Font"
             "Source Code Pro"
             "DejaVu Sans Mono"
