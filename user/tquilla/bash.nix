@@ -51,7 +51,8 @@
 			BAT0 = "nano /etc/nixos/user/tquilla/nanorc.nix";
 			NANO = "nano /etc/nixos/user/tquilla/nanorc.nix";
 			MPD = "nano /etc/nixos/user/tquilla/mpd.nix";
-
+			BRANCH = "nano /etc/nixos/user/tquilla/git-promt.nix";
+			
 			##  USER CONFIGURATIONS {SAVE}
 			BASHSAVE = "sudo chmod +x .bashrc";
 			UTILS = "chmod +x ~/.local/bin/*.sh";
