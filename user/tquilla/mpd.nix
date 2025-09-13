@@ -1,41 +1,45 @@
 { config, pkgs, services, ... }:
 
-{
-  # Install paket MPD dan client
-  home.packages = with pkgs; [
-    mpd
-    mpc_cli
-    rmpc
-  ];
+let
+	local = "/home/tquilla/.local/share/mpd"
+in
 
+{
   # Jalankan MPD sebagai user service
   services.mpd = {
     enable = true;
 
-    # Folder musik user
-    musicDirectory = "${config.home.homeDirectory}/.local/share/mpd/Musics";
+    user = "tquilla";
+    group = "users";
+    
+    ## Directory
+    musicDirectory = "${local}/Musics";
+    playlistDirectory = "${local}/Musics"
+	dbFile = "${local}/dbFile";
+	dataDir = "${local}/dataDir";
+	
+	
+#	credentials = [
+#		passwordFile = "path/to/file";
+#		permissions = [ "read" "add" "control" "admin" ];
+#	]
 
-    # Network supaya client bisa connect
+	## Other
+	fluidsynth = false;
+    startWhenNeeded = true;
+    
     network.listenAddress = "127.0.0.1";
+    network.port = "6600";
+    
 
     # Extra config, gabungkan semua setting dari mpd.conf lama
     extraConfig = ''
-      # Database & state files
-      db_file            "${config.home.homeDirectory}/.local/share/mpd/database"
-      log_file           "${config.home.homeDirectory}/.local/share/mpd/log"
-      pid_file           "${config.home.homeDirectory}/.local/share/mpd/pid"
-      state_file         "${config.home.homeDirectory}/.local/share/mpd/state"
-      sticker_file       "${config.home.homeDirectory}/.local/share/mpd/sticker.sql"
-
-      # Playlist
-      playlist_directory "${config.home.homeDirectory}/.local/share/mpd/Musics"
-
+    
       # MPD options
       gapless_mp3_playback "yes"
       follow_outside_symlinks "yes"
       follow_inside_symlinks "yes"
       auto_update "yes"
-      user "tquilla"
       log_level "verbose"
 
       # Audio output
