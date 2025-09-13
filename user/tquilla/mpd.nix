@@ -1,4 +1,4 @@
-{ libs, service, ... }:
+{ libs, service, pkgs, ... }:
 
 {
 	services.mpd = {

@@ -12,6 +12,7 @@
   	  polybar = "polybar";
   	  sxhkd = "sxhkd";
   	  nano = "nano";
+  	  mpd = "mpd";
 
   	  "systemd/user/battery-notif.service" = "systemd/user/battery-notif.service";
   	  "systemd/user/battery-notif.timer" = "systemd/user/battery-notif.timer";
