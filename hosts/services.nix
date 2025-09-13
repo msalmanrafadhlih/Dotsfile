@@ -3,24 +3,11 @@
 {
   services = {
   	mpd = {
-  		enable = true;
-  		user = "tquilla";
-  		group = "users";
-  		musicDirectory = "/home/tquilla/Musics";
-  		
-  		network.port = 6600;
-  		network.listenAddress = "127.0.0.1";
-  		
-  		extraConfig = ''
-		  audio_output {
-		    type  "alsa"
-		    name  "ALSA Output"
-		    device "default"
-		    mixer_type "software"
-		  }
-		'';
-  	};
-  
+ 		enable = true;
+ 		user = "tquilla";
+ 		group = "users";
+  	}
+  	
   	xserver = {
 		enable = true;
 		autoRepeatDelay = 300;
@@ -46,6 +33,7 @@
 
   	pipewire = {
 		enable = true;
+		pulse.enable = true;
 		alsa.enable = true;
   	};
 

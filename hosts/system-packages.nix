@@ -29,13 +29,13 @@
       xorg.xinput
 
       brightnessctl
+      mpc
       libcanberra-gtk3
       sound-theme-freedesktop
       pamixer
       acpi
       libnotify
       dunst
-
       # AUDIO
    ];
 }
