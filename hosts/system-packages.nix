@@ -37,9 +37,5 @@
       dunst
 
       # AUDIO
-      mpd
-      libmpdclient
-      mpc
-      pulseaudio
    ];
 }

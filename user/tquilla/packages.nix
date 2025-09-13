@@ -12,8 +12,7 @@
 
   	font-manager
   	yt-dlp
-  	ncmpcpp
-  		
+	ncmpcpp  		
   ])  ++ (with nixpkgs-unstable.legacyPackages.x86_64-linux; [
   ]);
 }
