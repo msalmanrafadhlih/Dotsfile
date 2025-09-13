@@ -42,7 +42,7 @@
   	./media.nix
   	./nanorc.nix
   	./mpd.nix
-  	./git-promt.nix
+  	./git-prompt.nix
    ];
 	
 }

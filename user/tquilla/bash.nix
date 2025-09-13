@@ -5,8 +5,11 @@
   programs.bash = {
         enable = true;
         initExtra = ''
-			[ -f ~/.local/bin/git-prompt.sh ] && source ~/.local/bin/git-prompt.sh
-			PROMPT_COMMAND='PS1="\[\e[92m\]\u\[\e[0m\] \\[\e[38;5;242;2m\]\s\[\e[0m\] in \\[\e[93m\]\w\[\e[91;5m\]$(__git_ps1 " (%s)")\[\e[0m\] \$\n"'			
+        	if [ -f ~/.local/bin/git-prompt.sh ]; then
+			  source ~/.local/bin/git-prompt.sh
+			fi
+#			[ -f ~/.local/bin/git-prompt.sh ] && source ~/.local/bin/git-prompt.sh
+#			PROMPT_COMMAND='PS1="\[\e[92m\]\u\[\e[0m\] \\[\e[38;5;242;2m\]\s\[\e[0m\] in \\[\e[93m\]\w\[\e[91;5m\]$(__git_ps1 " (%s)")\[\e[0m\] \$\n"'			
 			
 			export HISTSIZE=5000
 		    export HISTFILESIZE=10000
