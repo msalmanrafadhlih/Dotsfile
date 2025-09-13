@@ -15,6 +15,7 @@
 
   	  "systemd/user/battery-notif.service" = "systemd/user/battery-notif.service";
   	  "systemd/user/battery-notif.timer" = "systemd/user/battery-notif.timer";
+  	  "git-prompt.sh" = "git-prompt.sh";
     };
     in
 

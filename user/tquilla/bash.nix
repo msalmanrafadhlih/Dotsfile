@@ -5,11 +5,10 @@
   programs.bash = {
         enable = true;
         initExtra = ''
-        	if [ -f ~/.local/bin/git-prompt.sh ]; then
-			  source ~/.local/bin/git-prompt.sh
-			fi
-#			[ -f ~/.local/bin/git-prompt.sh ] && source ~/.local/bin/git-prompt.sh
-#			PROMPT_COMMAND='PS1="\[\e[92m\]\u\[\e[0m\] \\[\e[38;5;242;2m\]\s\[\e[0m\] in \\[\e[93m\]\w\[\e[91;5m\]$(__git_ps1 " (%s)")\[\e[0m\] \$\n"'			
+#			[ -f ~/.config/git-prompt.sh ] && source ~/.config/git-prompt.sh
+#			export PROMPT_COMMAND='PS1="\[\e[92m\]\u\[\e[0m\] \\[\e[38;5;242;2;5m\]\s\[\e[0m\]in \\[\e[93m\]\w\[\e[91;5m\]$(__git_ps1 " (%s)")\[\e[0m\] \$\n"'
+
+			PS1='\[\e[92m\]\u\[\e[0m\] \[\e[38;5;242;2;5m\]\s\[\e[0m\]in \[\e[93m\]\w\[\e[0m\] \\$\n'
 			
 			export HISTSIZE=5000
 		    export HISTFILESIZE=10000
@@ -54,7 +53,7 @@
 			BAT0 = "nano /etc/nixos/user/tquilla/nanorc.nix";
 			NANO = "nano /etc/nixos/user/tquilla/nanorc.nix";
 			MPD = "nano /etc/nixos/user/tquilla/mpd.nix";
-			BRANCH = "nano /etc/nixos/user/tquilla/git-promt.nix";
+			BRANCH = "nano /etc/nixos/user/tquilla/git-prompt.nix";
 			
 			##  USER CONFIGURATIONS {SAVE}
 			BASHSAVE = "sudo chmod +x .bashrc";
