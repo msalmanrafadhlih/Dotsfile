@@ -2,31 +2,23 @@
 
 {
   services = {
-  	mpd  = {
+  	mpd = {
   		enable = true;
-		user = "tquilla";
-		group = "users";
-  			
-  		musicDirectory = "/home/tquilla/Music";
-  		playlistDirectory = "/home/tquilla/Music";
-  		dataDir = "/home/tquilla/.local/share/mpd";
+  		user = "tquilla";   # pakai user kamu sendiri
+  		musicDirectory = "/home/tquilla/Musics";
 
   		extraConfig = ''
-  			audio_output {
-				type "alsa"
-				name "ALSA Output"
-				device "default"
-  			}
-  			audio_output {
-				type "pulse"
-				name "PulseAudio Output"
-  			}
+    		audio_output {
+      			type  "pulse"
+      			name  "PulseAudio"
+    		}
   		'';
-  	};
+	};
+
 
   	xserver = {
 		enable = true;
-		autoRepeatDelay = 200;
+		autoRepeatDelay = 300;
 		autoRepeatInterval = 35;
 		videoDrivers = [ "intel" "modesetting" ];
 

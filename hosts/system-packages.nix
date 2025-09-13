@@ -4,7 +4,7 @@
 { 
    environment.systemPackages = with pkgs; [
       # BSPWM Stuff
-      polybar
+      polybarFull
       sxhkd
       picom
       dmenu
@@ -33,8 +33,13 @@
       sound-theme-freedesktop
       pamixer
       acpi
-      playerctl
       libnotify
       dunst
+
+      # AUDIO
+      mpd
+      libmpdclient
+      mpc
+      pulseaudio
    ];
 }

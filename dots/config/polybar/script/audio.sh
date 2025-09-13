@@ -1,15 +1,15 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Cek lewat pactl (kalau ada)
 if command -v pactl &>/dev/null; then
     server=$(pactl info | grep "Server Name" | cut -d: -f2- | xargs)
 
     if [[ "$server" == *"PipeWire"* ]]; then
-        echo "🎶 PipeWire"
+        echo " PipeWire"
     elif [[ "$server" == *"PulseAudio"* ]]; then
-        echo "🎶 PulseAudio"
+        echo " PulseAudio"
     else
-        echo "🎶 $server"
+        echo " $server"
     fi
 
 # Fallback ke ALSA

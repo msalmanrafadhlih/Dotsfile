@@ -6,7 +6,7 @@
 	include "~/.config/nano/*.nanorc"
 	include "~/.config/nano/extra/*.nanorc"
 
-	set linenumbers
+#	set linenumbers
 	set tabsize 	4
 #	set tabstospaces
 	set autoindent
