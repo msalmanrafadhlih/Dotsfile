@@ -56,7 +56,7 @@ xwallpaper --zoom ~/Pictures/Wallpaper/wallpaper.jpg
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 # polybar
-killall -q polybar
+pkill  polybar
 while pqrep -x polybar >/dev/null; do sleep 1;
 done
 polybar top &

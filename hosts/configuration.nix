@@ -14,7 +14,7 @@
 	networking.networkmanager.enable = true;
 	networking.hostName = "nixos";
 	time.timeZone = "Asia/Jakarta";
-
+	
 	i18n.defaultLocale = "en_US.UTF-8";
 	console = {
 		font = "Lat2-Terminus16";
@@ -32,7 +32,7 @@
 		isNormalUser = true;
 		extraGroups = [ "wheel" "video" "audio" "networkmanager" ];
 	};
-
+	security.rtkit.enable = true;
 	system.stateVersion = "25.05";
 	nixpkgs.config.allowUnfree = true;
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];

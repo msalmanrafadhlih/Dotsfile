@@ -29,8 +29,6 @@
       xorg.xinput
 
       brightnessctl
-      mpc
-      mpd
       libcanberra-gtk3
       sound-theme-freedesktop
       pamixer
