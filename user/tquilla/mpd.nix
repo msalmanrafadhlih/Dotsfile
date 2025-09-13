@@ -29,10 +29,10 @@ in
         auto_update "yes"
         log_level "verbose"
 
-        audio_output {
-            type "pulse"
-            name "PulseAudio"
-        }
+#        audio_output {
+#            type "pulse"
+#            name "PulseAudio"
+#        }
 
         audio_output {
             type "pipewire"

@@ -5,7 +5,7 @@
   programs.bash = {
         enable = true;
         initExtra = ''
-#			[ -f ~/.config/git-prompt.sh ] && source ~/.config/git-prompt.sh
+#			[ -f ~/.config/git/git-prompt.sh ] && source ~/.config/git/git-prompt.sh
 #			export PROMPT_COMMAND='PS1="\[\e[92m\]\u\[\e[0m\] \\[\e[38;5;242;2;5m\]\s\[\e[0m\]in \\[\e[93m\]\w\[\e[91;5m\]$(__git_ps1 " (%s)")\[\e[0m\] \$\n"'
 
 			PS1='\[\e[92m\]\u\[\e[0m\] \[\e[38;5;242;2;5m\]\s\[\e[0m\]in \[\e[93m\]\w\[\e[0m\] \\$\n'
