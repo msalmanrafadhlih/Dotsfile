@@ -2,25 +2,27 @@
 
 let
   local = "${config.home.homeDirectory}/.local/share/mpd";
+  home = "/home/tquilla";
+  db = "/var/lib/mpd";
 in
 {
   services.mpd = {
     enable = true;
-    user = "tquilla";
-    group = "users";
+#    user = "tquilla";
+#    group = "users";
 
-    musicDirectory = "${home}/Musics";
-    playlistDirectory = "${home}/Musics";
-    dataDir = "${db}dataDir";
+    musicDirectory = "${local}/Musics";
+    playlistDirectory = "${local}/Musics";
+    dataDir = "${local}dataDir";
 
     network.listenAddress = "127.0.0.1";
     network.port = 6600;
 
     extraConfig = ''
-        db_file            "${db}/database"
-        pid_file           "${db}/pid"
-        state_file         "${db}/state"
-        sticker_file       "${db}/sticker.sql"
+        db_file            "${local}/database"
+        pid_file           "${local}/pid"
+        state_file         "${local}/state"
+        sticker_file       "${local}/sticker.sql"
 
         follow_outside_symlinks "yes"
         follow_inside_symlinks "yes"
