@@ -2,20 +2,6 @@
 
 {
   services = {
-  	mpd = {
-  		enable = true;
-  		user = "tquilla";   # pakai user kamu sendiri
-  		musicDirectory = "/home/tquilla/Musics";
-
-  		extraConfig = ''
-    		audio_output {
-      			type  "pulse"
-      			name  "PulseAudio"
-    		}
-  		'';
-	};
-
-
   	xserver = {
 		enable = true;
 		autoRepeatDelay = 300;
