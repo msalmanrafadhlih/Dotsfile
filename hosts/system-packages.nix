@@ -34,6 +34,7 @@
       pamixer
       acpi
       libnotify
+      mpc
       dunst
       # AUDIO
    ];

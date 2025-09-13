@@ -4,30 +4,38 @@ let
   local = "${config.home.homeDirectory}/.local/share/mpd";
 in
 {
-  programs.mpd = {
+  services.mpd = {
     enable = true;
-    musicDirectory = "${local}/Musics";
+    user = "tquilla";
+    group = "users";
+
+    musicDirectory = "${home}/Musics";
+    playlistDirectory = "${home}/Musics";
+    dataDir = "${db}dataDir";
+
     network.listenAddress = "127.0.0.1";
     network.port = 6600;
 
     extraConfig = ''
-      db_file            "${local}/database"
-      log_file           "${local}/log"
-      pid_file           "${local}/pid"
-      state_file         "${local}/state"
-      sticker_file       "${local}/sticker.sql"
-      playlist_directory "${local}/Musics"
+        db_file            "${db}/database"
+        pid_file           "${db}/pid"
+        state_file         "${db}/state"
+        sticker_file       "${db}/sticker.sql"
 
-      gapless_mp3_playback "yes"
-      follow_outside_symlinks "yes"
-      follow_inside_symlinks "yes"
-      auto_update "yes"
-      log_level "verbose"
+        follow_outside_symlinks "yes"
+        follow_inside_symlinks "yes"
+        auto_update "yes"
+        log_level "verbose"
 
-      audio_output {
-          type "pulse"
-          name "PulseAudio"
-      }
+        audio_output {
+            type "pulse"
+            name "PulseAudio"
+        }
+
+        audio_output {
+            type "pipewire"
+            name "PipeWire"
+        }
     '';
   };
 }

@@ -32,6 +32,7 @@
 		isNormalUser = true;
 		extraGroups = [ "wheel" "video" "audio" "networkmanager" ];
 	};
+
 	security.rtkit.enable = true;
 	system.stateVersion = "25.05";
 	nixpkgs.config.allowUnfree = true;
