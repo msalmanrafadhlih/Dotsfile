@@ -1,21 +1,25 @@
 { config, pkgs, libs, ... }:
 
   let
-    bin = ".local/bin";
     create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
+    home = config.home.homeDirectory;
     dots = "/etc/nixos/dots";
 
-    configs = {
-    
-  	  bspwm = "bspwm";
-  	  alacritty = "alacritty";
-  	  polybar = "polybar";
-  	  sxhkd = "sxhkd";
-  	  nano = "nano";
+#	~/.config
+    configs = {    
+		bspwm = "bspwm";
+  		alacritty = "alacritty";
+  		polybar = "polybar";
+		sxhkd = "sxhkd";
+		nano = "nano";
+		
+  	  	"systemd/user/battery-notif.service" = "systemd/user/battery-notif.service";
+  	  	"systemd/user/battery-notif.timer" = "systemd/user/battery-notif.timer";
+  	  	"git/git-prompt.sh" = "git/git-prompt.sh";
+    };
 
-  	  "systemd/user/battery-notif.service" = "systemd/user/battery-notif.service";
-  	  "systemd/user/battery-notif.timer" = "systemd/user/battery-notif.timer";
-  	  "git/git-prompt.sh" = "git/git-prompt.sh";
+    locals = {
+    	".icons" = "icons";
     };
     in
 
@@ -29,8 +33,12 @@
   	create_symlink "${dots}/config/${subpath}";
   	recursive = true;
    }) configs;	
-
-
+   
+   home.file = builtins.mapAttrs (name: subpath: {source = 
+  	create_symlink "${dots}/config/${subpath}";
+  	recursive = true;
+   }) locals;	
+   
    imports = [
   	./bash.nix
   	./packages.nix
@@ -44,6 +52,7 @@
   	./nanorc.nix
   	./mpd.nix
   	./git-prompt.nix
+  	./tar.nix
    ];
 	
 }
