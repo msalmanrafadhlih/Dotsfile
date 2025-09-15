@@ -1,0 +1,69 @@
+[module/bspwm]
+type = internal/bspwm
+
+ws-icon-0 = term;
+ws-icon-1 = web;
+ws-icon-2 = code;
+ws-icon-3 = music;
+ws-icon-4 = chat;
+
+format = <label-state> <label-mode>
+label-dimmed-underline = ${bar/top.background}
+
+label-focused = %icon%
+label-focused-foreground =  #fff
+label-focused-background = #773f3f3f
+label-focused-underline = #c9665e
+label-focused-padding = 2
+
+label-occupied =%icon%
+label-occupied-foreground = #ddd
+label-occupied-underline = #666
+label-occupied-padding = 2
+
+label-urgent =%icon%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-underline = #9b0a20
+label-urgent-font = 4
+label-urgent-padding = 2
+
+label-empty =%icon%
+label-empty-foreground = #55
+label-empty-font = 4
+label-empty-padding = 2
+
+# NODES  MODE
+label-tiled = Tiled 
+label-tiled-underline = ${module/bspwm.label-focused-underline}
+label-tiled-padding = 4
+
+label-monocle =  Monocle 
+label-monocle-underline = ${module/bspwm.label-focused-underline}
+label-monocle-padding = 4
+
+label-locked =  Locked 
+label-locked-foreground = #bd2c40
+label-locked-underline = ${module/bspwm.label-monocle-underline}
+label-locked-padding = ${module/bspwm.label-monocle-padding}
+
+label-sticky =  Sticky 
+abel-sticky-foreground = #fba922
+label-sticky-underline = ${module/bspwm.label-monocle-underline}
+label-sticky-padding = ${module/bspwm.label-monocle-padding}
+
+label-private =  Private 
+label-private-foreground = #bd2c40
+label-private-underline = ${module/bspwm.label-monocle-underline}
+label-private-padding = ${module/bspwm.label-monocle-padding}
+
+[module/bspwm-tmp]
+type = internal/bspwm
+format = <label-state>
+
+label-focused = 
+label-focused-padding = 1
+label-occupied = 
+label-occupied-padding = 1
+label-empty = 
+label-empty-padding = 1

@@ -69,6 +69,7 @@
 			POLY = "nano /etc/nixos/dots/config/polybar/config.ini";
 			GHOST = "nano /etc/nixos/dots/config/ghostty/config";
 			DUNST = "nano /etc/nixos/dots/config/dunst/dunstrc";
+			GPT =  "nano /etc/nixos/dots/config/polybar/script/chatgpt.sh";
 			  
 			##  OTHER
 			SAVE = "sudo nixos-rebuild switch";

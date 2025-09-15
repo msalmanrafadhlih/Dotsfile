@@ -1,0 +1,4 @@
+[module/chatgpt]
+type = custom/text
+content =
+click-left = ~/.config/polybar/script/chatgpt.sh
