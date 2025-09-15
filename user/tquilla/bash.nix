@@ -9,6 +9,7 @@
         	PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; 
         	PS1='\[\e[92m\]\u\[\e[0m\] \[\e[38;5;244;2;5m\]\s\[\e[0m\]in \[\e[93m\]\w\[\e[0m\] \$ ~ \[\e[91m\]''${PS1_CMD1}\n\[\e[0m\]'
 
+			
 			export HISTSIZE=5000
 		    export HISTFILESIZE=10000
 		    export HISTCONTROL=ignoredups:erasedups
@@ -53,6 +54,7 @@
 			NANO = "nano /etc/nixos/user/tquilla/nanorc.nix";
 			MPD = "nano /etc/nixos/user/tquilla/mpd.nix";
 			BRANCH = "nano /etc/nixos/user/tquilla/git-prompt.nix";
+			TAR = "nano /etc/nixos/user/tquilla/tar.nix";
 			
 			##  USER CONFIGURATIONS {SAVE}
 			BASHSAVE = "sudo chmod +x .bashrc";
@@ -64,9 +66,9 @@
 			ER = "nano /etc/nixos/dots/config/bspwm/src/ExternalRules";
 			BSPWM = "nano /etc/nixos/dots/config/bspwm/bspwmrc";
 			SXHKD = "nano /etc/nixos/dots/config/sxhkd/sxhkdrc";
-			ALAC = "nano /etc/nixos/dots/config/alacritty/alacritty.toml";
 			POLY = "nano /etc/nixos/dots/config/polybar/config.ini";
-
+			GHOST = "nano /etc/nixos/dots/config/ghostty/config";
+			DUNST = "nano /etc/nixos/dots/config/dunst/dunstrc";
 			  
 			##  OTHER
 			SAVE = "sudo nixos-rebuild switch";
@@ -85,9 +87,11 @@
 			PKGLIST = "nix-store --query --requisites /run/current-system | cut -d- -f2- | sort | uniq";
 
 			## productivities
-			DMUSIC = "yt-dlp --trim-filenames 80 --restrict-filenames -x --audio-format mp3 -S 'abr,codec' -o '~/.local/share/mpd/Musics/%(playlist|NA)s/%(title)s [%(id)s].%(ext)s'";
-			DVIDEO = "yt-dlp --trim-filenames 80 --restrict-filenames -S 'res:720,codec,br,fps' -f 'bv*+ba/best' -o '~/Videos/%(playlist|NA)s/%(title)s [%(id)s].%(ext)s'";
+			dmusic = "yt-dlp --trim-filenames 80 --restrict-filenames -x --audio-format mp3 -S 'abr,codec' -o '~/.local/share/mpd/Musics/%(playlist|NA)s/%(title)s [%(id)s].%(ext)s'";
+			dvideo = "yt-dlp --trim-filenames 80 --restrict-filenames -S 'res:720,codec,br,fps' -f 'bv*+ba/best' -o '~/Videos/%(playlist|NA)s/%(title)s [%(id)s].%(ext)s'";
+			dtar = "~/.local/bin/tar.sh";
 
+			
 			## POWER
 			REBOOT = "sudo reboot";
 			OFF = "poweroff";

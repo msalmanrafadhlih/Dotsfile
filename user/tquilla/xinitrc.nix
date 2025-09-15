@@ -5,7 +5,7 @@
   home.sessionVariables = {
     EDITOR = "nano";
     BROWSER = "brave";
-    TERMINAL = "alacritty";
+    TERMINAL = "ghostty";
   };
 
   xsession = {
