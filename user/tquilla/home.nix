@@ -54,6 +54,8 @@
   	./mpd.nix
   	./git-prompt.nix
   	./tar.nix
+  	./rmpc.nix
+  	./xyz.nix
    ];
 	
 }

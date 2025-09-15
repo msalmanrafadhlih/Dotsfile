@@ -48,6 +48,7 @@ bspc config removal_adjustment        	true
 
 bspc config external_rules_command "${HOME}"/.config/bspwm/src/ExternalRules
 bspc rule -a ChatAi state=floating sticky=off rectangle=506x750+1400+30
+bspc rule -a floating state=floating sticky=off rectangle=750x605+585+238
 
 # Autostart apps
 xwallpaper --zoom ~/Pictures/Wallpaper/wallpaper.jpg
