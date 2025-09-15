@@ -11,6 +11,7 @@
       xfce.thunar
  
       nodePackages.prettier
+      qutebrowser
       alacritty
       feh
       vim
@@ -32,6 +33,7 @@
       libcanberra-gtk3
       sound-theme-freedesktop
       pamixer
+      xdotool
       acpi
       libnotify
       mpc

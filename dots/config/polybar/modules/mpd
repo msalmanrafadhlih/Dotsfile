@@ -36,6 +36,8 @@ bar-progress-empty-foreground = #44
 inherit = mpd
 format-online = <label-song>
 
+left-click = alacritty --class floating_rmpc -e rmpc
+
 [module/mpd-progress]
 inherit = mpd
 format-online = <icon-prev> <icon-stop> <toggle> <icon-next>  <icon-repeat> <icon-random>  <bar-progress> <label-time>

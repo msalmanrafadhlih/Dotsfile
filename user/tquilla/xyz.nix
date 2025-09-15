@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 {
-  home.file.".local/bin/toggle_touchpad.sh" = {
+  home.file.".local/bin/xyz.sh" = {
     text = ''
 	    #!/usr/bin/env bash
 
