@@ -37,6 +37,7 @@
 
 			## GIT INTEGRATION
 			GIT = "git add . && git commit -m";
+			CLASS = "xprop | grep CLASS";
 
 			##  USER CONFIGURATIONS {EDIT}
 			TQU = "ls -la /etc/nixos/user/tquilla && cd /etc/nixos/user/tquilla";
@@ -69,10 +70,11 @@
 			BSPWM = "nano /etc/nixos/dots/config/bspwm/bspwmrc";
 			SXHKD = "nano /etc/nixos/dots/config/sxhkd/sxhkdrc";
 			POLY = "nano /etc/nixos/dots/config/polybar/config.ini";
-			GHOST = "nano /etc/nixos/dots/config/ghostty/config";
+			ALAC = "nano /etc/nixos/dots/config/alacritty/alacritty.toml";
 			DUNST = "nano /etc/nixos/dots/config/dunst/dunstrc";
-			GPT =  "nano /etc/nixos/dots/config/polybar/script/chatgpt.sh";
+			SCRIPT =  "nano /etc/nixos/dots/config/polybar/script";
 			FTHEME = "nano ~/.icons/default/index.theme";
+			PICOM = "nano /etc/nixos/dots/config/picom/picom.conf";
 			  
 			##  OTHER
 			SAVE = "sudo nixos-rebuild switch";

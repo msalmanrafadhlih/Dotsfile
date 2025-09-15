@@ -48,12 +48,15 @@ bspc config initial_polarity          	second_child
 bspc config removal_adjustment        	true
 
 bspc config external_rules_command "${HOME}"/.config/bspwm/src/ExternalRules
-bspc rule -a floating_rmpc state=floating rectangle=850x505+535+287
-bspc rule -a ChatAi state=floating rectangle=470x750+1436+295
+#bspc rule -a floating_rmpc state=floating rectangle=850x505+535+287
+bspc rule -a floating_rmpc state=floating rectangle=750x350+3+30
+bspc rule -a ChatAi state=floating rectangle=470x750+1440+296
+bspc rule -a Alacritty state=floating rectangle=750x660+3+390
 
 # picom
 killall picom
-picom --experimental-backends --config ~/.config/picom/picom.conf &
+sleep 0.1
+picom &
 
 # Autostart apps
 xwallpaper --zoom ~/Pictures/Wallpaper/wallpaper.jpg
