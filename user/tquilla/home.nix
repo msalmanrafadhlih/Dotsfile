@@ -13,6 +13,7 @@
 		sxhkd = "sxhkd";
 		nano = "nano";
 		ghostty = "ghostty";
+		picom = "picom";
 		
   	  	"systemd/user/battery-notif.service" = "systemd/user/battery-notif.service";
   	  	"systemd/user/battery-notif.timer" = "systemd/user/battery-notif.timer";

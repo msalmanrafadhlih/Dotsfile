@@ -11,7 +11,6 @@
       xfce.thunar
  
       nodePackages.prettier
-      qutebrowser
       alacritty
       feh
       vim

@@ -23,8 +23,7 @@ run() {
 
 
 # Border
-bspc config border_width                2
-bspc config border_radius               20
+bspc config border_width                4
 bspc config window_gap                  5
 bspc config focused_border_color        "#5E81AC"
 bspc config normal_border_color         "#3B4252"
@@ -48,18 +47,16 @@ bspc config initial_polarity          	second_child
 bspc config removal_adjustment        	true
 
 bspc config external_rules_command "${HOME}"/.config/bspwm/src/ExternalRules
+#bspc rule -a ChatAi state=floating sticky=off rectangle=506x750+1400+30
 bspc rule -a floating_rmpc state=floating rectangle=850x505+535+287
-bspc rule -a ChatAi state=floating rectangle=470x750+1436+295
-
-# picom
-killall picom
-picom --experimental-backends --config ~/.config/picom/picom.conf &
 
 # Autostart apps
 xwallpaper --zoom ~/Pictures/Wallpaper/wallpaper.jpg
 
 # sxhkd
 pgrep -x sxhkd > /dev/null || sxhkd &
+
+
 
 # polybar
 ~/.config/polybar/launch.sh &
