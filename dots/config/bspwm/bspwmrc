@@ -7,8 +7,6 @@ bspc monitor -d term web code music chat
 #bspc rule -a code-oss desktop=^3
 #bspc rule -a firefox desktop=^2
 
-bspc rule -a ChatAi state=floating sticky=on rectangle=506x750+1400+30
-
 # Jalankan perintah environment dasar
 export PATH="$HOME/.local/bin:$PATH"
 # Set environment variables
@@ -49,6 +47,7 @@ bspc config initial_polarity          	second_child
 bspc config removal_adjustment        	true
 
 bspc config external_rules_command "${HOME}"/.config/bspwm/src/ExternalRules
+bspc rule -a ChatAi state=floating sticky=off rectangle=506x750+1400+30
 
 # Autostart apps
 xwallpaper --zoom ~/Pictures/Wallpaper/wallpaper.jpg

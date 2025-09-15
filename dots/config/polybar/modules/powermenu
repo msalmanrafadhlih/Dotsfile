@@ -4,18 +4,18 @@ type = custom/menu
 format-padding = 1
 format-spacing = 1
 
-label-open = %{T2} %{T-}
-label-close = %{T2} %{T-}
+label-open = %{T2} %{T-}|
+label-close = %{T2} %{T-}|
 
-menu-0-0 =| Log Out |
+menu-0-0 = Log Out |
 menu-0-0-foreground = #fba922
 menu-0-0-exec = bspc quit -1
 
-menu-0-1 =| Reboot |
+menu-0-1 = Reboot |
 menu-0-1-foreground = #fba922
 menu-0-1-exec = systemctl reboot
 
-menu-0-2 =| Power off |
+menu-0-2 = Power off |
 menu-0-2-foreground = #fba922
 menu-0-2-exec = systemctl poweroff
 

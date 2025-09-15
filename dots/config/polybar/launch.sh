@@ -8,6 +8,7 @@ pkill polybar
 # Tunggu sampai benar-benar mati
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
+chmod +x ~/.config/polybar/script/*.sh
 # Gabung semua file jadi satu config sementara
 cat "$MAIN_CONFIG" $CONFIG_DIR/* > /tmp/polybar_full_config.ini
 

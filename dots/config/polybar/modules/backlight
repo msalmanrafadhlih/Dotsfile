@@ -1,6 +1,6 @@
 [module/backlight]
 type = internal/xbacklight
-format = <label> <ramp>
+format =<ramp> <label>
 label = %percentage%%
 
 ramp-0 = 󰪞

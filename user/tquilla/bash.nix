@@ -55,6 +55,7 @@
 			MPD = "nano /etc/nixos/user/tquilla/mpd.nix";
 			BRANCH = "nano /etc/nixos/user/tquilla/git-prompt.nix";
 			TAR = "nano /etc/nixos/user/tquilla/tar.nix";
+			FW = "nano /etc/nixos/user/tquilla/floating-window.nix";
 			
 			##  USER CONFIGURATIONS {SAVE}
 			BASHSAVE = "sudo chmod +x .bashrc";
@@ -62,7 +63,8 @@
 
 
 			##  DOTSFILE CONNFIGURATION & BSPWM
-			CONFIG = "tree /etc/nixos/dots/ && cd /etc/nixos/dots/config";
+			CONFIG = "tree /etc/nixos/dots/config && cd /etc/nixos/dots/config";
+			MODULE = "tree /etc/nixos/dots/config/polybar && cd /etc/nixos/dots/config/polybar/modules";			
 			ER = "nano /etc/nixos/dots/config/bspwm/src/ExternalRules";
 			BSPWM = "nano /etc/nixos/dots/config/bspwm/bspwmrc";
 			SXHKD = "nano /etc/nixos/dots/config/sxhkd/sxhkdrc";
@@ -70,6 +72,7 @@
 			GHOST = "nano /etc/nixos/dots/config/ghostty/config";
 			DUNST = "nano /etc/nixos/dots/config/dunst/dunstrc";
 			GPT =  "nano /etc/nixos/dots/config/polybar/script/chatgpt.sh";
+			FTHEME = "nano ~/.icons/default/index.theme";
 			  
 			##  OTHER
 			SAVE = "sudo nixos-rebuild switch";
