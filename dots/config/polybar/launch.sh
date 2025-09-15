@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env/bash
 CONFIG_DIR="$HOME/.config/polybar/modules"
 MAIN_CONFIG="$HOME/.config/polybar/config.ini"
 
@@ -7,7 +7,7 @@ pkill  polybar
 
 # Tunggu sampai benar-benar mati
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
-
+chmod +x $CONFIG_DIR/*
 # Gabung semua file jadi satu config sementara
 cat "$MAIN_CONFIG" $CONFIG_DIR/*.ini > /tmp/polybar_full_config.ini
 
