@@ -7,7 +7,7 @@ bspc monitor -d term web code music chat
 #bspc rule -a code-oss desktop=^3
 #bspc rule -a firefox desktop=^2
 
-bspc rule -a ChatGPT state=floating sticky=on rectangle=506x750+1400+30
+bspc rule -a ChatAi state=floating sticky=on rectangle=506x750+1400+30
 
 # Jalankan perintah environment dasar
 export PATH="$HOME/.local/bin:$PATH"
@@ -60,12 +60,6 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 # polybar
 ~/.config/polybar/launch.sh &
-
-#pkill  polybar
-#while pqrep -x polybar >/dev/null; do sleep 1;
-#done
-#polybar top &
-#polybar bottom &
 
 # dunst untuk widget notifikasi
 pgrep -x dunst > /dev/null || dunst &

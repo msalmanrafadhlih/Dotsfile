@@ -1,6 +1,6 @@
 [module/date]
 type = internal/date
-date = %%{F#fff}%H:%M%%{F-} 
+date = %%{F#fff}%H:%M%%{F-}
 date-alt = %%{F#fff}%A, %d %B %Y  %%{F#fff}%H:%M%%{F#666}:%%{F#fba922}%S%%{F-}
 
 [module/clock]
