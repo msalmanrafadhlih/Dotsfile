@@ -51,7 +51,8 @@ bspc config external_rules_command "${HOME}"/.config/bspwm/src/ExternalRules
 #bspc rule -a floating_rmpc state=floating rectangle=850x505+535+287
 bspc rule -a floating_rmpc state=floating rectangle=750x350+3+30
 bspc rule -a ChatAi state=floating rectangle=470x750+1440+296
-bspc rule -a Alacritty state=floating rectangle=750x660+3+390
+bspc rule -a AlacrittyDefault state=floating sticky=on rectangle=750x660+3+390
+bspc rule -a AlacrittyPinned state=floating sticky=off rectangle=750x360+585+1
 
 # picom
 killall picom

@@ -74,7 +74,8 @@
 			DUNST = "nano /etc/nixos/dots/config/dunst/dunstrc";
 			SCRIPT =  "nano /etc/nixos/dots/config/polybar/script";
 			FTHEME = "nano ~/.icons/default/index.theme";
-			PICOM = "nano /etc/nixos/dots/config/picom/picom.conf";
+			PCOM = "nano /etc/nixos/dots/config/picom/picom.conf";
+			ANIMA = "nano /etc/nixos/dots/config/picom/picom-animations.conf";
 			  
 			##  OTHER
 			SAVE = "sudo nixos-rebuild switch";
