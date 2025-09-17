@@ -13,6 +13,7 @@
 			export HISTSIZE=5000
 		    export HISTFILESIZE=10000
 		    export HISTCONTROL=ignoredups:erasedups
+#		    export PATH="$HOME/.local/bin:$PATH"
 		    shopt -s histappend
 			shopt -s autocd
 	    	shopt -s cdspell
@@ -81,6 +82,10 @@
 			CURSOR = "nano ~/.icons/default/index.theme";
 			PCOM = "nano /etc/nixos/dots/config/picom/picom.conf";
 			ANIMA = "nano /etc/nixos/dots/config/picom/picom-animations.conf";
+
+			## Suckless Stuff
+			NS = "nix-shell";
+			MAKE = "make clean && make && make install PREFIX=$HOME/.local";
 			  
 			##  OTHER
 			SAVE = "sudo nixos-rebuild switch";

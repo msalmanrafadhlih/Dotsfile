@@ -16,10 +16,11 @@
 		  exit 1
 		fi
 
-		# Tanya tujuan (default /etc/nixos/dots/config/icons/)
+		# Tanya tujuan (default /home/$USER/)
 		read -p "Masukkan path tujuan [default: /home/$USER/]: " DEST
-		DEST="${DEST:-/home/$USER/}"
-
+		DEST="''${DEST/#\~/$HOME}"
+		DEST="''${DEST:-/home/$USER/}"
+		  
 		# Buat folder tujuan kalau belum ada
 		mkdir -p "$DEST"
 
