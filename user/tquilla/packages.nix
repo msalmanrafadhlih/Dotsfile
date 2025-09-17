@@ -6,7 +6,6 @@
 	fastfetch
 	vivaldi
 	brave
-#	surf
 	neovim
 	
 	nixpkgs-fmt

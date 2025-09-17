@@ -15,6 +15,8 @@
 		ghostty = "ghostty";
 		picom = "picom";
 		st = "st";
+		surf = "surf";
+		nvim = "nvim";
 		
   	  	"systemd/user/battery-notif.service" = "systemd/user/battery-notif.service";
   	  	"systemd/user/battery-notif.timer" = "systemd/user/battery-notif.timer";
