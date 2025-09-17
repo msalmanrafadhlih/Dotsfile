@@ -14,7 +14,7 @@
 		nano = "nano";
 		ghostty = "ghostty";
 		picom = "picom";
-		st = "st";
+#		st = "st";
 		
   	  	"systemd/user/battery-notif.service" = "systemd/user/battery-notif.service";
   	  	"systemd/user/battery-notif.timer" = "systemd/user/battery-notif.timer";

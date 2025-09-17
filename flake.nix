@@ -14,7 +14,7 @@
 			system = "x86_64-linux";
 			modules = [
 				./hosts/configuration.nix
-			    ./hosts/st-custom.nix
+#			    ./hosts/st-custom.nix
 				home-manager.nixosModules.home-manager
 				{
 					home-manager = {
