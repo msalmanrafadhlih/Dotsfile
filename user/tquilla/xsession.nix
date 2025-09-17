@@ -16,6 +16,9 @@
     initExtra = ''
 	    eval "$(dbus-launch --sh-syntax)"
 	    export DBUS_SESSION_BUS_ADDRESS
+		export XCURSOR_THEME=Doro
+		export XCURSOR_SIZE=24
+		xsetroot -cursor_name left_ptr
 	    
     '';
   };

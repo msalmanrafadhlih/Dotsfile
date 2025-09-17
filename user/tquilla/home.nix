@@ -46,7 +46,7 @@
   	./bash.nix
   	./packages.nix
   	./bat.nix
-  	./xinitrc.nix	
+  	./xsession.nix	
   	./battery.nix
   	./brightness.nix
   	./toggle_touchpad.nix

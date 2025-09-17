@@ -51,7 +51,7 @@
 			BASH = "nano /etc/nixos/user/tquilla/bash.nix";
 			INSTALL = "nano /etc/nixos/user/tquilla/packages.nix";
 			BAT = "nano /etc/nixos/user/tquilla/bat.nix";
-			XINIT = "nano /etc/nixos/user/tquilla/xinitrc.nix";
+			XSESSION = "nano /etc/nixos/user/tquilla/xsession.nix";
 			MEDIA = "nano /etc/nixos/user/tquilla/media.nix";
 			PAD = "nano /etc/nixos/user/tquilla/toggle_touchpad.nix";
 			VOL = "nano /etc/nixos/user/tquilla/volume.nix";
@@ -87,7 +87,7 @@
 			NSHELL = "nix-shell";
 			PATCH = "patch -p1 <";
 			CONF = "cd /etc/nixos/dots/config/st  && nano config.def.h";
-			CPCONF = "cp config.def.h config.h";
+			CONFSAVE = "cp config.def.h config.h";
 			MAKE = "make clean && make && make install PREFIX=$HOME/.local";
 						  
 			##  OTHER

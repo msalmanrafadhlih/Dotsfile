@@ -11,7 +11,6 @@
       xfce.thunar
  
       nodePackages.prettier
-      alacritty
       feh
       wget
       btop

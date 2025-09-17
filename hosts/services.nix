@@ -16,7 +16,7 @@ in
 		windowManager.bspwm.enable = true;
 		displayManager.lightdm.enable = true;
   	};
-
+	
   	libinput = {
   		enable = true;
         touchpad = {
