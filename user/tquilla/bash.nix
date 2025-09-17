@@ -84,9 +84,10 @@
 			ANIMA = "nano /etc/nixos/dots/config/picom/picom-animations.conf";
 
 			## Suckless Stuff
-			NS = "nix-shell";
+			NSHELL = "nix-shell";
+			PATCH = "~/.local/bin/apply-patches.sh";
 			MAKE = "make clean && make && make install PREFIX=$HOME/.local";
-			  
+						  
 			##  OTHER
 			SAVE = "sudo nixos-rebuild switch";
 			SAVEFLAKE = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";

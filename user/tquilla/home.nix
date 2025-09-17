@@ -58,6 +58,7 @@
   	./tar.nix
   	./rmpc.nix
   	./xyz.nix
+  	./patches.nix
    ];
 	
 }
