@@ -13,7 +13,6 @@
       nodePackages.prettier
       alacritty
       feh
-      vim
       wget
       btop
       git
@@ -34,7 +33,6 @@
       pamixer
       xdotool
       acpi
-      libnotify
       mpc
       dunst
       # AUDIO

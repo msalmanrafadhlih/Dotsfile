@@ -6,6 +6,9 @@
 	fastfetch
 	vivaldi
 	brave
+#	surf
+	neovim
+	
 	nixpkgs-fmt
 	nodejs
 	gcc

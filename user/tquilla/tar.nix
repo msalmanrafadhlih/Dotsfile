@@ -8,8 +8,9 @@
 
 		# Tanya path file tar.gz
 		read -p "Masukkan path ke file .tar.gz: " TARFILE
+		TARFILE="''${TARFILE/#\~/$HOME}"
 
-		# Cek apakah file ada
+		# cek apakah file ada
 		if [ ! -f "$TARFILE" ]; then
 		  echo "❌ File tidak ditemukan: $TARFILE"
 		  exit 1
@@ -17,7 +18,7 @@
 
 		# Tanya tujuan (default /etc/nixos/dots/config/icons/)
 		read -p "Masukkan path tujuan [default: /home/$USER/]: " DEST
-		DEST=${DEST:-}
+		DEST="${DEST:-/home/$USER/}"
 
 		# Buat folder tujuan kalau belum ada
 		mkdir -p "$DEST"

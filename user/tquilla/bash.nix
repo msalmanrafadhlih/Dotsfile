@@ -22,7 +22,11 @@
         shellAliases = {
         
 			test = "I use NixOS btw";	 
+			PING = "ping google.com";
 			NIXOS = "tree /etc/nixos && cd /etc/nixos";
+			RUNNING = "systemctl --user list-units --state=running";
+			SYSRUNNING = "systemctl list-units --state=running";
+			USAGELOG = "sudo journalctl --disk-usage";
 
 			    
 			##  SYSTEM CONFIGURATIONS
@@ -51,7 +55,7 @@
 			PAD = "nano /etc/nixos/user/tquilla/toggle_touchpad.nix";
 			VOL = "nano /etc/nixos/user/tquilla/volume.nix";
 			BRIGHT = "nano /etc/nixos/user/tquilla/brightness.nix";
-			BAT0 = "nano /etc/nixos/user/tquilla/nanorc.nix";
+			BAT0 = "nano /etc/nixos/user/tquilla/battery.nix";
 			NANO = "nano /etc/nixos/user/tquilla/nanorc.nix";
 			MPD = "nano /etc/nixos/user/tquilla/mpd.nix";
 			BRANCH = "nano /etc/nixos/user/tquilla/git-prompt.nix";
@@ -61,19 +65,20 @@
 			##  USER CONFIGURATIONS {SAVE}
 			BASHSAVE = "sudo chmod +x .bashrc";
 			UTILS = "chmod +x ~/.local/bin/*.sh";
-
+			
 
 			##  DOTSFILE CONNFIGURATION & BSPWM
 			CONFIG = "tree /etc/nixos/dots/config && cd /etc/nixos/dots/config";
 			MODULE = "tree /etc/nixos/dots/config/polybar && cd /etc/nixos/dots/config/polybar/modules";			
+			SCRIPT =  "cd /etc/nixos/dots/config/polybar/script && tree";
+
 			ER = "nano /etc/nixos/dots/config/bspwm/src/ExternalRules";
 			BSPWM = "nano /etc/nixos/dots/config/bspwm/bspwmrc";
 			SXHKD = "nano /etc/nixos/dots/config/sxhkd/sxhkdrc";
 			POLY = "nano /etc/nixos/dots/config/polybar/config.ini";
 			ALAC = "nano /etc/nixos/dots/config/alacritty/alacritty.toml";
 			DUNST = "nano /etc/nixos/dots/config/dunst/dunstrc";
-			SCRIPT =  "nano /etc/nixos/dots/config/polybar/script";
-			FTHEME = "nano ~/.icons/default/index.theme";
+			CURSOR = "nano ~/.icons/default/index.theme";
 			PCOM = "nano /etc/nixos/dots/config/picom/picom.conf";
 			ANIMA = "nano /etc/nixos/dots/config/picom/picom-animations.conf";
 			  
@@ -86,6 +91,7 @@
 			GBG = "nix-collect-garbage";
 			OPTIMISE = "nix-store --optimise";
 			GC = "nix-store --gc";
+			CLEANER = "rm -rf ~/.cache/nix && rm -rf /tmp/nix-build-* && rm -rf ~/.local/share/Trash/*";
 			CLEAR = "clear";
 
 			PKG = "nix search nixpkgs";
@@ -94,9 +100,9 @@
 			PKGLIST = "nix-store --query --requisites /run/current-system | cut -d- -f2- | sort | uniq";
 
 			## productivities
-			dmusic = "yt-dlp --trim-filenames 80 --restrict-filenames -x --audio-format mp3 -S 'abr,codec' -o '~/.local/share/mpd/Musics/%(playlist|NA)s/%(title)s [%(id)s].%(ext)s'";
-			dvideo = "yt-dlp --trim-filenames 80 --restrict-filenames -S 'res:720,codec,br,fps' -f 'bv*+ba/best' -o '~/Videos/%(playlist|NA)s/%(title)s [%(id)s].%(ext)s'";
-			dtar = "~/.local/bin/tar.sh";
+			DMUSIC = "yt-dlp --trim-filenames 80 --restrict-filenames -x --audio-format mp3 -S 'abr,codec' -o '~/.local/share/mpd/Musics/%(playlist|NA)s/%(title)s [%(id)s].%(ext)s'";
+			DVIDEO = "yt-dlp --trim-filenames 80 --restrict-filenames -S 'res:720,codec,br,fps' -f 'bv*+ba/best' -o '~/Videos/%(playlist|NA)s/%(title)s [%(id)s].%(ext)s'";
+			DTAR = "~/.local/bin/tar.sh";
 			XYZ = "~/.local/bin/xyz.sh";
 			
 			## POWER

@@ -4,10 +4,13 @@
 # ==================================================  BSPWM
 # ---------------------------------------------------------  Reload sxhkd
 super + grave
-	pkill -USR1 -x sxhkd
+    pkill -USR1 -x sxhkd && dunstify -r 1234 -t 1000 "sxhkd" "Reloaded ✅"
 # ---------------------------------------------------------  Refresh bspwm
 ctrl + super + alt + Return
-	bspc wm -r;
+	bspc wm -r
+# ---------------------------------------------------------  Btop++
+super + alt + b
+	alacritty -e btop
 
 ###########################################################
 # ------------------ Applications ----------------------- #
@@ -16,9 +19,6 @@ ctrl + super + alt + Return
 # ---------------------------------------------------------  Terminal
 super + Return
 	alacritty --class AlacrittyDefault
-# ---------------------------------------------------------  Terminal
-super + p
-	alacritty --class AlacrittyPinned
 # ---------------------------------------------------------  Menu Apps
 super + @space
     dmenu_run -i -b -p "Run:" -fn 'Monospace-10' -nb '#1e1e2e' -nf '#cdd6f4' -sb '#89b4fa' -sf '#1e1e2e'
@@ -31,6 +31,12 @@ super + f
 # ---------------------------------------------------------  Rmpc	
 super + m
     alacritty --class floating_rmpc -e rmpc
+# ---------------------------------------------------------  AstroNvim
+super + n
+    nvim
+# ---------------------------------------------------------  Terminal
+super + p
+	alacritty --class AlacrittyPinned
 # ---------------------------------------------------------  Exit
 super + q
 	bspc node -c

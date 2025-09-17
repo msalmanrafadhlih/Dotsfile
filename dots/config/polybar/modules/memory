@@ -1,6 +1,6 @@
 [module/memory]
 type = internal/memory
-format = <label> <bar-used>
+format =| <label> <bar-used>
 
 ; label default (sederhana)
 label = RAM %used:memory%

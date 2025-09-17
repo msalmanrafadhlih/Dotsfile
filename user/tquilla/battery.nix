@@ -7,6 +7,7 @@
       #!/bin/sh
 
       BAT="/sys/class/power_supply/BAT0"
+      
       capacity=$(cat "$BAT/capacity")
       status=$(cat "$BAT/status")
 

@@ -11,13 +11,13 @@ format = <label-state> <label-mode>
 label-dimmed-underline = ${bar/top.background}
 
 label-focused = %icon%
-label-focused-foreground =  #fff
+label-focused-foreground = #ff
 label-focused-background = #773f3f3f
 label-focused-underline = #c9665e
 label-focused-padding = 2
 
 label-occupied =%icon%
-label-occupied-foreground = #ddd
+label-occupied-foreground = #55
 label-occupied-underline = #666
 label-occupied-padding = 2
 
@@ -29,7 +29,7 @@ label-urgent-font = 4
 label-urgent-padding = 2
 
 label-empty =%icon%
-label-empty-foreground = #55
+label-empty-foreground = #555
 label-empty-font = 4
 label-empty-padding = 2
 
