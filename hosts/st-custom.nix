@@ -1,13 +1,15 @@
 { pkgs, ... }:
 
-{
+let
+  stSrc = ../dots/config/st;
+  stPatches = builtins.path { path = ../dots/config/st/patches; name = "st-patches"; };
+in {
   environment.systemPackages = [
     (pkgs.stdenv.mkDerivation {
       pname = "st-custom";
       version = "0.8.5";
 
-      # ambil source code st dari folder lokal
-      src = ./../dots/config/st;
+      src = stSrc;
 
       nativeBuildInputs = [ pkgs.pkg-config ];
       buildInputs = [
@@ -16,9 +18,8 @@
         pkgs.xorg.libXrender
       ];
 
-      # otomatis ambil semua patch *.diff di folder patches
-      patches = map (name: ./../dots/config/st/patches/${name})
-        (builtins.attrNames (builtins.readDir ./../dots/config/st/patches));
+      patches = map (name: "${stPatches}/${name}")
+        (builtins.attrNames (builtins.readDir stPatches));
 
       installPhase = ''
         mkdir -p $out/bin
