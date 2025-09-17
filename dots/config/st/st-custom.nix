@@ -1,8 +1,8 @@
 { pkgs, ... }:
 
 let
-  stSrc = ../dots/config/st;
-  stPatches = builtins.path { path = ../dots/config/st/patches; name = "st-patches"; };
+  stSrc = ./st;
+  stPatches = builtins.path { path = ./st/patches; name = "st-patches"; };
 in {
   environment.systemPackages = [
     (pkgs.stdenv.mkDerivation {
