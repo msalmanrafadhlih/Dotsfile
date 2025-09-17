@@ -7,5 +7,6 @@ mkShell {
     xorg.libX11
     xorg.libXft
     xorg.libXrender
+    xorg.libXcursor
   ];
 }

@@ -21,8 +21,12 @@ boxdraw.o: config.h st.h boxdraw_data.h
 
 $(OBJ): config.h config.mk
 
-st: $(OBJ)
-	$(CC) -o $@ $(OBJ) $(STLDFLAGS)
+#st: $(OBJ)
+#	$(CC) -o $@ $(OBJ) $(STLDFLAGS)
+
+st: ${OBJ}
+	${CC} -o $@ ${OBJ} ${LDFLAGS} -lm -lrt -lX11 -lutil -lXft -lXrender -lXcursor \
+		`pkg-config --libs fontconfig` `pkg-config --libs freetype2`
 
 clean:
 	rm -f st $(OBJ) st-$(VERSION).tar.gz

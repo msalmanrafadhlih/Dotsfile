@@ -108,6 +108,13 @@ unsigned int tabspaces = 4;
 /* bg opacity */
 float alpha = 0.5;
 
+/*
+ * drag and drop escape characters
+ *
+ * this will add a '\' before any characters specified in the string.
+ */
+char *xdndescchar = " !\"#$&'()*;<>?[\\]^`{|}~";
+
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
@@ -156,7 +163,7 @@ static unsigned int defaultrcs = 257;
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 7;
+static unsigned int cursorshape = 2;
 
 /*
  * Default columns and rows numbers
@@ -166,11 +173,10 @@ static unsigned int cols = 80;
 static unsigned int rows = 24;
 
 /*
- * Default colour and shape of the mouse cursor
+ * Default shape of the mouse cursor
  */
-static unsigned int mouseshape = XC_xterm;
-static unsigned int mousefg = 7;
-static unsigned int mousebg = 0;
+
+static char* mouseshape = "XC_left_ptr";
 
 /*
  * Color used to display font attributes when fontconfig selected a font which
