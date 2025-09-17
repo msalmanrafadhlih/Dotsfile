@@ -18,7 +18,7 @@ super + alt + b
 # ==============================================  MAIN APPS
 # ---------------------------------------------------------  Terminal
 super + Return
-	alacritty --class AlacrittyDefault
+	st -c AlacrittyDefault
 # ---------------------------------------------------------  Menu Apps
 super + @space
     dmenu_run -i -b -p "Run:" -fn 'Monospace-10' -nb '#1e1e2e' -nf '#cdd6f4' -sb '#89b4fa' -sf '#1e1e2e'
@@ -30,13 +30,13 @@ super + f
 	thunar
 # ---------------------------------------------------------  Rmpc	
 super + m
-    alacritty --class floating_rmpc -e rmpc
+    st -c floating_rmpc -e rmpc
 # ---------------------------------------------------------  AstroNvim
 super + n
     nvim
 # ---------------------------------------------------------  Terminal
 super + p
-	alacritty --class AlacrittyPinned
+	st -c AlacrittyPinned
 # ---------------------------------------------------------  Exit
 super + q
 	bspc node -c

@@ -86,8 +86,7 @@
 			## Suckless Stuff
 			NSHELL = "nix-shell";
 			PATCH = "patch -p1 <";
-			CONF = "cd /etc/nixos/dots/config/st  && nano config.def.h";
-			CPCONF = "cp config.def.h config.h";
+			CONF = "cp config.def.h config.h";
 			MAKE = "make clean && make && make install PREFIX=$HOME/.local";
 						  
 			##  OTHER
