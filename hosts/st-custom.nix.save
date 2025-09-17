@@ -1,12 +1,15 @@
 { pkgs, ... }:
 
-{
+let
+  stSrc = ../dots/config/st;
+  stPatches = builtins.path { path = ../dots/config/st/patches; name = "st-patches"; };
+in {
   environment.systemPackages = [
     (pkgs.stdenv.mkDerivation {
       pname = "st-custom";
       version = "0.8.5";
 
-      src = ./.;
+      src = stSrc;
 
       nativeBuildInputs = [ pkgs.pkg-config ];
       buildInputs = [
@@ -14,10 +17,9 @@
         pkgs.xorg.libXft
         pkgs.xorg.libXrender
       ];
-      
-      patches = builtins.filter (p: pkgs.lib.hasSuffix ".diff" (toString p))
-  		(builtins.attrValues (builtins.readDir ./patches));
 
+      patches = map (name: "${stPatches}/${name}")
+        (builtins.attrNames (builtins.readDir stPatches));
 
       installPhase = ''
         mkdir -p $out/bin
