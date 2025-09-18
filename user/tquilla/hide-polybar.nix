@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 {
-  home.file.".local/bin/show-polybar.sh" = {
+  home.file.".local/bin/hide-polybar.sh" = {
       text = ''
 #!/bin/sh
 bspc config top_padding 0

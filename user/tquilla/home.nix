@@ -60,6 +60,8 @@
   	./rmpc.nix
   	./xyz.nix
   	./patches.nix
+  	./hide-polybar.nix
+  	./show-polybar.nix
    ];
 	
 }
