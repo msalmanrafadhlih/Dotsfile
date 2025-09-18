@@ -38,24 +38,24 @@ label-tiled = Tiled 
 label-tiled-underline = ${module/bspwm.label-focused-underline}
 label-tiled-padding = 4
 
-label-monocle =  Monocle 
+label-monocle =  %{T3}Monocle %{T-}
 label-monocle-underline = ${module/bspwm.label-focused-underline}
 label-monocle-padding = 4
 
-label-locked =  Locked 
+label-locked =  %{T3}Locked %{T-}
 label-locked-foreground = #bd2c40
 label-locked-underline = ${module/bspwm.label-monocle-underline}
 label-locked-padding = ${module/bspwm.label-monocle-padding}
 
-label-sticky =  Sticky 
+label-sticky =  %{T3}Sticky %{T-}
 abel-sticky-foreground = #fba922
 label-sticky-underline = ${module/bspwm.label-monocle-underline}
 label-sticky-padding = ${module/bspwm.label-monocle-padding}
 
-label-private =  Private 
+label-private =  %{T3}Private %{T-}
 label-private-foreground = #bd2c40
 label-private-underline = ${module/bspwm.label-monocle-underline}
-label-private-padding = ${module/bspwm.label-monocle-padding}
+olabel-private-padding = ${module/bspwm.label-monocle-padding}
 
 [module/bspwm-tmp]
 type = internal/bspwm

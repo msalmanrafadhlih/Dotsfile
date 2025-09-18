@@ -3,7 +3,8 @@ type = internal/memory
 format =| <label> <bar-used>
 
 ; label default (sederhana)
-label = RAM %used:memory%
+label = %{T3}RAM %used:memory%%{T-}
+
 
 interval = 2
 

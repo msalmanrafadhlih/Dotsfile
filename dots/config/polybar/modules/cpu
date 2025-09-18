@@ -2,7 +2,7 @@
 type = internal/cpu
 interval = 0.5
 format = <label> <ramp-coreload>
-label = CPU %percentage:2%%
+label =%{T3}CPU %percentage:2%%%{T-}
 
 ramp-coreload-0 = %{T3}▁%{T-}
 ramp-coreload-0-font = 2

@@ -4,7 +4,7 @@ interval = 25
 mount-0 = /
 
 ; Menampilkan mountpoint dan ukuran terpakai / total dengan desimal
-label-mounted = %used:disk% / %total:disk%
+label-mounted = %{T3}%used:disk% / %total:disk%%{T-}
 
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.disabled}

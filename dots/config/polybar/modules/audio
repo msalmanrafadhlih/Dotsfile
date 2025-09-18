@@ -15,6 +15,9 @@ ramp-volume-1 = 
 ramp-volume-2 = 
 ramp-volume-3 = 
 
+ramp-font = 1
+label-font = 1
+
 [module/pulseaudio]
 type = internal/pulseaudio
 
