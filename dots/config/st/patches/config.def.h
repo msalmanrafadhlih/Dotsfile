@@ -123,19 +123,6 @@ static const char *colorname[] = {
 	"green3",
 	"yellow3",
 	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
-
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
 
 	[255] = 0,
 
@@ -173,11 +160,10 @@ static unsigned int cols = 80;
 static unsigned int rows = 24;
 
 /*
- * Default colour and shape of the mouse cursor
+ * Default shape of the mouse cursor
  */
-static unsigned int mouseshape = XC_xterm;
-static unsigned int mousefg = 7;
-static unsigned int mousebg = 0;
+
+static char* mouseshape = "XC_xterm";
 
 /*
  * Color used to display font attributes when fontconfig selected a font which

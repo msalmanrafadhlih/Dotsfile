@@ -4,7 +4,7 @@
 
 include config.mk
 
-SRC = st.c x.c boxdraw.c
+SRC = st.c x.c
 OBJ = $(SRC:.c=.o)
 
 all: st
@@ -17,16 +17,11 @@ config.h:
 
 st.o: config.h st.h win.h
 x.o: arg.h config.h st.h win.h
-boxdraw.o: config.h st.h boxdraw_data.h
 
 $(OBJ): config.h config.mk
 
-#st: $(OBJ)
-#	$(CC) -o $@ $(OBJ) $(STLDFLAGS)
-
-st: ${OBJ}
-	${CC} -o $@ ${OBJ} ${LDFLAGS} -lm -lrt -lX11 -lutil -lXft -lXrender -lXcursor \
-		`pkg-config --libs fontconfig` `pkg-config --libs freetype2`
+st: $(OBJ)
+	$(CC) -o $@ $(OBJ) $(STLDFLAGS)
 
 clean:
 	rm -f st $(OBJ) st-$(VERSION).tar.gz
