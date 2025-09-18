@@ -18,7 +18,7 @@
 	    export DBUS_SESSION_BUS_ADDRESS
 	    
 		export XCURSOR_THEME=Doro
-		export XCURSOR_SIZE=20
+		export XCURSOR_SIZE=14
 		xsetroot -cursor_name left_ptr
 
     '';

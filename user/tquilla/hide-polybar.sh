@@ -1,0 +1,13 @@
+{ config, pkgs, lib, ... }:
+
+{
+  home.file.".local/bin/show-polybar.sh" = {
+      text = ''
+#!/bin/sh
+bspc config top_padding 0
+bspc config bottom_padding 0
+
+pkill polybar
+      '';
+  };
+}
