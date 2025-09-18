@@ -86,7 +86,7 @@ const int boxdraw_braille = 0;
 static int bellvolume = 20;
 
 /* default TERM value */
-char *termname = "st-256color";
+char *termname = "st";
 
 /*
  * spaces per tab
@@ -163,7 +163,7 @@ static unsigned int rows = 24;
  * Default shape of the mouse cursor
  */
 
-static char* mouseshape = "left_ptr";
+static char* mouseshape = "XC_xterm";
 
 /*
  * Color used to display font attributes when fontconfig selected a font which

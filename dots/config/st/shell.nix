@@ -3,6 +3,7 @@ mkShell {
   buildInputs = [
     gcc
     gnumake
+    freetype
     pkg-config
     xorg.libX11
     xorg.libXft

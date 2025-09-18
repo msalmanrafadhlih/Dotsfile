@@ -43,6 +43,7 @@
 			## GIT INTEGRATION
 			GIT = "git add . && git commit -m";
 			CLASS = "xprop | grep CLASS";
+			NAME = "xprop | grep NAME";
 
 			##  USER CONFIGURATIONS {EDIT}
 			TQU = "ls -la /etc/nixos/user/tquilla && cd /etc/nixos/user/tquilla";
