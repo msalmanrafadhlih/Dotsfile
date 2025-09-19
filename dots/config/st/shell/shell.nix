@@ -2,6 +2,7 @@ with import <nixpkgs> { };
 mkShell {
   buildInputs = [
     gcc
+    imlib2
     gnumake
     freetype
     pkg-config

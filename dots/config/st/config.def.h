@@ -107,6 +107,12 @@ unsigned int tabspaces = 4;
 float alpha = 0.5;
 
 /*
+ * Patch selectionbg-alpha:
+ * bikin background seleksi juga transparan mengikuti alpha di atas.
+ */
+double selectionbg_alpha = 1.0;
+
+/*
  * drag and drop escape characters
  *
  * this will add a '\' before any characters specified in the string.
@@ -180,12 +186,6 @@ static unsigned int defaultrcs = 3;
 unsigned int selectionfg = 0;  /* warna teks saat seleksi */
 unsigned int selectionbg = 1;  /* warna background seleksi */
 
-
-/*
- * Patch selectionbg-alpha:
- * bikin background seleksi juga transparan mengikuti alpha di atas.
- */
-double selectionbg_alpha = 0.6;
 
 /*
  * Colors used, when the specific fg == defaultfg. So in reverse mode this
