@@ -41,6 +41,7 @@
 			FONTS = "nano /etc/nixos/hosts/fonts.nix";
 			SYSINSTALL = "nano  /etc/nixos/hosts/system-packages.nix";
 			SERVICE = "nano  /etc/nixos/hosts/services.nix";
+			PROGRAMS = "nano  /etc/nixos/hosts/programs.nix";
 
 			## GIT INTEGRATION
 			GIT = "git add . && git commit -m";

@@ -32,6 +32,7 @@
       sound-theme-freedesktop
       pamixer
       xdotool
+      xarchiver
       acpi
       mpc
       dunst
