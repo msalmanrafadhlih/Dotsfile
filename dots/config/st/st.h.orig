@@ -70,6 +70,7 @@ enum underline_style {
 	UNDERLINE_DASHED = 5,
 };
 
+int borderpx;
 typedef unsigned char uchar;
 typedef unsigned int uint;
 typedef unsigned long ulong;

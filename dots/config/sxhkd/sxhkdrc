@@ -56,6 +56,7 @@ super + {1-9,0}
 alt + {h,u}
 	source ~/.local/bin/{hide,show}-polybar.sh
 
+
 # =================================================== NODES
 # ========================================== NAVIGATE NODES
 # ---------------------------------------------------------  Move focused Node to spesific workspace

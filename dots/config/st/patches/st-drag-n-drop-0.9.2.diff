@@ -176,9 +176,8 @@ index d73152b..1c4b9aa 100644
 +		t = strtok(NULL, "\n\r");
 +	}
 +
-+	#xsetsel(pastedata);
-+	#selpaste(0);
-+	ttywrite(pastedata, strlen(pastedata), 1);
++	xsetsel(pastedata);
++	selpaste(0);
 +}
 +
  void

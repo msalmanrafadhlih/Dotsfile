@@ -14,6 +14,7 @@
 		    export HISTFILESIZE=10000
 		    export HISTCONTROL=ignoredups:erasedups
 		    export PATH="$HOME/.local/bin:$PATH"
+		    export PROMPT_COMMAND='echo -ne "\e]7;file://''${PWD}\a"'
 		    shopt -s histappend
 			shopt -s autocd
 	    	shopt -s cdspell
@@ -88,8 +89,9 @@
 			NSHELL = "nix-shell";
 			PATCH = "patch -p1 <";
 			CONF = "cd /etc/nixos/dots/config/st  && nano config.def.h";
-			CONFSAVE = "cp config.def.h config.h";
-			MAKE = "make clean && make && make install PREFIX=$HOME/.config/st";
+			CONFSAVE = "mv config.h config.h.bak && cp config.def.h config.h";
+			CONFDEL = "cp config.h.bak config.def.h && mv config.h.bak config.h";
+			MAKE = "make clean && make && make install PREFIX=$HOME/.local";
 						  
 			##  OTHER
 			SAVE = "sudo nixos-rebuild switch";

@@ -7,7 +7,7 @@
 bspc config top_padding 0
 bspc config bottom_padding 0
 
-pkill polybar
+polybar-msg cmd hide
       '';
   };
 }

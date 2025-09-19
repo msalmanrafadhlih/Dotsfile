@@ -21,6 +21,7 @@
  
       killall
       unzip
+      imlib2
       xwallpaper
       xorg.xinit
       xorg.xsetroot
