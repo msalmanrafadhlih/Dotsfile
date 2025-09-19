@@ -62,6 +62,7 @@
   	./patches.nix
   	./hide-polybar.nix
   	./show-polybar.nix
+  	./tmux.nix
    ];
 	
 }

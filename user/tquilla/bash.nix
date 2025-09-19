@@ -9,12 +9,13 @@
         	PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; 
         	PS1='\[\e[92m\]\u\[\e[0m\] \[\e[38;5;244;2;5m\]\s\[\e[0m\]in \[\e[93m\]\w\[\e[0m\] \$ ~ \[\e[91m\]''${PS1_CMD1}\n\[\e[0m\]'
 
+			[ -z "$TMUX" ] && tmux
 			
 			export HISTSIZE=5000
 		    export HISTFILESIZE=10000
 		    export HISTCONTROL=ignoredups:erasedups
 		    export PATH="$HOME/.local/bin:$PATH"
-		    export PROMPT_COMMAND='echo -ne "\e]7;file://''${PWD}\a"'
+#		    export PROMPT_COMMAND='echo -ne "\e]7;file://''${PWD}\a"'
 		    shopt -s histappend
 			shopt -s autocd
 	    	shopt -s cdspell
