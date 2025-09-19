@@ -7,6 +7,7 @@
 	vivaldi
 	brave
 	neovim
+	tmux
 	
 	nixpkgs-fmt
 	nodejs

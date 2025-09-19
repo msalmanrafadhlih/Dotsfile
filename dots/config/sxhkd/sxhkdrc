@@ -33,7 +33,7 @@ super + m
     st -c floating_rmpc -e rmpc
 # ---------------------------------------------------------  AstroNvim
 super + n
-    nvim
+    st -e nvim
 # ---------------------------------------------------------  Terminal
 super + p
 	st -c AlacrittyPinned

@@ -16,6 +16,7 @@
 		picom = "picom";
 		st = "st";
 		nvim = "nvim";
+		tmux = "conf";
 		
   	  	"systemd/user/battery-notif.service" = "systemd/user/battery-notif.service";
   	  	"systemd/user/battery-notif.timer" = "systemd/user/battery-notif.timer";
@@ -62,7 +63,6 @@
   	./patches.nix
   	./hide-polybar.nix
   	./show-polybar.nix
-  	./tmux.nix
    ];
 	
 }
