@@ -1,3 +1,4 @@
+
 /* See LICENSE file for copyright and license details. */
 
 /*
@@ -123,7 +124,7 @@ char *xdndescchar = " !\"#$&'()*;<>?[\\]^`{|}~";
 static const char *palettes[][16] = {
     /* Palette 0 */
     {
-        "#000000", "#ffffff", "#00ff00", "#ffff00",
+        "#141414", "#ffffff", "#00ff00", "#ffff00",
         "#87afff", "#ff00ff", "#00ffff", "#ffffff",
         "#555555", "#ff5555", "#55ff55", "#ffff55",
         "#5f87ff", "#ff55ff", "#55ffff", "#bbbbbb"

@@ -1,7 +1,7 @@
 { libs, program, pkgs, ...  }:
 
 {
-  program.tmux = {
+  programs.tmux = {
 	enable = true;
   };
 

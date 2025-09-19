@@ -65,6 +65,7 @@
 			BRANCH = "nano /etc/nixos/user/tquilla/git-prompt.nix";
 			TAR = "nano /etc/nixos/user/tquilla/tar.nix";
 			RMPC = "nano /etc/nixos/user/tquilla/rmpc.nix";
+			TMUX = "nano /etc/nixos/user/tquilla/tmux.nix";
 			
 			##  USER CONFIGURATIONS {SAVE}
 			BASHSAVE = "sudo chmod +x .bashrc";
