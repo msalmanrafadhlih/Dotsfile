@@ -17,7 +17,7 @@
 	    eval "$(dbus-launch --sh-syntax)"
 	    export DBUS_SESSION_BUS_ADDRESS
 	    
-		export XCURSOR_THEME=Doro
+		export XCURSOR_THEME=Kafka
 		export XCURSOR_SIZE=14
 		xsetroot -cursor_name left_ptr
 

@@ -8,7 +8,6 @@
       sxhkd
       picom
       dmenu
-      xfce.thunar
  
       nodePackages.prettier
       alacritty
