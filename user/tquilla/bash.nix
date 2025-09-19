@@ -9,7 +9,7 @@
         	PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; 
         	PS1='\[\e[92m\]\u\[\e[0m\] \[\e[38;5;244;2;5m\]\s\[\e[0m\]in \[\e[93m\]\w\[\e[0m\] \$ ~ \[\e[91m\]''${PS1_CMD1}\n\[\e[0m\]'
 
-			[ -z "$TMUX" ] && tmux
+#			[ -z "$TMUX" ] && tmux
 			
 			export HISTSIZE=5000
 		    export HISTFILESIZE=10000
@@ -25,7 +25,6 @@
         shellAliases = {
         
 			test = "I use NixOS btw";	 
-			PING = "ping google.com";
 			NIXOS = "tree /etc/nixos && cd /etc/nixos";
 			RUNNING = "systemctl --user list-units --state=running";
 			SYSRUNNING = "systemctl list-units --state=running";
@@ -38,6 +37,7 @@
 			HNIX = "bat /etc/nixos/hosts/hardware-configuration.nix";
 			FLAKE = "nano /etc/nixos/flake.nix";
 			LOCK = "bat /etc/nixos/flake.lock";
+
 			FONTS = "nano /etc/nixos/hosts/fonts.nix";
 			SYSINSTALL = "nano  /etc/nixos/hosts/system-packages.nix";
 			SERVICE = "nano  /etc/nixos/hosts/services.nix";
@@ -65,7 +65,6 @@
 			BRANCH = "nano /etc/nixos/user/tquilla/git-prompt.nix";
 			TAR = "nano /etc/nixos/user/tquilla/tar.nix";
 			RMPC = "nano /etc/nixos/user/tquilla/rmpc.nix";
-			TMUX = "nano /etc/nixos/user/tquilla/tmux.nix";
 			
 			##  USER CONFIGURATIONS {SAVE}
 			BASHSAVE = "sudo chmod +x .bashrc";
@@ -77,6 +76,7 @@
 			MODULE = "tree /etc/nixos/dots/config/polybar && cd /etc/nixos/dots/config/polybar/modules";			
 			SCRIPT =  "cd /etc/nixos/dots/config/polybar/script && tree";
 
+			TMUX = "nano /etc/nixos/dots/config/tmux/tmux.conf";
 			ER = "nano /etc/nixos/dots/config/bspwm/src/ExternalRules";
 			BSPWM = "nano /etc/nixos/dots/config/bspwm/bspwmrc";
 			SXHKD = "nano /etc/nixos/dots/config/sxhkd/sxhkdrc";
@@ -94,6 +94,7 @@
 			CONFSAVE = "mv config.h config.h.bak && cp config.def.h config.h";
 			CONFDEL = "cp config.h.bak config.def.h && mv config.h.bak config.h";
 			MAKE = "make clean && make && make install PREFIX=$HOME/.local";
+			TMUXSAVE = "tmux source-file ~/.config/tmux/tmux.conf";
 						  
 			##  OTHER
 			SAVE = "sudo nixos-rebuild switch";

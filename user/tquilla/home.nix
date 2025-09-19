@@ -16,7 +16,7 @@
 		picom = "picom";
 		st = "st";
 		nvim = "nvim";
-		tmux = "conf";
+		tmux = "tmux";
 		
   	  	"systemd/user/battery-notif.service" = "systemd/user/battery-notif.service";
   	  	"systemd/user/battery-notif.timer" = "systemd/user/battery-notif.timer";
