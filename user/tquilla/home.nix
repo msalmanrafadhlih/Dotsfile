@@ -62,6 +62,7 @@
   	./hide-polybar.nix
   	./show-polybar.nix
   	./background.nix
+  	./opencam.nix
    ];
 	
 }
