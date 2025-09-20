@@ -13,7 +13,6 @@
 	nodejs
 	gcc
 
-
 	ncmpcpp
   	font-manager
   	yt-dlp

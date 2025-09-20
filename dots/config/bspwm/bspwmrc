@@ -60,7 +60,8 @@ sleep 0.1
 picom &
 
 # Autostart background dengan slideshow 10 menit
-feh --bg-scale --randomize --slideshow-delay 5 ~/Pictures/Wallpaper/* &
+#feh --bg-scale --randomize --slideshow-delay 5 ~/Pictures/Wallpaper/*
+~/.local/bin/bg-slideshow
 
 # sxhkd
 pgrep -x sxhkd > /dev/null || sxhkd &
