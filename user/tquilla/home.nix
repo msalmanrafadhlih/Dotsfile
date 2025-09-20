@@ -58,11 +58,10 @@
   	./mpd.nix
   	./git-prompt.nix
   	./tar.nix
-  	./rmpc.nix
   	./xyz.nix
-  	./patches.nix
   	./hide-polybar.nix
   	./show-polybar.nix
+  	./background.nix
    ];
 	
 }

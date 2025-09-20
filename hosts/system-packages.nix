@@ -10,7 +10,6 @@
       dmenu
  
       nodePackages.prettier
-      alacritty
       feh
       wget
       btop
@@ -21,7 +20,6 @@
       killall
       unzip
       imlib2
-      xwallpaper
       xorg.xinit
       xorg.xsetroot
       xorg.xrandr
@@ -33,6 +31,7 @@
       pamixer
       xdotool
       xarchiver
+      mpv
       acpi
       mpc
       dunst

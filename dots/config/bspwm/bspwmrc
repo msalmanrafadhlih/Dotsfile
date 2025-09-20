@@ -49,17 +49,18 @@ bspc config removal_adjustment        	true
 
 bspc config external_rules_command "${HOME}"/.config/bspwm/src/ExternalRules
 bspc rule -a floating_rmpc state=floating rectangle=750x350+3+30
-bspc rule -a ChatAi state=floating rectangle=470x750+1440+296
+bspc rule -a ChatAi state=floating rectangle=470x665+1445+385
 bspc rule -a AlacrittyDefault state=floating sticky=off rectangle=750x665+3+385
-bspc rule -a AlacrittyPinned state=floating sticky=on rectangle=750x360+585+1
+bspc rule -a AlacrittyPinned state=floating sticky=on rectangle=750x350+1165+30
+bspc rule -a mpv state=floating sticky=on rectangle=350x350+760+385
 
 # picom
 killall picom
 sleep 0.1
 picom &
 
-# Autostart apps
-xwallpaper --zoom ~/Pictures/Wallpaper/wallpaper.jpg
+# Autostart background dengan slideshow 10 menit
+feh --bg-scale --randomize --slideshow-delay 5 ~/Pictures/Wallpaper/* &
 
 # sxhkd
 pgrep -x sxhkd > /dev/null || sxhkd &
@@ -69,8 +70,5 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 # dunst untuk widget notifikasi
 pgrep -x dunst > /dev/null || dunst &
-
-# Battery Info
-~/.local/bin/battery.sh
 
 chmod +x ~/.local/bin/*.sh

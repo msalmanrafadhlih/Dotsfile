@@ -33,7 +33,7 @@ super + f
 	thunar
 # ---------------------------------------------------------  Rmpc	
 super + m
-    st -c floating_rmpc -e rmpc
+    st -c floating_rmpc -e ncmpcpp
 # ---------------------------------------------------------  AstroNvim
 super + n
     st -e nvim

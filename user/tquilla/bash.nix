@@ -56,7 +56,6 @@
 			INSTALL = "nano /etc/nixos/user/tquilla/packages.nix";
 			BAT = "nano /etc/nixos/user/tquilla/bat.nix";
 			XSESSION = "nano /etc/nixos/user/tquilla/xsession.nix";
-			MEDIA = "nano /etc/nixos/user/tquilla/media.nix";
 			PAD = "nano /etc/nixos/user/tquilla/toggle_touchpad.nix";
 			VOL = "nano /etc/nixos/user/tquilla/volume.nix";
 			BRIGHT = "nano /etc/nixos/user/tquilla/brightness.nix";
@@ -65,7 +64,7 @@
 			MPD = "nano /etc/nixos/user/tquilla/mpd.nix";
 			BRANCH = "nano /etc/nixos/user/tquilla/git-prompt.nix";
 			TAR = "nano /etc/nixos/user/tquilla/tar.nix";
-			RMPC = "nano /etc/nixos/user/tquilla/rmpc.nix";
+			BG = "nano /etc/nixos/user/tquilla/background.nix";
 			
 			##  USER CONFIGURATIONS {SAVE}
 			BASHSAVE = "sudo chmod +x .bashrc";

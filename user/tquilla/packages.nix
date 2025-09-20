@@ -13,7 +13,8 @@
 	nodejs
 	gcc
 
-	rmpc
+
+	ncmpcpp
   	font-manager
   	yt-dlp
   ])  ++ (with nixpkgs-unstable.legacyPackages.x86_64-linux; [
