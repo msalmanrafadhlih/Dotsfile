@@ -125,8 +125,8 @@ static const char *palettes[][16] = {
     /* Palette Default*/
     { /* Alt + F1  */
         "#141414", "red3", "green3", "yellow3",
-        "#6a9955", "magenta3", "cyan3", "#f5f5f5",
-        "gray50", "red", "green", "yellow",
+        "#9cdcfe", "magenta3", "cyan3", "#f5f5f5",
+        "gray50", "red", "#32cd32", "yellow",
         "#5c5cff", "magenta", "cyan", "white"
     },
 
