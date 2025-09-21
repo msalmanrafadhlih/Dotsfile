@@ -1,3 +1,4 @@
+
 {
   description = "NixOs from Binary";
   inputs = {
@@ -27,6 +28,5 @@
 		];
 	};
   };
-
   
 }

@@ -7,7 +7,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "jetBrainsMono Nerd Font:pixelsize=12:antialias=true:autohint=true";
-static int borderpx = 15;
+static int borderpx = 10;
 /* How to align the content in the window when the size of the terminal
  * doesn't perfectly match the size of the window. The values are percentages.
  * 50 means center, 0 means flush left/top, 100 means flush right/bottom.
@@ -122,16 +122,24 @@ char *xdndescchar = " !\"#$&'()*;<>?[\\]^`{|}~";
 
 /* Terminal colors (16 used in escape sequence) */
 static const char *palettes[][16] = {
-    /* Palette 0 */
-    {
-        "#141414", "#ffffff", "#00ff00", "#ffff00",
-        "#87afff", "#ff00ff", "#00ffff", "#ffffff",
-        "#555555", "#ff5555", "#55ff55", "#ffff55",
-        "#5f87ff", "#ff55ff", "#55ffff", "#bbbbbb"
+    /* Palette Default*/
+    { /* Alt + F1  */
+        "#141414", "red3", "green3", "yellow3",
+        "#6a9955", "magenta3", "cyan3", "#f5f5f5",
+        "gray50", "red", "green", "yellow",
+        "#5c5cff", "magenta", "cyan", "white"
+    },
+
+    /* Palette Draculla scheme */
+    { /* Alt + F2  */
+        "#282A36", "#ff5555", "#50fa7b", "#f1fa8c",
+        "#bd93f9", "#ff79c6", "#8be9fd", "#f8f8f2",
+        "#44475a", "#ff5555", "#50fa7b", "#f1fa8c",
+        "#bd93f9", "#ff79c6", "#8be9fd", "#ffffff"
     },
 
     /* Palette 1 */
-    {
+    { /* Alt + F3  */
         "#1c1c1c", "#af0000", "#5faf00", "#d7af5f",
         "#5fafd7", "#af5fd7", "#5fd7af", "#e4e4e4",
         "#555555", "#ff5f5f", "#5fff5f", "#ffff5f",
@@ -139,7 +147,7 @@ static const char *palettes[][16] = {
     },
 
     /* Palette 2 */
-    {
+    { /* Alt + F4  */
         "black",   "red3",  "green3", "yellow3",
         "blue2",   "white", "cyan3",  "gray90",
         "gray50",  "red",   "green",  "yellow",
@@ -147,7 +155,7 @@ static const char *palettes[][16] = {
     },
 
     /* Palette 3 */
-    {
+    { /* Alt + F5  */
         "#223", "#900", "#080", "#fe7",
         "#35e", "#fc5", "#18e", "#aaa",
         "#666", "#f25", "#0b0", "#ff6",
@@ -155,7 +163,7 @@ static const char *palettes[][16] = {
     },
 
     /* Palette 4 */
-    {
+    { /* Alt + F6  */
         "#eaeaea", "#b7141f", "#457b24", "#fc7b08",
         "#134eb2", "#560088", "#0e717c", "#777777",
         "#424242", "#e83b3f", "#7aba3a", "#fd8e09",
@@ -163,7 +171,7 @@ static const char *palettes[][16] = {
     },
 
     /* Palette 5 */
-    {
+    { /* Alt + F7  */
         "#20242d", "#b04b57", "#87b379", "#e5c179",
         "#7d8fa4", "#a47996", "#85a7a5", "#b3b8c3",
         "#000000", "#b04b57", "#87b379", "#e5c179",
@@ -179,13 +187,13 @@ static const char **colorname;
  * foreground, background, cursor
  */
 unsigned int defaultbg = 0;
-unsigned int defaultfg = 1;
-unsigned int defaultcs = 2;
-static unsigned int defaultrcs = 3;
+unsigned int defaultfg = 7;
+unsigned int defaultcs = 7;
+static unsigned int defaultrcs = 0;
 
 /* selection colors */
 unsigned int selectionfg = 0;  /* warna teks saat seleksi */
-unsigned int selectionbg = 1;  /* warna background seleksi */
+unsigned int selectionbg = 8;  /* warna background seleksi */
 
 
 /*
@@ -193,8 +201,8 @@ unsigned int selectionbg = 1;  /* warna background seleksi */
  * will reverse too. Another logic would only make the simple feature too
  * complex.
  */
-unsigned int defaultitalic = 7;
-unsigned int defaultunderline = 7;
+unsigned int defaultitalic = 6;
+unsigned int defaultunderline = 5;
 
 /*
  * Default shape of cursor

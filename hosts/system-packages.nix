@@ -10,7 +10,6 @@
       dmenu
  
       nodePackages.prettier
-      feh
       wget
       btop
       git
@@ -28,7 +27,6 @@
       brightnessctl
       libcanberra-gtk3
       sound-theme-freedesktop
-      ffplay
       pamixer
       xdotool
       xarchiver

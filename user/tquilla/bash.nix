@@ -65,6 +65,7 @@
 			BRANCH = "nano /etc/nixos/user/tquilla/git-prompt.nix";
 			TAR = "nano /etc/nixos/user/tquilla/tar.nix";
 			BG = "nano /etc/nixos/user/tquilla/background.nix";
+			OPENCAM = "nano /etc/nixos/user/tquilla/opencam.nix";
 			
 			##  USER CONFIGURATIONS {SAVE}
 			BASHSAVE = "sudo chmod +x .bashrc";
@@ -114,6 +115,7 @@
 			PKGLIST = "nix-store --query --requisites /run/current-system | cut -d- -f2- | sort | uniq";
 
 			## productivities
+			CAM = "~/.local/bin/opencam";
 			DMUSIC = "yt-dlp --trim-filenames 80 --restrict-filenames -x --audio-format mp3 -S 'abr,codec' -o '~/.local/share/mpd/Musics/%(playlist|NA)s/%(title)s [%(id)s].%(ext)s'";
 			DVIDEO = "yt-dlp --trim-filenames 80 --restrict-filenames -S 'res:720,codec,br,fps' -f 'bv*+ba/best' -o '~/Videos/%(playlist|NA)s/%(title)s [%(id)s].%(ext)s'";
 			DTAR = "~/.local/bin/tar.sh";

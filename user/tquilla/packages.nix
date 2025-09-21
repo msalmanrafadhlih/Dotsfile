@@ -16,6 +16,7 @@
 	ncmpcpp
   	font-manager
   	yt-dlp
+  	jellyfin-ffmpeg
   ])  ++ (with nixpkgs-unstable.legacyPackages.x86_64-linux; [
   ]);
 }

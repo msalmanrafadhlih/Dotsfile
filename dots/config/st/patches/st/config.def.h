@@ -1,4 +1,3 @@
-
 /* See LICENSE file for copyright and license details. */
 
 /*
@@ -6,14 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "jetBrainsMono Nerd Font:pixelsize=12:antialias=true:autohint=true";
-static int borderpx = 10;
-/* How to align the content in the window when the size of the terminal
- * doesn't perfectly match the size of the window. The values are percentages.
- * 50 means center, 0 means flush left/top, 100 means flush right/bottom.
- */
-static int anysize_halign = 50;
-static int anysize_valign = 50;
+static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static int borderpx = 2;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -30,15 +23,11 @@ char *scroll = NULL;
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
 /* identification sequence returned in DA and DECID */
-/* By default, use the same one as kitty. */
-char *vtiden = "\033[?62c";
+char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
 static float cwscale = 1.0;
 static float chscale = 1.0;
-/* Character rendering offsets in pixels */
-static short cxoffset = 0;
-static short cyoffset = 0;
 
 /*
  * word delimiter string
@@ -102,107 +91,48 @@ char *termname = "st-256color";
  *
  *	stty tabs
  */
-unsigned int tabspaces = 4;
+unsigned int tabspaces = 8;
 
-/* bg opacity */
-float alpha = 0.5;
+/* Terminal colors (16 first used in escape sequence) */
+static const char *colorname[] = {
+	/* 8 normal colors */
+	"black",
+	"red3",
+	"green3",
+	"yellow3",
+	"blue2",
+	"magenta3",
+	"cyan3",
+	"gray90",
 
-/*
- * Patch selectionbg-alpha:
- * bikin background seleksi juga transparan mengikuti alpha di atas.
- */
-double selectionbg_alpha = 1.0;
+	/* 8 bright colors */
+	"gray50",
+	"red",
+	"green",
+	"yellow",
+	"#5c5cff",
+	"magenta",
+	"cyan",
+	"white",
 
-/*
- * drag and drop escape characters
- *
- * this will add a '\' before any characters specified in the string.
- */
-char *xdndescchar = " !\"#$&'()*;<>?[\\]^`{|}~";
+	[255] = 0,
 
-/* Terminal colors (16 used in escape sequence) */
-static const char *palettes[][16] = {
-    /* Palette Default*/
-    { /* Alt + F1  */
-        "#141414", "red3", "green3", "yellow3",
-        "#6a9955", "magenta3", "cyan3", "#f5f5f5",
-        "gray50", "red", "green", "yellow",
-        "#5c5cff", "magenta", "cyan", "white"
-    },
-
-    /* Palette Draculla scheme */
-    { /* Alt + F2  */
-        "#282A36", "#ff5555", "#50fa7b", "#f1fa8c",
-        "#bd93f9", "#ff79c6", "#8be9fd", "#f8f8f2",
-        "#44475a", "#ff5555", "#50fa7b", "#f1fa8c",
-        "#bd93f9", "#ff79c6", "#8be9fd", "#ffffff"
-    },
-
-    /* Palette 1 */
-    { /* Alt + F3  */
-        "#1c1c1c", "#af0000", "#5faf00", "#d7af5f",
-        "#5fafd7", "#af5fd7", "#5fd7af", "#e4e4e4",
-        "#555555", "#ff5f5f", "#5fff5f", "#ffff5f",
-        "#5f5fff", "#ff5fff", "#5fffff", "#ffffff"
-    },
-
-    /* Palette 2 */
-    { /* Alt + F4  */
-        "black",   "red3",  "green3", "yellow3",
-        "blue2",   "white", "cyan3",  "gray90",
-        "gray50",  "red",   "green",  "yellow",
-        "#5c5cff", "magenta", "cyan", "white"
-    },
-
-    /* Palette 3 */
-    { /* Alt + F5  */
-        "#223", "#900", "#080", "#fe7",
-        "#35e", "#fc5", "#18e", "#aaa",
-        "#666", "#f25", "#0b0", "#ff6",
-        "#46f", "#d6a", "#6bf", "#ddd"
-    },
-
-    /* Palette 4 */
-    { /* Alt + F6  */
-        "#eaeaea", "#b7141f", "#457b24", "#fc7b08",
-        "#134eb2", "#560088", "#0e717c", "#777777",
-        "#424242", "#e83b3f", "#7aba3a", "#fd8e09",
-        "#54a4f3", "#aa4dbc", "#26bbd1", "#aaaaaa"
-    },
-
-    /* Palette 5 */
-    { /* Alt + F7  */
-        "#20242d", "#b04b57", "#87b379", "#e5c179",
-        "#7d8fa4", "#a47996", "#85a7a5", "#b3b8c3",
-        "#000000", "#b04b57", "#87b379", "#e5c179",
-        "#7d8fa4", "#a47996", "#85a7a5", "#ffffff"
-    }
+	/* more colors can be added after 255 to use with DefaultXX */
+	"#cccccc",
+	"#555555",
+	"gray90", /* default foreground colour */
+	"black", /* default background colour */
 };
 
 
-static const char **colorname;
-
 /*
  * Default colors (colorname index)
- * foreground, background, cursor
+ * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultbg = 0;
-unsigned int defaultfg = 7;
-unsigned int defaultcs = 7;
-static unsigned int defaultrcs = 0;
-
-/* selection colors */
-unsigned int selectionfg = 0;  /* warna teks saat seleksi */
-unsigned int selectionbg = 8;  /* warna background seleksi */
-
-
-/*
- * Colors used, when the specific fg == defaultfg. So in reverse mode this
- * will reverse too. Another logic would only make the simple feature too
- * complex.
- */
-unsigned int defaultitalic = 6;
-unsigned int defaultunderline = 5;
+unsigned int defaultfg = 258;
+unsigned int defaultbg = 259;
+unsigned int defaultcs = 256;
+static unsigned int defaultrcs = 257;
 
 /*
  * Default shape of cursor
@@ -221,10 +151,11 @@ static unsigned int cols = 80;
 static unsigned int rows = 24;
 
 /*
- * Default shape of the mouse cursor
+ * Default colour and shape of the mouse cursor
  */
-
-static char* mouseshape = "left_ptr";
+static unsigned int mouseshape = XC_xterm;
+static unsigned int mousefg = 7;
+static unsigned int mousebg = 0;
 
 /*
  * Color used to display font attributes when fontconfig selected a font which
@@ -233,37 +164,11 @@ static char* mouseshape = "left_ptr";
 static unsigned int defaultattr = 11;
 
 /*
- * Graphics configuration
- */
-
-/// The template for the cache directory.
-const char graphics_cache_dir_template[] = "/tmp/st-images-XXXXXX";
-/// The max size of a single image file, in bytes.
-unsigned graphics_max_single_image_file_size = 20 * 1024 * 1024;
-/// The max size of the cache, in bytes.
-unsigned graphics_total_file_cache_size = 300 * 1024 * 1024;
-/// The max ram size of an image or placement, in bytes.
-unsigned graphics_max_single_image_ram_size = 100 * 1024 * 1024;
-/// The max total size of all images loaded into RAM.
-unsigned graphics_max_total_ram_size = 300 * 1024 * 1024;
-/// The max total number of image placements and images.
-unsigned graphics_max_total_placements = 4096;
-/// The ratio by which limits can be exceeded. This is to reduce the frequency
-/// of image removal.
-double graphics_excess_tolerance_ratio = 0.05;
-/// The minimum delay between redraws caused by animations, in milliseconds.
-unsigned graphics_animation_min_delay = 20;
-
-/*
  * Force mouse select/shortcuts while mask is active (when MODE_MOUSE is set).
  * Note that if you want to use ShiftMask with selmasks, set this to an other
  * modifier, set to 0 to not use it.
  */
 static uint forcemousemod = ShiftMask;
-
-/* Internal keyboard shortcuts. */
-#define MODKEY Mod1Mask
-#define TERMMOD (ControlMask|ShiftMask)
 
 /*
  * Internal mouse shortcuts.
@@ -271,15 +176,16 @@ static uint forcemousemod = ShiftMask;
  */
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
-	{ TERMMOD,              Button3, previewimage,   {.s = "feh"} },
-	{ TERMMOD,              Button2, showimageinfo,  {},            1 },
-	{ ControlMask,          Button2, selopen,        {.i = 0},      1 },
 	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
-	{ ControlMask,          Button4, ttysend,        {.s = "\033[5;2~"} },
+	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
-	{ ControlMask,          Button5, ttysend,        {.s = "\033[6;2~"} },
+	{ ShiftMask,            Button5, ttysend,        {.s = "\033[6;2~"} },
 	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
 };
+
+/* Internal keyboard shortcuts. */
+#define MODKEY Mod1Mask
+#define TERMMOD (ControlMask|ShiftMask)
 
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
@@ -295,20 +201,6 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
-	{ TERMMOD,              XK_X,           invert,         { }       },
-    { TERMMOD,              XK_F1,          togglegrdebug,  {.i =  0} },
-    { TERMMOD,              XK_F6,          dumpgrstate,    {.i =  0} },
-    { TERMMOD,              XK_F7,          unloadimages,   {.i =  0} },
-    { TERMMOD,              XK_F8,          toggleimages,   {.i =  0} },
-    { MODKEY|ShiftMask,     XK_F1,          setpalette,     {.i =  0} },
-    { MODKEY|ShiftMask,     XK_F2,          setpalette,     {.i =  1} },
-    { MODKEY|ShiftMask,     XK_F3,          setpalette,     {.i =  2} },
-    { MODKEY|ShiftMask,     XK_F4,          setpalette,     {.i =  3} },
-    { MODKEY|ShiftMask,     XK_F5,          setpalette,     {.i =  4} },
-    { MODKEY|ShiftMask,     XK_F6,          setpalette,     {.i =  5} },
-    { MODKEY|ShiftMask,     XK_F7,          setpalette,     {.i =  6} },
-    { MODKEY|ShiftMask,     XK_F8,          setpalette,     {.i =  7} },
-    { MODKEY|ShiftMask,     XK_F9,          setpalette,     {.i =  8} },
 };
 
 /*
@@ -350,7 +242,6 @@ static uint ignoremod = Mod2Mask|XK_SWITCH_MOD;
  */
 static Key key[] = {
 	/* keysym           mask            string      appkey appcursor */
-	{ XK_KP_Home,       ControlMask,    "\033[1;5H",     0,    0},
 	{ XK_KP_Home,       ShiftMask,      "\033[2J",       0,   -1},
 	{ XK_KP_Home,       ShiftMask,      "\033[1;2H",     0,   +1},
 	{ XK_KP_Home,       XK_ANY_MOD,     "\033[H",        0,   -1},
@@ -367,7 +258,6 @@ static Key key[] = {
 	{ XK_KP_Right,      XK_ANY_MOD,     "\033Ov",       +1,    0},
 	{ XK_KP_Right,      XK_ANY_MOD,     "\033[C",        0,   -1},
 	{ XK_KP_Right,      XK_ANY_MOD,     "\033OC",        0,   +1},
-	{ XK_KP_Prior,      Mod1Mask,       "\033[5;3~",     0,    0},
 	{ XK_KP_Prior,      ShiftMask,      "\033[5;2~",     0,    0},
 	{ XK_KP_Prior,      XK_ANY_MOD,     "\033[5~",       0,    0},
 	{ XK_KP_Begin,      XK_ANY_MOD,     "\033[E",        0,    0},
@@ -376,22 +266,19 @@ static Key key[] = {
 	{ XK_KP_End,        ShiftMask,      "\033[K",       -1,    0},
 	{ XK_KP_End,        ShiftMask,      "\033[1;2F",    +1,    0},
 	{ XK_KP_End,        XK_ANY_MOD,     "\033[4~",       0,    0},
-	{ XK_KP_Next,       Mod1Mask,       "\033[6;3~",     0,    0},
 	{ XK_KP_Next,       ShiftMask,      "\033[6;2~",     0,    0},
 	{ XK_KP_Next,       XK_ANY_MOD,     "\033[6~",       0,    0},
 	{ XK_KP_Insert,     ShiftMask,      "\033[2;2~",    +1,    0},
 	{ XK_KP_Insert,     ShiftMask,      "\033[4l",      -1,    0},
-	{ XK_KP_Insert,     Mod1Mask,       "\033[2;3~",     0,    0},
 	{ XK_KP_Insert,     ControlMask,    "\033[L",       -1,    0},
 	{ XK_KP_Insert,     ControlMask,    "\033[2;5~",    +1,    0},
 	{ XK_KP_Insert,     XK_ANY_MOD,     "\033[4h",      -1,    0},
 	{ XK_KP_Insert,     XK_ANY_MOD,     "\033[2~",      +1,    0},
-	{ XK_KP_Delete,     ControlMask,    "\033[3;5~",    -1,    0},
+	{ XK_KP_Delete,     ControlMask,    "\033[M",       -1,    0},
 	{ XK_KP_Delete,     ControlMask,    "\033[3;5~",    +1,    0},
-	{ XK_KP_Delete,     Mod1Mask,       "\033[3;3~",     0,    0},
 	{ XK_KP_Delete,     ShiftMask,      "\033[2K",      -1,    0},
 	{ XK_KP_Delete,     ShiftMask,      "\033[3;2~",    +1,    0},
-	{ XK_KP_Delete,     XK_ANY_MOD,     "\033[3~",      -1,    0},
+	{ XK_KP_Delete,     XK_ANY_MOD,     "\033[P",       -1,    0},
 	{ XK_KP_Delete,     XK_ANY_MOD,     "\033[3~",      +1,    0},
 	{ XK_KP_Multiply,   XK_ANY_MOD,     "\033Oj",       +2,    0},
 	{ XK_KP_Add,        XK_ANY_MOD,     "\033Ok",       +2,    0},
@@ -451,21 +338,18 @@ static Key key[] = {
 	{ XK_Return,        XK_ANY_MOD,     "\r",            0,    0},
 	{ XK_Insert,        ShiftMask,      "\033[4l",      -1,    0},
 	{ XK_Insert,        ShiftMask,      "\033[2;2~",    +1,    0},
-	{ XK_Insert,        Mod1Mask,       "\033[2;3~",     0,    0},
 	{ XK_Insert,        ControlMask,    "\033[L",       -1,    0},
 	{ XK_Insert,        ControlMask,    "\033[2;5~",    +1,    0},
 	{ XK_Insert,        XK_ANY_MOD,     "\033[4h",      -1,    0},
 	{ XK_Insert,        XK_ANY_MOD,     "\033[2~",      +1,    0},
-	{ XK_Delete,        ControlMask,    "\033[3;5~",    -1,    0},
+	{ XK_Delete,        ControlMask,    "\033[M",       -1,    0},
 	{ XK_Delete,        ControlMask,    "\033[3;5~",    +1,    0},
-	{ XK_Delete,        Mod1Mask,       "\033[3;3~",     0,    0},
 	{ XK_Delete,        ShiftMask,      "\033[2K",      -1,    0},
 	{ XK_Delete,        ShiftMask,      "\033[3;2~",    +1,    0},
-	{ XK_Delete,        XK_ANY_MOD,     "\033[3~",      -1,    0},
+	{ XK_Delete,        XK_ANY_MOD,     "\033[P",       -1,    0},
 	{ XK_Delete,        XK_ANY_MOD,     "\033[3~",      +1,    0},
 	{ XK_BackSpace,     XK_NO_MOD,      "\177",          0,    0},
 	{ XK_BackSpace,     Mod1Mask,       "\033\177",      0,    0},
-	{ XK_Home,          ControlMask,    "\033[1;5H",     0,    0},
 	{ XK_Home,          ShiftMask,      "\033[2J",       0,   -1},
 	{ XK_Home,          ShiftMask,      "\033[1;2H",     0,   +1},
 	{ XK_Home,          XK_ANY_MOD,     "\033[H",        0,   -1},
@@ -476,11 +360,9 @@ static Key key[] = {
 	{ XK_End,           ShiftMask,      "\033[1;2F",    +1,    0},
 	{ XK_End,           XK_ANY_MOD,     "\033[4~",       0,    0},
 	{ XK_Prior,         ControlMask,    "\033[5;5~",     0,    0},
-	{ XK_Prior,         Mod1Mask,       "\033[5;3~",     0,    0},
 	{ XK_Prior,         ShiftMask,      "\033[5;2~",     0,    0},
 	{ XK_Prior,         XK_ANY_MOD,     "\033[5~",       0,    0},
 	{ XK_Next,          ControlMask,    "\033[6;5~",     0,    0},
-	{ XK_Next,          Mod1Mask,       "\033[6;3~",     0,    0},
 	{ XK_Next,          ShiftMask,      "\033[6;2~",     0,    0},
 	{ XK_Next,          XK_ANY_MOD,     "\033[6~",       0,    0},
 	{ XK_F1,            XK_NO_MOD,      "\033OP" ,       0,    0},
@@ -590,14 +472,3 @@ static char ascii_printable[] =
 	" !\"#$%&'()*+,-./0123456789:;<=>?"
 	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
 	"`abcdefghijklmnopqrstuvwxyz{|}~";
-
-/*
- * Open urls starting with urlprefixes, contatining urlchars
- * by passing as ARG1 to urlhandler.
- */
-char* urlhandler = "xdg-open";
-char urlchars[] =
-	"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-	"abcdefghijklmnopqrstuvwxyz"
-	"0123456789-._~:/?#@!$&'*+,;=%";
-char* urlprefixes[] = {"http://", "https://", NULL};
