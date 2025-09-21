@@ -1,69 +1,52 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, ... }:
 
 let
   batteryScript = pkgs.writeScript "battery-notify.sh" ''
-      #!/bin/sh
+    #!${pkgs.bash}/bin/bash
+    export PATH=${pkgs.coreutils}/bin:${pkgs.dunst}/bin:${pkgs.libcanberra}/bin:${pkgs.gtk3}/bin:/run/wrappers/bin:$PATH
 
-      BAT="/sys/class/power_supply/BAT0"
-      
-      capacity=$(cat "$BAT/capacity")
-      status=$(cat "$BAT/status")
+    BAT="/sys/class/power_supply/BAT0"
+    CAPACITY=$(cat "$BAT/capacity")
+    STATUS=$(cat "$BAT/status")
 
-      # Tentukan ikon berdasarkan persen
-      if [ "$capacity" -le 10 ]; then
-        icon="$HOME/.local/share/icons/battery/battery_0.png"
-      elif [ "$capacity" -le 30 ]; then
-        icon="$HOME/.local/share/icons/battery/battery_20.png"
-      elif [ "$capacity" -le 50 ]; then
-        icon="$HOME/.local/share/icons/battery/battery_40.png"
-      elif [ "$capacity" -le 70 ]; then
-        icon="$HOME/.local/share/icons/battery/battery_60.png"
-      elif [ "$capacity" -le 90 ]; then
-        icon="$HOME/.local/share/icons/battery/battery_80.png"
-      else
-        icon="$HOME/.local/share/icons/battery/battery_full.png"
-      fi
+    ICON_LOW="/etc/nixos/dots/config/bspwm/src/assets/LowBat.png";
+    ICON_FULL="/etc/nixos/dots/config/bspwm/src/assets/FullBat.png";
+    SOUND_LOW="/etc/nixos/dots/config/dunst/sound/emotional-damage-meme.wav";
+    SOUND_FULL= "/etc/nixos/dots/config/dunst/sound/hidup-jokowi.wav";
 
-      # Kirim notifikasi
-      if [ "$status" = "Discharging" ] && [ "$capacity" -le 20 ]; then
-        dunstify -i "$icon" \
-          -h int:value:"$capacity" \
-          -r 2001 \
-          -u critical "Battery Low" "''${capacity}% remaining"
-        canberra-gtk-play -i battery-low -d "Battery Warning"
-      elif [ "$status" = "Full" ] || { [ "$status" = "Charging" ] && [ "$capacity" -ge 95 ]; }; then
-        dunstify -i "$icon" \
-          -h int:value:"$capacity" \
-          -r 2002 \
-          -u normal "Battery Full" "You can unplug the charger"
-        canberra-gtk-play -i complete -d "Battery Full"
-      fi
+    if [[ "$STATUS" == "Discharging" && "$CAPACITY" -le 20 ]]; then
+      dunstify -t 30000 -i "$ICON_LOW" \
+        -h int:value:"$CAPACITY" \
+        -r 2001 \
+        -u critical "Battery Low" "$CAPACITY % remaining"
+      canberra-gtk-play -f "/etc/nixos/dots/config/dunst/sound/emotional-damage-meme.wav" -V 8.0
+    elif [[ ("$STATUS" == "Full" || ( "$STATUS" == "Charging" && "$CAPACITY" -ge 95 )) ]]; then
+      dunstify -t 30000 -i "$ICON_FULL" \
+        -h int:value:"$CAPACITY" \
+        -r 2002 \
+        -u normal "Battery Full" "$CAPACITY % charged. You can unplug the charger."
+      canberra-gtk-play -f "/etc/nixos/dots/config/dunst/sound/hidup-jokowi.wav" -V 8.0
+    fi
   '';
 in
 {
   home.file.".local/bin/battery-notify.sh".source = batteryScript;
 
-  systemd.user = {
-  	services.battery-check = {
-    	Unit = {
-      		Description = "Battery check notifier";
-    	};
-    	Service = {
-      	ExecStart = "${batteryScript}";
-    	};
-  	};
+  systemd.user.services.battery-check = {
+    Unit.Description = "Battery check notifier";
+    Service = {
+      ExecStart = "${batteryScript}";
+      Environment = "PATH=${pkgs.coreutils}/bin:${pkgs.dunst}/bin:${pkgs.libcanberra}/bin:${pkgs.gtk3}/bin:/run/wrappers/bin:${pkgs.bash}/bin";
+    };
+  };
 
-	timers.battery-check = {
-	    Unit = {
-	      Description = "Run battery notifier every 1 minute";
-	    };
-	    Timer = {
-	      OnBootSec = "30s";
-	      OnUnitActiveSec = "1m";
-	    };
-	    Install = {
-	      WantedBy = [ "timers.target" ];
-	    };
-	};
+  systemd.user.timers.battery-check = {
+    Unit.Description = "Run battery notifier every 1 minute";
+    Timer = {
+      OnBootSec = "30s";
+      OnUnitActiveSec = "1m";
+      Unit = "battery-check.service";
+    };
+    Install.WantedBy = [ "timers.target" ];
   };
 }

@@ -15,9 +15,9 @@
 	mute=$(pamixer --get-mute)
 
 	if [ "$mute" = "true" ]; then
-	  dunstify -i audio-volume-muted-symbolic -r 1002 -u low "Volume" "Muted"
+	  dunstify -t 2000 -i audio-volume-muted-symbolic -r 1002 -u low "Volume" "Muted"
 	else
-	  dunstify -i audio-volume-high-symbolic \
+	  dunstify -t 2000 -i audio-volume-high-symbolic \
 	    -h int:value:"$vol" \
 	    -r 1002 \
 	    -u low "Volume" "''${vol}%"

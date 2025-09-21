@@ -52,7 +52,7 @@ bspc rule -a floating_rmpc state=floating rectangle=750x350+3+30
 bspc rule -a ChatAi state=floating rectangle=470x665+1445+385
 bspc rule -a AlacrittyDefault state=floating sticky=off rectangle=750x665+3+385
 bspc rule -a AlacrittyPinned state=floating sticky=on rectangle=750x350+1165+30
-bspc rule -a mpv state=floating sticky=on rectangle=350x350+760+385
+bspc rule -a mpv state=floating sticky=off rectangle=350x350+760+385
 
 # picom
 killall picom
@@ -60,7 +60,7 @@ sleep 0.1
 picom &
 
 # Autostart background dengan slideshow 10 menit
-#~/.local/bin/bg-slideshow
+~/.local/bin/bg-slideshow
 
 # sxhkd
 pgrep -x sxhkd > /dev/null || sxhkd &

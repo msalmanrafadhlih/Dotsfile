@@ -1,2 +1,8 @@
 [global]
 progress_bar = true
+
+[urgency=critical]
+geometry = "50%x0:0"
+
+[appname=battery]
+geometry = "50%x0:0"

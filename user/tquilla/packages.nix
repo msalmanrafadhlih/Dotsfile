@@ -4,17 +4,20 @@
   home.packages = (with pkgs; [
         # stable version
 	fastfetch
+#	spotify-tui
 	vivaldi
 	brave
 	neovim
 	tmux
+	feh
 	
 	nixpkgs-fmt
 	nodejs
 	gcc
 
-	ncmpcpp
+	rmpc
   	font-manager
+  	vesktop
   	yt-dlp
   	jellyfin-ffmpeg
   ])  ++ (with nixpkgs-unstable.legacyPackages.x86_64-linux; [

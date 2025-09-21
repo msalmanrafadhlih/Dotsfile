@@ -14,7 +14,7 @@
 	max=$(brightnessctl max)
 	percent=$(( current * 100 / max ))
 
-	dunstify -i display-brightness-symbolic \
+	dunstify -t 2000 -i display-brightness-symbolic \
 	  -h int:value:"$percent" \
 	  -r 1001 \
 	  -u low "Brightness" "''${percent}%"

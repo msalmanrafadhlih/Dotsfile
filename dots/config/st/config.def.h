@@ -146,7 +146,7 @@ static const char *palettes[][16] = {
         "#5f5fff", "#ff5fff", "#5fffff", "#ffffff"
     },
 
-    /* Palette 2 */
+  	/* Palette 2 */
     { /* Alt + F4  */
         "black",   "red3",  "green3", "yellow3",
         "blue2",   "white", "cyan3",  "gray90",
@@ -271,14 +271,17 @@ static uint forcemousemod = ShiftMask;
  */
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
+	{ XK_NO_MOD,            Button4, kscrollup,      {.i = 1},		0, /* !alt */ -1 },
+	{ XK_NO_MOD,            Button5, kscrolldown,    {.i = 1},		0, /* !alt */ -1 },
+    { XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
+	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\033[5;2~"}, 0, 1 },
+	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
+	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\033[6;2~"}, 0, 1 },
+	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
+
 	{ TERMMOD,              Button3, previewimage,   {.s = "feh"} },
 	{ TERMMOD,              Button2, showimageinfo,  {},            1 },
 	{ ControlMask,          Button2, selopen,        {.i = 0},      1 },
-	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
-	{ ControlMask,          Button4, ttysend,        {.s = "\033[5;2~"} },
-	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
-	{ ControlMask,          Button5, ttysend,        {.s = "\033[6;2~"} },
-	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
 };
 
 static Shortcut shortcuts[] = {

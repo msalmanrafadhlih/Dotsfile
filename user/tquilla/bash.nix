@@ -120,6 +120,7 @@
 			DVIDEO = "yt-dlp --trim-filenames 80 --restrict-filenames -S 'res:720,codec,br,fps' -f 'bv*+ba/best' -o '~/Videos/%(playlist|NA)s/%(title)s [%(id)s].%(ext)s'";
 			DTAR = "~/.local/bin/tar.sh";
 			XYZ = "~/.local/bin/xyz.sh";
+			MPG = "ffmpeg -i";
 			
 			## POWER
 			REBOOT = "sudo reboot";
