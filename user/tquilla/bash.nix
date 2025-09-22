@@ -95,14 +95,18 @@
 
 			## Suckless Stuff
 			SUCKPULL = "mv config.h config.h.bak && git pull";
-			NSHELL = "cd shell && nix-shell";
+			NSHELL = "cd shell && nix-shell && cd ..";
 			PATCH = "patch -p1 <";
 			STCONF = "cd /etc/nixos/dots/config/st  && nano config.h";
 			DMENUCONF = "cd /etc/nixos/dots/config/dmenu && nano config.h";
+			SLOCKCONF = "cd /etc/nixos/dots/config/slock && nano config.h";
 			CONFSAVE = "mv config.h config.h.bak";
 			CONFDEL = "cp config.h.bak config.h";
 			MAKE = "make clean && make && make install PREFIX=$HOME/.local";
+
+			## Tmux
 			TMUXSAVE = "tmux source-file ~/.config/tmux/tmux.conf";
+			TMUXDEL = "tmux kill-server";
 						  
 			##  OTHER
 			SAVE = "sudo nixos-rebuild switch";
