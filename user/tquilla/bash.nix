@@ -94,11 +94,13 @@
 			ANIMA = "nano /etc/nixos/dots/config/picom/picom-animations.conf";
 
 			## Suckless Stuff
-			NSHELL = "nix-shell";
+			SUCKPULL = "mv config.h config.h.bak && git pull";
+			NSHELL = "cd shell && nix-shell";
 			PATCH = "patch -p1 <";
-			CONF = "cd /etc/nixos/dots/config/st  && nano config.def.h";
-			CONFSAVE = "mv config.h config.h.bak && cp config.def.h config.h";
-			CONFDEL = "cp config.h.bak config.def.h && mv config.h.bak config.h";
+			STCONF = "cd /etc/nixos/dots/config/st  && nano config.h";
+			DMENUCONF = "cd /etc/nixos/dots/config/dmenu && nano config.h";
+			CONFSAVE = "mv config.h config.h.bak";
+			CONFDEL = "cp config.h.bak config.h";
 			MAKE = "make clean && make && make install PREFIX=$HOME/.local";
 			TMUXSAVE = "tmux source-file ~/.config/tmux/tmux.conf";
 						  

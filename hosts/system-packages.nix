@@ -7,7 +7,6 @@
       polybarFull
       sxhkd
       picom
-      dmenu
  
       nodePackages.prettier
       wget

@@ -18,6 +18,7 @@
 		nvim = "nvim";
 		tmux = "tmux";
 		dunst = "dunst";
+		dmenu = "dmenu";
 		
   	  	"systemd/user/battery-notif.service" = "systemd/user/battery-notif.service";
   	  	"systemd/user/battery-notif.timer" = "systemd/user/battery-notif.timer";
