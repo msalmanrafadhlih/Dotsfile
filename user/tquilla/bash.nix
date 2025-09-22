@@ -9,8 +9,9 @@
         	PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; 
         	PS1='\[\e[92m\]\u\[\e[0m\] \[\e[38;5;244;2;5m\]\s\[\e[0m\]in \[\e[93m\]\w\[\e[0m\] \$ ~ \[\e[91m\]''${PS1_CMD1}\n\[\e[0m\]'
 
-#			[ -z "$TMUX" ] && tmux
-			
+			[ -z "$TMUX" ] && tmux attach || tmux new
+#			[ -z "$TMUX" ] && tmux attach-session -t $(tmux ls -F '#S' 2>/dev/null | tail -n1) || tmux new-session
+
 			export HISTSIZE=5000
 		    export HISTFILESIZE=10000
 		    export HISTCONTROL=ignoredups:erasedups
