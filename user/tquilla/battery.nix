@@ -15,13 +15,13 @@ let
     SOUND_FULL= "/etc/nixos/dots/config/dunst/sound/hidup-jokowi.wav";
 
     if [[ "$STATUS" == "Discharging" && "$CAPACITY" -le 20 ]]; then
-      dunstify -t 30000 -i "$ICON_LOW" \
+      dunstify -i "$ICON_LOW" \
         -h int:value:"$CAPACITY" \
         -r 2001 \
         -u critical "Battery Low" "$CAPACITY % remaining"
       canberra-gtk-play -f "/etc/nixos/dots/config/dunst/sound/emotional-damage-meme.wav" -V 8.0
     elif [[ ("$STATUS" == "Full" || ( "$STATUS" == "Charging" && "$CAPACITY" -ge 95 )) ]]; then
-      dunstify -t 30000 -i "$ICON_FULL" \
+      dunstify -i "$ICON_FULL" \
         -h int:value:"$CAPACITY" \
         -r 2002 \
         -u normal "Battery Full" "$CAPACITY % charged. You can unplug the charger."
@@ -36,7 +36,7 @@ in
     Unit.Description = "Battery check notifier";
     Service = {
       ExecStart = "${batteryScript}";
-      Environment = "PATH=${pkgs.coreutils}/bin:${pkgs.dunst}/bin:${pkgs.libcanberra}/bin:${pkgs.gtk3}/bin:/run/wrappers/bin:${pkgs.bash}/bin";
+      Environment = "PATH=${pkgs.coreutils}/bin:${pkgs.dunst}/bin:${pkgs.libcanberra-gtk3}/bin:${pkgs.gtk3}/bin:/run/wrappers/bin:${pkgs.bash}/bin";
     };
   };
 

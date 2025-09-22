@@ -1,12 +1,13 @@
 { libs, services, program, ... }:
 
 {
-  home.file.".local/bin/bg-slideshow" = {
+  home.file."~/.local/bin/bg-slideshow" = {
     text = ''
 		#!/bin/sh
-		BG=~/Pictures/Wallpaper
+		BG=/home/tquilla/Pictures/Wallpaper/1360883.jpeg
 		
-        feh --bg-scale --randomize "$BG"
+#        feh --bg-scale --randomize "$BG"
+        feh --bg-scale "$BG"
 	'';
 	executable = true;
   };

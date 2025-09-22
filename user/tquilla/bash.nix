@@ -20,6 +20,10 @@
 			shopt -s autocd
 	    	shopt -s cdspell
 	    	shopt -s nocaseglob
+	    	
+	    	REMOTE() {
+			    git remote set-url origin git@github.com:"$1"/"$2".git
+			}
     	'';
     	
         shellAliases = {
