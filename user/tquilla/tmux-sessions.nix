@@ -1,7 +1,7 @@
 { sessions, libs, programs, ... }:
 
 {
-  home.file.".config/rofi/scripts/tmux-sessions" = {
+  home.file.".local/bin/tmux-sessions" = {
 	text = ''
 #!/bin/sh
 set -eu
