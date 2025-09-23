@@ -66,5 +66,6 @@
   	./background.nix
   	./opencam.nix
   	./bookmarks.nix
+  	./github-repos.nix
    ];
 }

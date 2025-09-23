@@ -65,9 +65,8 @@
 
 			##  USER CONFIGURATIONS {EDIT}
 			TQU = "ls -la /etc/nixos/user/tquilla && cd /etc/nixos/user/tquilla";
-			KEY = "bat /etc/nixos/user/tquilla/bash.nix";
 			HOME = "nano /etc/nixos/user/tquilla/home.nix";
-			BASH = "nano /etc/nixos/user/tquilla/bash.nix";
+			BASH = "nano /etc/nixos/user/tquilla/bash.nix && source ~/.bashrc";
 			INSTALL = "nano /etc/nixos/user/tquilla/packages.nix";
 			BAT = "nano /etc/nixos/user/tquilla/bat.nix";
 			XSESSION = "nano /etc/nixos/user/tquilla/xsession.nix";
@@ -81,6 +80,8 @@
 			TAR = "nano /etc/nixos/user/tquilla/tar.nix";
 			BG = "nano /etc/nixos/user/tquilla/background.nix";
 			OPENCAM = "nano /etc/nixos/user/tquilla/opencam.nix";
+			BOOKMARK = "nano /etc/nixos/user/tquilla/bookmarks.nix";
+			REPOS = "nano /etc/nixos/user/tquilla/github-repos.nix";
 			
 			##  USER CONFIGURATIONS {SAVE}
 			BASHSAVE = "sudo chmod +x .bashrc";
