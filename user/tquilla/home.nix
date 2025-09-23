@@ -67,5 +67,6 @@
   	./opencam.nix
   	./bookmarks.nix
   	./github-repos.nix
+  	./tmux-sessions.nix
    ];
 }
