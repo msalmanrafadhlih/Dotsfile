@@ -12,6 +12,7 @@
   		polybar = "polybar";
 		sxhkd = "sxhkd";
 		nano = "nano";
+		rofi = "rofi";
 		ghostty = "ghostty";
 		picom = "picom";
 		st = "st";

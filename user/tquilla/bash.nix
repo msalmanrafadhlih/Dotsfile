@@ -18,7 +18,7 @@
 			        tmux attach-session \; choose-session
 			    fi
 			fi
-
+#
 #			[ -z "$TMUX" ] && tmux attach || tmux new
 #			[ -z "$TMUX" ] && tmux attach-session -t $(tmux ls -F '#S' 2>/dev/null | tail -n1) || tmux new-session
 
