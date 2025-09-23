@@ -11,6 +11,9 @@ ctrl + super + alt + Return
 # ---------------------------------------------------------  Btop++
 super + alt + b
 	st -e btop
+# ---------------------------------------------------------  Powrmenu
+super + Escape
+	~/.config/rofi/files/powermenu/type-4/powermenu.sh
 
 ###########################################################
 # ------------------ Applications ----------------------- #
@@ -21,8 +24,7 @@ super + Return
 	st -c AlacrittyDefault
 # ---------------------------------------------------------  Menu Apps
 super + @space
-	 ~/.config/rofi/files/launchers/type-7/launcher.sh 
-#     dmenu_run -i -b -p "Run:" -fn 'Monospace-10' -nb '#1e1e2e' -nf '#cdd6f4' -sb '#89b4fa' -sf '#1e1e2e'
+	 ~/.config/rofi/files/launchers/type-7/launcher.sh
 # ---------------------------------------------------------  Browser
 super + b
 	brave
