@@ -65,6 +65,6 @@
   	./show-polybar.nix
   	./background.nix
   	./opencam.nix
+  	./bookmarks.nix
    ];
-	
 }

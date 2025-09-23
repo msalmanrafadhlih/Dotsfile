@@ -5,6 +5,7 @@
         # stable version
 	fastfetch
 #	spotify-tui
+	rofi
 	vivaldi
 	brave
 	neovim
