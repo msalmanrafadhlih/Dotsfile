@@ -1,5 +1,5 @@
 #!/bin/sh
-
+#
 # monitor setup
 bspc monitor -d term web code music chat
 

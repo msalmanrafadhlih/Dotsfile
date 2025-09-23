@@ -36,7 +36,6 @@
 			    git remote set-url origin git@github.com:"$1"/"$2".git
 			}
     	'';
-    	
         shellAliases = {
         
 			test = "I use NixOS btw";	 
@@ -66,7 +65,7 @@
 			##  USER CONFIGURATIONS {EDIT}
 			TQU = "ls -la /etc/nixos/user/tquilla && cd /etc/nixos/user/tquilla";
 			HOME = "nano /etc/nixos/user/tquilla/home.nix";
-			BASH = "nano /etc/nixos/user/tquilla/bash.nix && source ~/.bashrc";
+			BASH = "source ~/.bashrc && nano /etc/nixos/user/tquilla/bash.nix";
 			INSTALL = "nano /etc/nixos/user/tquilla/packages.nix";
 			BAT = "nano /etc/nixos/user/tquilla/bat.nix";
 			XSESSION = "nano /etc/nixos/user/tquilla/xsession.nix";
@@ -82,6 +81,7 @@
 			OPENCAM = "nano /etc/nixos/user/tquilla/opencam.nix";
 			BOOKMARK = "nano /etc/nixos/user/tquilla/bookmarks.nix";
 			REPOS = "nano /etc/nixos/user/tquilla/github-repos.nix";
+			TMUXSESSION = "nano /etc/nixos/user/tquilla/tmux-sessions.nix";			
 			
 			##  USER CONFIGURATIONS {SAVE}
 			BASHSAVE = "sudo chmod +x .bashrc";
@@ -146,8 +146,7 @@
 			
 			## POWER
 			REBOOT = "sudo reboot";
-			OFF = "poweroff";
-	  
+			OFF = "poweroff";	  
         };
   };
 }
