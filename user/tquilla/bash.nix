@@ -103,7 +103,7 @@
 			CURSOR = "nano ~/.icons/default/index.theme";
 			PCOM = "nano /etc/nixos/dots/config/picom/picom.conf";
 			ANIMA = "nano /etc/nixos/dots/config/picom/picom-animations.conf";
-
+			
 			## Suckless Stuff
 			SUCKPULL = "mv config.h config.h.bak && git pull";
 			NSHELL = "cd shell && nix-shell && cd ..";

@@ -7,6 +7,7 @@
       polybarFull
       sxhkd
       picom
+      eww
  
       nodePackages.prettier
       wget
