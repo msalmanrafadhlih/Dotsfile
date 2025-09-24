@@ -20,6 +20,7 @@
 		tmux = "tmux";
 		dunst = "dunst";
 		dmenu = "dmenu";
+		eww = "eww";
 		
   	  	"systemd/user/battery-notif.service" = "systemd/user/battery-notif.service";
   	  	"systemd/user/battery-notif.timer" = "systemd/user/battery-notif.timer";
