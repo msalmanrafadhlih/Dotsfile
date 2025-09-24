@@ -70,5 +70,6 @@
   	./bookmarks.nix
   	./github-repos.nix
   	./tmux-sessions.nix
+  	./run.nix
    ];
 }

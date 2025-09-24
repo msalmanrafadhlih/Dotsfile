@@ -6,6 +6,7 @@
 	fastfetch
 #	spotify-tui
 	rofi
+	geany
 	vivaldi
 	brave
 	neovim
