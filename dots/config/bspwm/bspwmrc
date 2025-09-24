@@ -57,7 +57,7 @@ bspc rule -a mpv state=floating sticky=off rectangle=350x350+760+385
 # picom
 killall picom
 sleep 0.1
-picom &
+picom  &
 
 # Autostart background dengan slideshow 10 menit
 ~/.local/bin/bg-slideshow
@@ -67,6 +67,10 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 # polybar
 ~/.config/polybar/launch.sh &
+
+#eww
+chmod +x ~/.config/eww/scripts/*
+#eww daemon && eww open topbar
 
 # dunst untuk widget notifikasi
 pgrep -x dunst > /dev/null || dunst &

@@ -13,7 +13,7 @@ super + alt + b
 	st -e btop
 # ---------------------------------------------------------  Powrmenu
 super + Escape
-	~/.config/rofi/files/powermenu/type-4/powermenu.sh
+	~/.config/rofi/scripts/powermenu-t4.sh
 
 ###########################################################
 # ------------------ Applications ----------------------- #
@@ -24,7 +24,7 @@ super + Return
 	st -c AlacrittyDefault
 # ---------------------------------------------------------  Menu Apps
 super + @space
-	 ~/.config/rofi/files/launchers/type-7/launcher.sh
+	 ~/.config/rofi/scripts/launcher-t7.sh
 # ---------------------------------------------------------  Browser
 super + b
 	brave
