@@ -76,3 +76,4 @@ chmod +x ~/.config/eww/scripts/*
 pgrep -x dunst > /dev/null || dunst &
 
 chmod +x ~/.local/bin/*
+

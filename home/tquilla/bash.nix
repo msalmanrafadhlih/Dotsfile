@@ -38,24 +38,24 @@
     	'';
         shellAliases = {
         
-			test = "I use NixOS btw";	 
-			NIXOS = "tree /etc/nixos && cd /etc/nixos";
+			test = "echo 'i use NixOS btw!!'";	 
+			NIXOS = "tree ~/.repos/nixos && cd ~/.repos/nixos";
 			RUNNING = "systemctl --user list-units --state=running";
 			SYSRUNNING = "systemctl list-units --state=running";
 			USAGELOG = "sudo journalctl --disk-usage";
 
 			    
 			##  SYSTEM CONFIGURATIONS
-			HOSTS = "cd /etc/nixos/hosts && tree /etc/nixos/hosts";
-			NIX = "nano /etc/nixos/hosts/configuration.nix";
-			HNIX = "bat /etc/nixos/hosts/hardware-configuration.nix";
-			FLAKE = "nano /etc/nixos/flake.nix";
-			LOCK = "bat /etc/nixos/flake.lock";
+			HOSTS = "cd ~/.repos/nixos/host && tree ~/.repos/nixos/host";
+			NIX = "nano ~/.repos/nixos/host/configuration.nix";
+			HNIX = "bat ~/.repos/nixos/host/hardware-configuration.nix";
+			FLAKE = "nano ~/.repos/nixos/flake.nix";
+			LOCK = "bat ~/.repos/nixos/flake.lock";
 
-			FONTS = "nano /etc/nixos/hosts/fonts.nix";
-			SYSINSTALL = "nano  /etc/nixos/hosts/system-packages.nix";
-			SERVICE = "nano  /etc/nixos/hosts/services.nix";
-			PROGRAMS = "nano  /etc/nixos/hosts/programs.nix";
+			FONTS = "nano ~/.repos/nixos/host/fonts.nix";
+			SYSINSTALL = "nano  ~/.repos/nixos/host/system-packages.nix";
+			SERVICE = "nano  ~/.repos/nixos/host/services.nix";
+			PROGRAMS = "nano  ~/.repos/nixos/host/programs.nix";
 
 			## GIT INTEGRATION
 			GIT = "git add . && git commit -m";
@@ -64,25 +64,25 @@
 			GRAPH = "git log --oneline --decorate --graph --all";
 
 			##  USER CONFIGURATIONS {EDIT}
-			TQU = "ls -la /etc/nixos/user/tquilla && cd /etc/nixos/user/tquilla";
-			HOME = "nano /etc/nixos/user/tquilla/home.nix";
-			BASH = "source ~/.bashrc && nano /etc/nixos/user/tquilla/bash.nix";
-			INSTALL = "nano /etc/nixos/user/tquilla/packages.nix";
-			BAT = "nano /etc/nixos/user/tquilla/bat.nix";
-			XSESSION = "nano /etc/nixos/user/tquilla/xsession.nix";
-			PAD = "nano /etc/nixos/user/tquilla/toggle_touchpad.nix";
-			VOL = "nano /etc/nixos/user/tquilla/volume.nix";
-			BRIGHT = "nano /etc/nixos/user/tquilla/brightness.nix";
-			BAT0 = "nano /etc/nixos/user/tquilla/battery.nix";
-			NANO = "nano /etc/nixos/user/tquilla/nanorc.nix";
-			MPD = "nano /etc/nixos/user/tquilla/mpd.nix";
-			BRANCH = "nano /etc/nixos/user/tquilla/git-prompt.nix";
-			TAR = "nano /etc/nixos/user/tquilla/tar.nix";
-			BG = "nano /etc/nixos/user/tquilla/background.nix";
-			OPENCAM = "nano /etc/nixos/user/tquilla/opencam.nix";
-			BOOKMARK = "nano /etc/nixos/user/tquilla/bookmarks.nix";
-			REPOS = "nano /etc/nixos/user/tquilla/github-repos.nix";
-			TMUXSESSION = "nano /etc/nixos/user/tquilla/tmux-sessions.nix";			
+			TQU = "ls -la ~/.repos/nixos/home/tquilla && cd ~/.repos/nixos/home/tquilla";
+			HOME = "nano ~/.repos/nixos/home/tquilla/home.nix";
+			BASH = "source ~/.bashrc && nano ~/.repos/nixos/home/tquilla/bash.nix";
+			INSTALL = "nano ~/.repos/nixos/home/tquilla/packages.nix";
+			BAT = "nano ~/.repos/nixos/home/tquilla/bat.nix";
+			XSESSION = "nano ~/.repos/nixos/home/tquilla/xsession.nix";
+			PAD = "nano ~/.repos/nixos/home/tquilla/toggle_touchpad.nix";
+			VOL = "nano ~/.repos/nixos/home/tquilla/volume.nix";
+			BRIGHT = "nano ~/.repos/nixos/home/tquilla/brightness.nix";
+			BAT0 = "nano ~/.repos/nixos/home/tquilla/battery.nix";
+			NANO = "nano ~/.repos/nixos/home/tquilla/nanorc.nix";
+			MPD = "nano ~/.repos/nixos/home/tquilla/mpd.nix";
+			BRANCH = "nano ~/.repos/nixos/home/tquilla/git-prompt.nix";
+			TAR = "nano ~/.repos/nixos/home/tquilla/tar.nix";
+			BG = "nano ~/.repos/nixos/home/tquilla/background.nix";
+			OPENCAM = "nano ~/.repos/nixos/home/tquilla/opencam.nix";
+			BOOKMARK = "nano ~/.repos/nixos/home/tquilla/bookmarks.nix";
+			REPOS = "nano ~/.repos/nixos/home/tquilla/github-repos.nix";
+			TMUXSESSION = "nano ~/.repos/nixos/home/tquilla/tmux-sessions.nix";			
 			
 			##  USER CONFIGURATIONS {SAVE}
 			BASHSAVE = "sudo chmod +x .bashrc";
@@ -90,28 +90,28 @@
 			
 
 			##  DOTSFILE CONNFIGURATION & BSPWM
-			CONFIG = "tree /etc/nixos/dots/config && cd /etc/nixos/dots/config";
-			MODULE = "tree /etc/nixos/dots/config/polybar && cd /etc/nixos/dots/config/polybar/modules";			
-			SCRIPT =  "cd /etc/nixos/dots/config/polybar/script && tree";
+			CONFIG = "tree ~/.repos/nixos/dots/config && cd ~/.repos/nixos/dots/config";
+			POLYMODULE = "tree ~/.repos/nixos/dots/config/polybar && cd ~/.repos/nixos/dots/config/polybar/modules";			
+			POLYSCRIPT =  "cd ~/.repos/nixos/dots/config/polybar/script && tree";
 
-			TMUX = "nano /etc/nixos/dots/config/tmux/tmux.conf";
-			ER = "nano /etc/nixos/dots/config/bspwm/src/ExternalRules";
-			BSPWM = "nano /etc/nixos/dots/config/bspwm/bspwmrc";
-			SXHKD = "nano /etc/nixos/dots/config/sxhkd/sxhkdrc";
-			POLY = "nano /etc/nixos/dots/config/polybar/config.ini";
-			ALAC = "nano /etc/nixos/dots/config/alacritty/alacritty.toml";
-			DUNST = "nano /etc/nixos/dots/config/dunst/dunstrc";
+			TMUX = "nano ~/.repos/nixos/dots/config/tmux/tmux.conf";
+			ER = "nano ~/.repos/nixos/dots/config/bspwm/src/ExternalRules";
+			BSPWM = "nano ~/.repos/nixos/dots/config/bspwm/bspwmrc";
+			SXHKD = "nano ~/.repos/nixos/dots/config/sxhkd/sxhkdrc";
+			POLY = "nano ~/.repos/nixos/dots/config/polybar/config.ini";
+			ALAC = "nano ~/.repos/nixos/dots/config/alacritty/alacritty.toml";
+			DUNST = "nano ~/.repos/nixos/dots/config/dunst/dunstrc";
 			CURSOR = "nano ~/.icons/default/index.theme";
-			PCOM = "nano /etc/nixos/dots/config/picom/picom.conf";
-			ANIMA = "nano /etc/nixos/dots/config/picom/picom-animations.conf";
+			PCOM = "nano ~/.repos/nixos/dots/config/picom/picom.conf";
+			ANIMA = "nano ~/.repos/nixos/dots/config/picom/picom-animations.conf";
 			
 			## Suckless Stuff
 			SUCKPULL = "mv config.h config.h.bak && git pull";
 			NSHELL = "cd shell && nix-shell && cd ..";
 			PATCH = "patch -p1 <";
-			STCONF = "cd /etc/nixos/dots/config/st  && nano config.h";
-			DMENUCONF = "cd /etc/nixos/dots/config/dmenu && nano config.h";
-			SLOCKCONF = "cd /etc/nixos/dots/config/slock && nano config.h";
+			STCONF = "cd ~/.repos/nixos/dots/config/st  && nano config.h";
+			DMENUCONF = "cd ~/.repos/nixos/dots/config/dmenu && nano config.h";
+			SLOCKCONF = "cd ~/.repos/nixos/dots/config/slock && nano config.h";
 			CONFSAVE = "mv config.h config.h.bak";
 			CONFDEL = "cp config.h.bak config.h";
 			MAKE = "make clean && make && make install PREFIX=$HOME/.local";
@@ -121,8 +121,8 @@
 			TMUXDEL = "tmux kill-server";
 						  
 			##  OTHER
-			SAVE = "sudo nixos-rebuild switch";
-			SAVEFLAKE = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
+			SAVE = "source ~/.bashrc && dunstify 'bash saved'";
+			SAVEFLAKE = "sudo nixos-rebuild switch --flake ~/.repos/nixos#nixos";
 
 			OLD = "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";
 			GBGOLD = "sudo nix-env -p /nix/var/nix/profiles/system --delete-generations +3";

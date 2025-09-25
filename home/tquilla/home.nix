@@ -3,8 +3,7 @@
   let
     create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
     home = config.home.homeDirectory;
-    dots = "/etc/nixos/dots";
-    modules = "/home/tquilla/.repos/nixos/dots";
+    dots = "/home/tquilla/.repos/nixos/dots";
 
 #	~/.config
     configs = {    
