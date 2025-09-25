@@ -15,13 +15,15 @@
 	nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 		system = "x86_64-linux";
 		modules = [
-			./hosts/configuration.nix
-			# ./hosts/addModulesHere...
+			./host/configuration.nix
+			
 			home-manager.nixosModules.home-manager {
 			  home-manager = {
 				useGlobalPkgs = true;
 				useUserPackages = true;
-				users.tquilla = import ./user/tquilla/home.nix;
+				users = {
+					tquilla = import ./home/tquilla/home.nix;
+				};
 				backupFileExtension = "backup";
 			  };
 			}

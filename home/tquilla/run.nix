@@ -1,7 +1,7 @@
-{ programs, , pkgs, libs, ... }:
+{ programs, pkgs, libs, ... }:
 
 {
-  home.file.".local/bin/sh-runner.sh" {
+  home.file.".local/bin/sh-runner.sh" = {
   	text = ''
 #!/usr/bin/env bash
 
