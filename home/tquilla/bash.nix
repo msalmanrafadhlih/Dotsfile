@@ -104,6 +104,8 @@
 			CURSOR = "nano ~/.icons/default/index.theme";
 			PCOM = "nano ~/.repos/nixos/dots/config/picom/picom.conf";
 			ANIMA = "nano ~/.repos/nixos/dots/config/picom/picom-animations.conf";
+			POWERMENU = "nano /home/tquilla/.repos/nixos/dots/config/rofi/files/powermenu/type-4/style-1.rasi";
+			ROFI = "nano /home/tquilla/.repos/nixos/dots/config/rofi/files/launchers/type-7/style-4.rasi";
 			
 			## Suckless Stuff
 			SUCKPULL = "mv config.h config.h.bak && git pull";

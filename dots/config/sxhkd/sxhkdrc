@@ -3,8 +3,6 @@
 ###########################################################
 # ==================================================  BSPWM
 # ---------------------------------------------------------  Reload sxhkd
-super + l
-	~/.repos/TESTING/tmux
 super + grave
     pkill -USR1 -x sxhkd && dunstify -r 1234 -t 1000 "sxhkd" "Reloaded ✅"
 # ---------------------------------------------------------  Refresh bspwm
@@ -153,6 +151,14 @@ alt + {Tab,period}
 # ---------------------------------------------------------  kill all unfocused nodes
 super + shift + k ; {x,k}
     bspc query -N -n '.!focused.!marked.local.window' | xargs -I id -n 1 bspc node id {-c,-k}
+# ---------------------------------------------------------  switch nodes
+super + Tab
+    rofi \
+        -theme $HOME/.config/bspwm/config/rofi-themes/Windows.rasi \
+        -show window -window-thumbnail \
+        -window-hide-active-window true \
+        -kb-accept-entry "!Alt-Tab,Return" \
+        -kb-element-next "Alt-Tab"
 
 
 # ==================================================  OTHER
