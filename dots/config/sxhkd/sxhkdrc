@@ -154,7 +154,7 @@ super + shift + k ; {x,k}
 # ---------------------------------------------------------  switch nodes
 super + Tab
     rofi \
-        -theme $HOME/.config/bspwm/config/rofi-themes/Windows.rasi \
+        -theme $HOME/.repos/nixos/dots/config/rofi/files/window.rasi\
         -show window -window-thumbnail \
         -window-hide-active-window true \
         -kb-accept-entry "!Alt-Tab,Return" \
