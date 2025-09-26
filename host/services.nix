@@ -18,11 +18,21 @@ in
   services = {  
   	xserver = {
 		enable = true;
-		autoRepeatDelay = 300;
+		windowManager = { 
+			dwm = {
+				enable = true;
+				package = pkgs.dwm.overrideAttrs (old: {
+				          src = ../../dots/config/dwm;
+				};
+			};
+			bspwm = {
+				enable = true;
+			};
+		};
+		
+		autoRepeatDelay = 300; 
 		autoRepeatInterval = 35;
 		videoDrivers = [ "intel" "modesetting" ];
-
-		windowManager.bspwm.enable = true;
 		displayManager.lightdm.enable = true;
   	};
 	

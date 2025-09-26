@@ -1,4 +1,4 @@
-{ repos, libs, manager, ... }:
+{ repss, libs, manager, ... }:
 
 {
   home.file.".local/bin/repository.sh" = {
@@ -28,8 +28,7 @@ pkill -x $terminal 2>/dev/null || true
 sleep 0.1
 
 # Launch a clean terminal: attach if exists, else create
-exec $terminal -c AlacrittyPinned -e tmux new-session -As "$chosen" -c "$dir" & disown
-exit 0
+setsid "$terminal" -c Terminalnvim -e tmux new-session -As "$chosen" -c "$dir" >/dev/null 2>&1 nvim . & exit 0
 	'';
 	executable = true;
   };

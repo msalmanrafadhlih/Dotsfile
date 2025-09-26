@@ -3,6 +3,8 @@
 ###########################################################
 # ==================================================  BSPWM
 # ---------------------------------------------------------  Reload sxhkd
+super + l
+	rofi -show tmux -modi "tmux:~/.local/bin/tmux-sessions.sh"	
 super + grave
     pkill -USR1 -x sxhkd && dunstify -r 1234 -t 1000 "sxhkd" "Reloaded ✅"
 # ---------------------------------------------------------  Refresh bspwm
@@ -21,7 +23,7 @@ super + Escape
 # ==============================================  MAIN APPS
 # ---------------------------------------------------------  Terminal
 super + Return
-	st -c AlacrittyDefault
+	st -c TerminalDefault
 # ---------------------------------------------------------  Menu Apps
 super + @space
 	 ~/.config/rofi/scripts/launcher-t7.sh
@@ -30,7 +32,7 @@ super + b
 	brave
 # ---------------------------------------------------------  Terminal
 super + c
-	thunar /etc/nixos
+	thunar ~/.repos/nixos
 # ---------------------------------------------------------  Open Discord
 super + d
 	vesktop
@@ -48,7 +50,7 @@ super + n
     st -e nvim
 # ---------------------------------------------------------  Terminal
 super + p
-	st -c AlacrittyPinned
+	st -c TerminalPinned
 # ---------------------------------------------------------  Exit
 super + q
 	bspc node -c
@@ -154,11 +156,12 @@ super + shift + k ; {x,k}
 # ---------------------------------------------------------  switch nodes
 super + Tab
     rofi \
-        -theme $HOME/.repos/nixos/dots/config/rofi/files/window.rasi\
-        -show window -window-thumbnail \
+        -theme $HOME/.repos/nixos/dots/config/rofi/files/window.rasi \
+        -show window \
+#        -window-thumbnail \
         -window-hide-active-window true \
-        -kb-accept-entry "!Alt-Tab,Return" \
-        -kb-element-next "Alt-Tab"
+        -kb-accept-entry "!super-Tab,Return" \
+        -kb-element-next "super-Tab"
 
 
 # ==================================================  OTHER
