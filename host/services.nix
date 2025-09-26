@@ -22,7 +22,7 @@ in
 			dwm = {
 				enable = true;
 				package = pkgs.dwm.overrideAttrs {
-				  src = ./dots/config/dwm;
+				  src = home/tquilla/.repos/nixos/dots/config/dwm;
 				};
 			};
 			bspwm = {
