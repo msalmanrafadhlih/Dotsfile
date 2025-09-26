@@ -12,22 +12,16 @@
   { self, nixpkgs, home-manager, ... }: 
   
   {
-
 	nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 		system = "x86_64-linux";
 		modules = [
-			./host/configuration.nix
-	    	./host/programs.nix
-	 		./host/services.nix
-		    ./host/system-packages.nix
-		    ./host/fonts.nix
-			
+			./system/configuration.nix		
 			home-manager.nixosModules.home-manager {
 			  home-manager = {
 				useGlobalPkgs = true;
 				useUserPackages = true;
 				users = {
-					tquilla = import ./home/tquilla/home.nix;
+					tquilla = import ./user/tquilla/home.nix;
 				};
 				backupFileExtension = "backup";
 			  };
