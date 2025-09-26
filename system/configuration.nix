@@ -3,10 +3,6 @@
 {
 	imports = [
 		./hardware-configuration.nix
-		../module/fonts.nix
-		../module/services.nix
-		../module/programs.nix
-		../module/system-packages.nix
 	];
   	
 	networking.networkmanager.enable = true;

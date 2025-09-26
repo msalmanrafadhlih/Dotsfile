@@ -16,7 +16,11 @@
 		system = "x86_64-linux";
 		modules = [
 			./system/configuration.nix
-			./system/imports.nix
+			./module/fonts.nix
+			./module/services.nix
+			./module/programs.nix
+			./module/system-packages.nix
+			
 			home-manager.nixosModules.home-manager {
 			  home-manager = {
 				useGlobalPkgs = true;
