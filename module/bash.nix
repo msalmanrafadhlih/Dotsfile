@@ -52,11 +52,10 @@
 			FLAKE = "nano ~/.repos/nixos/flake.nix";
 			LOCK = "bat ~/.repos/nixos/flake.lock";
 
-			FONTS = "nano ~/.repos/nixos/system/module/fonts.nix";
-			SYSINSTALL = "nano  ~/.repos/nixos/system/module/system-packages.nix";
+			FONTS = "nano ~/.repos/nixos/module/fonts.nix";
+			SYSINSTALL = "nano  ~/.repos/nixos/module/system-packages.nix";
 			SERVICE = "nano  ~/.repos/nixos/system/services.nix";
-			PROGRAMS = "nano  ~/.repos/nixos/system/module/programs.nix";
-			IMPORT = "nano  ~/.repos/nixos/system/imports.nix";
+			PROGRAMS = "nano  ~/.repos/nixos/module/programs.nix";
 
 			## GIT INTEGRATION
 			GIT = "git add . && git commit -m";
@@ -65,25 +64,25 @@
 			GRAPH = "git log --oneline --decorate --graph --all";
 
 			##  USER CONFIGURATIONS {EDIT}
-			TQU = "cd ~/.repos/nixos/user/tquilla/module && ls -la";
+			TQU = "cd ~/.repos/nixos/module && ls -la";
 			HOME = "nano ~/.repos/nixos/user/tquilla/home.nix";
-			BASH = "source ~/.bashrc && nano ~/.repos/nixos/user/tquilla/module/bash.nix";
-			INSTALL = "nano ~/.repos/nixos/user/tquilla/module/packages.nix";
-			BAT = "nano ~/.repos/nixos/user/tquilla/module/bat.nix";
-			XSESSION = "nano ~/.repos/nixos/user/tquilla/module/xsession.nix";
-			PAD = "nano ~/.repos/nixos/user/tquilla/module/toggle_touchpad.nix";
-			VOL = "nano ~/.repos/nixos/user/tquilla/module/volume.nix";
-			BRIGHT = "nano ~/.repos/nixos/user/tquilla/module/brightness.nix";
-			BAT0 = "nano ~/.repos/nixos/user/tquilla/module/battery.nix";
-			NANO = "nano ~/.repos/nixos/user/tquilla/module/nanorc.nix";
-			MPD = "nano ~/.repos/nixos/user/tquilla/module/mpd.nix";
-			BRANCH = "nano ~/.repos/nixos/user/tquilla/module/git-prompt.nix";
-			TAR = "nano ~/.repos/nixos/user/tquilla/module/tar.nix";
-			BG = "nano ~/.repos/nixos/user/tquilla/module/background.nix";
-			OPENCAM = "nano ~/.repos/nixos/user/tquilla/module/opencam.nix";
-			BOOKMARK = "nano ~/.repos/nixos/user/tquilla/module/bookmarks.nix";
-			REPOS = "nano ~/.repos/nixos/user/tquilla/module/github-repos.nix";
-			TMUXSESSION = "nano ~/.repos/nixos/user/tquilla/module/tmux-sessions.nix";			
+			BASH = "source ~/.bashrc && nano ~/.repos/nixos/module/bash.nix";
+			INSTALL = "nano ~/.repos/nixos/module/packages.nix";
+			BAT = "nano ~/.repos/nixos/module/bat.nix";
+			XSESSION = "nano ~/.repos/nixos/module/xsession.nix";
+			PAD = "nano ~/.repos/nixos/module/toggle_touchpad.nix";
+			VOL = "nano ~/.repos/nixos/module/volume.nix";
+			BRIGHT = "nano ~/.repos/nixos/module/brightness.nix";
+			BAT0 = "nano ~/.repos/nixos/module/battery.nix";
+			NANO = "nano ~/.repos/nixos/module/nanorc.nix";
+			MPD = "nano ~/.repos/nixos/module/mpd.nix";
+			BRANCH = "nano ~/.repos/nixos/module/git-prompt.nix";
+			TAR = "nano ~/.repos/nixos/module/tar.nix";
+			BG = "nano ~/.repos/nixos/module/background.nix";
+			OPENCAM = "nano ~/.repos/nixos/module/opencam.nix";
+			BOOKMARK = "nano ~/.repos/nixos/module/bookmarks.nix";
+			REPOS = "nano ~/.repos/nixos/module/github-repos.nix";
+			TMUXSESSION = "nano ~/.repos/nixos/module/tmux-sessions.nix";			
 			
 			##  USER CONFIGURATIONS {SAVE}
 			BASHSAVE = "sudo chmod +x .bashrc";
