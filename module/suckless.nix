@@ -1,13 +1,13 @@
-{pkgs, ... }:
+{ pkgs, ... }:
 
 {
   home.packages = with pkgs; [
 	(pkgs.st.overrideAttrs (_: {
-		src = ../user/tquilla/config/st;
+		src = inputs.st-src;
 		patches = [ ];
 	}))
     (pkgs.dmenu.overrideAttrs (_: {
-        src = ../user/tquilla/config/dmenu;
+        src = inputs.dmenu-src;
         patches = [ ];
     }))
 	slock
