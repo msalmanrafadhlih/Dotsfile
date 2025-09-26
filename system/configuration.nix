@@ -4,7 +4,27 @@
 	imports = [
 		./hardware-configuration.nix
 	];
-	
+	services = {
+	  	xserver = {
+			enable = true;
+			windowManager = { 
+				dwm = {
+					enable = true;
+					package = pkgs.dwm.overrideAttrs {
+					  src = ./pkgs/dwm;
+					};
+				};
+				bspwm = {
+					enable = true;
+				};
+			};
+			
+			autoRepeatDelay = 300; 
+			autoRepeatInterval = 35;
+			videoDrivers = [ "intel" "modesetting" ];
+			displayManager.lightdm.enable = true;
+		};
+  	};
 	networking.networkmanager.enable = true;
 	networking.hostName = "nixos";
 	time.timeZone = "Asia/Jakarta";
