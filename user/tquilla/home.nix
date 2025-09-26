@@ -21,6 +21,7 @@
 		dunst = "dunst";
 		dmenu = "dmenu";
 		eww = "eww";
+		dwm = "dwm";
 		
   	  	"systemd/user/battery-notif.service" = "systemd/user/battery-notif.service";
   	  	"systemd/user/battery-notif.timer" = "systemd/user/battery-notif.timer";
@@ -71,5 +72,6 @@
   	../../module/github-repos.nix
   	../../module/tmux-sessions.nix
   	../../module/run.nix
+  	../../module/suckless.nix  	
    ];
 }
