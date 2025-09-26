@@ -3,7 +3,9 @@
 {
 	imports = [
 		./hardware-configuration.nix
+		../module/fonts.nix
 	];
+	
 	services = {
 	  	xserver = {
 			enable = true;
@@ -25,6 +27,7 @@
 			displayManager.lightdm.enable = true;
 		};
   	};
+  	
 	networking.networkmanager.enable = true;
 	networking.hostName = "nixos";
 	time.timeZone = "Asia/Jakarta";

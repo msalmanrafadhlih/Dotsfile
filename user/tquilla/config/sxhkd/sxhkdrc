@@ -13,7 +13,7 @@ ctrl + super + alt + Return
 # ---------------------------------------------------------  Btop++
 super + alt + b
 	st -e btop
-# ---------------------------------------------------------  Powrmenu
+# ---------------------------------------------------------  Powermenu
 super + Escape
 	~/.config/rofi/scripts/powermenu-t4.sh
 
