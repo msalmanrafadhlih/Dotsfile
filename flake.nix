@@ -12,6 +12,15 @@
   { self, nixpkgs, home-manager, ... }: 
   
   {
+	imports =
+	[
+	    ./host/hardware-configuration.nix
+	    ./host/fonts.nix
+	    ./host/system-packages.nix
+	    ./host/services.nix
+	    ./host/programs.nix
+	];
+
 	nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 		system = "x86_64-linux";
 		modules = [

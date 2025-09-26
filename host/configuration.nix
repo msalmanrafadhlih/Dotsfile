@@ -1,15 +1,6 @@
 { config, lib, pkgs, ... }:
 
 {
-	imports =
-	[ 
-		./hardware-configuration.nix
-		./fonts.nix
-		./system-packages.nix
-		./services.nix
-		./programs.nix
-	];
-
 	networking.networkmanager.enable = true;
 	networking.hostName = "nixos";
 	time.timeZone = "Asia/Jakarta";

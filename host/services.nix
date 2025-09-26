@@ -21,8 +21,8 @@ in
 		windowManager = { 
 			dwm = {
 				enable = true;
-				package = pkgs.dwm.overrideAttrs (old: {
-				          src = ../../dots/config/dwm;
+				package = pkgs.dwm.overrideAttrs {
+				  src = ./dots/config/dwm;
 				};
 			};
 			bspwm = {
