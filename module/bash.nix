@@ -117,6 +117,7 @@
 			CONFSAVE = "mv config.h config.h.bak";
 			CONFDEL = "cp config.h.bak config.h";
 			MAKE = "make clean && make && make install PREFIX=$HOME/.local";
+			SUCKLESS = "nano ~/.repos/nixos/module/sucless.nix";
 
 			## Tmux
 			TMUXSAVE = "tmux source-file ~/.config/tmux/tmux.conf";
