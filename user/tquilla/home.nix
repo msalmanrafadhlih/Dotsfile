@@ -15,11 +15,11 @@
 		rofi = "rofi";
 		ghostty = "ghostty";
 		picom = "picom";
-		st = "st";
+#		st = "st";
 		nvim = "nvim";
 		tmux = "tmux";
 		dunst = "dunst";
-		dmenu = "dmenu";
+#		dmenu = "dmenu";
 		eww = "eww";
 		dwm = "dwm";
 		
