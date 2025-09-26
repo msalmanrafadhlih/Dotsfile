@@ -9,23 +9,23 @@ let
     CAPACITY=$(cat "$BAT/capacity")
     STATUS=$(cat "$BAT/status")
 
-    ICON_LOW="/etc/nixos/dots/config/bspwm/src/assets/LowBat.png";
-    ICON_FULL="/etc/nixos/dots/config/bspwm/src/assets/FullBat.png";
-    SOUND_LOW="/etc/nixos/dots/config/dunst/sound/emotional-damage-meme.wav";
-    SOUND_FULL= "/etc/nixos/dots/config/dunst/sound/hidup-jokowi.wav";
+    ICON_LOW="~/.repos/nixos/dots/config/bspwm/src/assets/LowBat.png";
+    ICON_FULL="~/.repos/nixos/dots/config/bspwm/src/assets/FullBat.png";
+    SOUND_LOW="~/.repos/nixos/dots/config/dunst/sound/emotional-damage-meme.wav";
+    SOUND_FULL= "~/.repos/nixos/dots/config/dunst/sound/hidup-jokowi.wav";
 
     if [[ "$STATUS" == "Discharging" && "$CAPACITY" -le 20 ]]; then
       dunstify -i "$ICON_LOW" \
         -h int:value:"$CAPACITY" \
         -r 2001 \
         -u critical "Battery Low" "$CAPACITY % remaining"
-      canberra-gtk-play -f "/etc/nixos/dots/config/dunst/sound/emotional-damage-meme.wav" -V 8.0
+      canberra-gtk-play -f "~/.repos/nixos/dots/config/dunst/sound/emotional-damage-meme.wav" -V 8.0
     elif [[ ("$STATUS" == "Full" || ( "$STATUS" == "Charging" && "$CAPACITY" -ge 95 )) ]]; then
       dunstify -i "$ICON_FULL" \
         -h int:value:"$CAPACITY" \
         -r 2002 \
         -u normal "Battery Full" "$CAPACITY % charged. You can unplug the charger."
-      canberra-gtk-play -f "/etc/nixos/dots/config/dunst/sound/hidup-jokowi.wav" -V 8.0
+      canberra-gtk-play -f "~/.repos/nixos/dots/config/dunst/sound/hidup-jokowi.wav" -V 8.0
     fi
   '';
 in
