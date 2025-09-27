@@ -2,8 +2,8 @@
 {
   description = "NixOs from Binary";
   inputs = {
-    st-src.url = "path:./user/tquilla/config/st";
-    dmenu-src.url = "path:./user/tquilla/config/dmenu";
+#    st-src.url = "path:./user/tquilla/config/st";
+#    dmenu-src.url = "path:./user/tquilla/config/dmenu";
 	nixpkgs.url = "nixpkgs/nixos-25.05";
 	home-manager = {
 		url = "github:nix-community/home-manager/release-25.05";

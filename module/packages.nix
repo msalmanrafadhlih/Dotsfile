@@ -9,7 +9,6 @@
 	geany
 	vivaldi
 	brave
-	neovim
 	tmux
 	feh
 	

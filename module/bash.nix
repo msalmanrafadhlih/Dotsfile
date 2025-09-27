@@ -54,7 +54,7 @@
 
 			FONTS = "nano ~/.repos/nixos/module/fonts.nix";
 			SYSINSTALL = "nano  ~/.repos/nixos/module/system-packages.nix";
-			SERVICE = "nano  ~/.repos/nixos/system/services.nix";
+			SERVICE = "nano  ~/.repos/nixos/module/services.nix";
 			PROGRAMS = "nano  ~/.repos/nixos/module/programs.nix";
 
 			## GIT INTEGRATION

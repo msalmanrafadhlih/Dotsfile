@@ -72,6 +72,6 @@
   	../../module/github-repos.nix
   	../../module/tmux-sessions.nix
   	../../module/run.nix
-  	../../module/suckless.nix  	
+#  	../../module/suckless.nix  	
    ];
 }
