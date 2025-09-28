@@ -1,4 +1,4 @@
-{ ... }:
+{ sudo, ... }:
 
 {
 	security.sudo.extraRules = [{

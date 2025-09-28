@@ -39,11 +39,6 @@ in
 			autoLogin.user = "whiskey";
 		};
 	};
-
-	getty.autologin = {
-		enable = true;
-		user = "whiskey";
-	}
 	
   	libinput = {
   		enable = true;
