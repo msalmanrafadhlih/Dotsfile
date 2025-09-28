@@ -49,28 +49,28 @@
    }) locals;	
    
    imports = [
-  	../../module/bash.nix
-  	../../module/packages.nix
-  	../../module/bat.nix
-  	../../module/xsession.nix	
-  	../../module/battery.nix
-  	../../module/brightness.nix
-  	../../module/toggle_touchpad.nix
-  	../../module/volume.nix
-  	../../module/media.nix
-  	../../module/nanorc.nix
-  	../../module/mpd.nix
-  	../../module/git-prompt.nix
-  	../../module/tar.nix
-  	../../module/xyz.nix
-  	../../module/hide-polybar.nix
-  	../../module/show-polybar.nix
-  	../../module/background.nix
-  	../../module/opencam.nix
-  	../../module/bookmarks.nix
-  	../../module/github-repos.nix
-  	../../module/tmux-sessions.nix
-  	../../module/run.nix
-#  	../../module/suckless.nix  	
+  	../module/bash.nix
+  	../module/packages.nix
+  	../module/bat.nix
+  	../module/xsession.nix	
+  	../module/battery.nix
+  	../module/brightness.nix
+  	../module/toggle_touchpad.nix
+  	../module/volume.nix
+  	../module/media.nix
+  	../module/nanorc.nix
+  	../module/mpd.nix
+  	../module/git-prompt.nix
+  	../module/tar.nix
+  	../module/xyz.nix
+  	../module/hide-polybar.nix
+  	../module/show-polybar.nix
+  	../module/background.nix
+  	../module/opencam.nix
+  	../module/bookmarks.nix
+  	../module/github-repos.nix
+  	../module/tmux-sessions.nix
+  	../module/run.nix
+#  	../module/suckless.nix  	
    ];
 }
