@@ -3,7 +3,7 @@
   let
     create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
     home = config.home.homeDirectory;
-    tquilla = "/home/tquilla/.repos/nixos/user/tquilla";
+    dots = "/home/tquilla/.repos/nixos";
 
 #	~/.config
     configs = {    
@@ -39,12 +39,12 @@
     home.stateVersion = "25.05";
 
    xdg.configFile = builtins.mapAttrs (name: subpath: {source = 
-  	create_symlink "${tquilla}/config/${subpath}";
+  	create_symlink "${dots}/config/${subpath}";
   	recursive = true;
    }) configs;	
    
    home.file = builtins.mapAttrs (name: subpath: {source = 
-  	create_symlink "${tquilla}/config/${subpath}";
+  	create_symlink "${dots}/config/${subpath}";
   	recursive = true;
    }) locals;	
    

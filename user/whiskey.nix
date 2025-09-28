@@ -3,7 +3,7 @@
   let
     create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
     home = config.home.homeDirectory;
-    whiskey = "/home/whiskey/.repos/nixos";
+    dots = "/home/whiskey/.repos/nixos";
 
 #	~/.config
     configs = {    
@@ -39,38 +39,38 @@
     home.stateVersion = "25.05";
 
    xdg.configFile = builtins.mapAttrs (name: subpath: {source = 
-  	create_symlink "${whiskey}/config/${subpath}";
+  	create_symlink "${dots}/config/${subpath}";
   	recursive = true;
    }) configs;	
    
    home.file = builtins.mapAttrs (name: subpath: {source = 
-  	create_symlink "${whiskey}/config/${subpath}";
+  	create_symlink "${dots}/config/${subpath}";
   	recursive = true;
    }) locals;	
    
    imports = [
-  	../../module/bash.nix
-  	../../module/packages.nix
-  	../../module/bat.nix
-  	../../module/xsession.nix	
-  	../../module/battery.nix
-  	../../module/brightness.nix
-  	../../module/toggle_touchpad.nix
-  	../../module/volume.nix
-  	../../module/media.nix
-  	../../module/nanorc.nix
-  	../../module/mpd.nix
-  	../../module/git-prompt.nix
-  	../../module/tar.nix
-  	../../module/xyz.nix
-  	../../module/hide-polybar.nix
-  	../../module/show-polybar.nix
-  	../../module/background.nix
-  	../../module/opencam.nix
-  	../../module/bookmarks.nix
-  	../../module/github-repos.nix
-  	../../module/tmux-sessions.nix
-  	../../module/run.nix
-#  	../../module/suckless.nix  	
+  	../module/bash.nix
+  	../module/packages.nix
+  	../module/bat.nix
+  	../module/xsession.nix	
+  	../module/battery.nix
+  	../module/brightness.nix
+  	../module/toggle_touchpad.nix
+  	../module/volume.nix
+  	../module/media.nix
+  	../module/nanorc.nix
+  	../module/mpd.nix
+  	../module/git-prompt.nix
+  	../module/tar.nix
+  	../module/xyz.nix
+  	../module/hide-polybar.nix
+  	../module/show-polybar.nix
+  	../module/background.nix
+  	../module/opencam.nix
+  	../module/bookmarks.nix
+  	../module/github-repos.nix
+  	../module/tmux-sessions.nix
+  	../module/run.nix
+#  	../module/suckless.nix  	
    ];
 }
