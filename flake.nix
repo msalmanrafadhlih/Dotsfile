@@ -45,6 +45,7 @@
 				useUserPackages = true;
 				users = {
 					tquilla = import ./user/tquilla/home.nix;
+					# roman = import ./user/roman/home.nix
 				};
 				backupFileExtension = "backup";
 			  };

@@ -16,7 +16,7 @@
 		ghostty = "ghostty";
 		picom = "picom";
 		st = "st";
-		nvim = "nvim";
+#		nvim = "nvim";
 		tmux = "tmux";
 		dunst = "dunst";
 		dmenu = "dmenu";

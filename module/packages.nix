@@ -8,6 +8,7 @@
 	rofi
 	geany
 	vivaldi
+	neovim
 	brave
 	tmux
 	feh

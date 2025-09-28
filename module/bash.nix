@@ -51,6 +51,7 @@
 			HNIX = "bat ~/.repos/nixos/system/hardware-configuration.nix";
 			FLAKE = "nano ~/.repos/nixos/flake.nix";
 			LOCK = "bat ~/.repos/nixos/flake.lock";
+			MODULE = "cd ~/.repos/nixos/module && tree";
 
 			FONTS = "nano ~/.repos/nixos/module/fonts.nix";
 			SYSINSTALL = "nano  ~/.repos/nixos/module/system-packages.nix";
