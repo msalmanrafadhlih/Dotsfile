@@ -7,6 +7,8 @@
   	
 	networking.networkmanager.enable = true;
 	networking.hostName = "nixos";
+	networking.firewall.enable = false;
+	
 	time.timeZone = "Asia/Jakarta";
 	
 	i18n.defaultLocale = "en_US.UTF-8";
@@ -23,9 +25,16 @@
 		options = "--delete-older-than 3d";
 	};
 
-	users.users.tquilla = {
-		isNormalUser = true;
-		extraGroups = [ "wheel" "video" "audio" "networkmanager" ];
+	users.users = {
+		whisky = {
+		  isNormalUser = true;
+		  extraGroups = [ "wheel" "audio" "video" "networkmanager" ];
+		};
+
+		tquilla = {
+		  isNormalUser = true;
+		  extraGroups = [ "wheel" "audio" "video" "networkmanager" ];
+		};
 	};
 
 	security.rtkit.enable = true;

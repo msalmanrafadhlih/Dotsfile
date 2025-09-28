@@ -1,4 +1,3 @@
-
 {
   description = "NixOs from Binary";
   inputs = {
@@ -38,14 +37,16 @@
 			./module/services.nix
 			./module/programs.nix
 			./module/system-packages.nix
+			./module/ssh.nix
+			./module/security.nix
 			
 			home-manager.nixosModules.home-manager {
 			  home-manager = {
 				useGlobalPkgs = true;
 				useUserPackages = true;
 				users = {
-					tquilla = import ./user/tquilla/home.nix;
-					# roman = import ./user/roman/home.nix
+					tquilla = import ./user/tquilla.nix;
+					whiskey = import ./user/whiskey.nix;
 				};
 				backupFileExtension = "backup";
 			  };
