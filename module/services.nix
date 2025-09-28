@@ -22,7 +22,7 @@ in
 			dwm = {
 				enable = true;
 				package = pkgs.dwm.overrideAttrs {
-				  src = ../user/tquilla/config/dwm;
+				  src = ../config/dwm;
 				};
 			};
 			bspwm = {

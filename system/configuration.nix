@@ -25,18 +25,6 @@
 		options = "--delete-older-than 3d";
 	};
 
-	users.users = {
-		whisky = {
-		  isNormalUser = true;
-		  extraGroups = [ "wheel" "audio" "video" "networkmanager" ];
-		};
-
-		tquilla = {
-		  isNormalUser = true;
-		  extraGroups = [ "wheel" "audio" "video" "networkmanager" ];
-		};
-	};
-
 	security.rtkit.enable = true;
 	system.stateVersion = "25.05";
 	nixpkgs.config.allowUnfree = true;

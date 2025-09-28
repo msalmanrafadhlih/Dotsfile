@@ -39,6 +39,7 @@
 			./module/system-packages.nix
 			./module/ssh.nix
 			./module/security.nix
+			./module/user.nix
 			
 			home-manager.nixosModules.home-manager {
 			  home-manager = {
