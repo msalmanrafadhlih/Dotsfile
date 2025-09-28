@@ -5,7 +5,6 @@
         whiskey = {
           isNormalUser = true;
           extraGroups = [ "wheel" "audio" "video" "networkmanager" ];
-          initialPassword = "SALMANCUA";
         };
 
         tquilla = {
