@@ -66,7 +66,7 @@
 
 			##  USER CONFIGURATIONS {EDIT}
 			TQU = "cd ~/.repos/nixos/module && ls -la";
-			HOME = "nano ~/.repos/nixos/user/tquilla/home.nix";
+			HOME = "nano ~/.repos/nixos/user/tquilla.nix";
 			BASH = "source ~/.bashrc && nano ~/.repos/nixos/module/bash.nix";
 			INSTALL = "nano ~/.repos/nixos/module/packages.nix";
 			BAT = "nano ~/.repos/nixos/module/bat.nix";
@@ -91,30 +91,30 @@
 			
 
 			##  DOTSFILE CONNFIGURATION & BSPWM
-			CONFIG = "tree ~/.repos/nixos/user/tquilla/config && cd ~/.repos/nixos/user/tquilla/config";
-			POLYMODULE = "tree ~/.repos/nixos/user/tquilla/config/polybar && cd ~/.repos/nixos/user/tquilla/config/polybar/modules";			
-			POLYSCRIPT =  "cd ~/.repos/nixos/user/tquilla/config/polybar/script && tree";
+			CONFIG = "tree ~/.repos/nixos/config && cd ~/.repos/nixos/config";
+			POLYMODULE = "tree ~/.repos/nixos/config/polybar && cd ~/.repos/nixos/config/polybar/modules";			
+			POLYSCRIPT =  "cd ~/.repos/nixos/config/polybar/script && tree";
 
-			TMUX = "nano ~/.repos/nixos/user/tquilla/config/tmux/tmux.conf";
-			ER = "nano ~/.repos/nixos/user/tquilla/config/bspwm/src/ExternalRules";
-			BSPWM = "nano ~/.repos/nixos/user/tquilla/config/bspwm/bspwmrc";
-			SXHKD = "nano ~/.repos/nixos/user/tquilla/config/sxhkd/sxhkdrc";
-			POLY = "nano ~/.repos/nixos/user/tquilla/config/polybar/config.ini";
-			ALAC = "nano ~/.repos/nixos/user/tquilla/config/alacritty/alacritty.toml";
-			DUNST = "nano ~/.repos/nixos/user/tquilla/config/dunst/dunstrc";
+			TMUX = "nano ~/.repos/nixos/config/tmux/tmux.conf";
+			ER = "nano ~/.repos/nixos/config/bspwm/src/ExternalRules";
+			BSPWM = "nano ~/.repos/nixos/config/bspwm/bspwmrc";
+			SXHKD = "nano ~/.repos/nixos/config/sxhkd/sxhkdrc";
+			POLY = "nano ~/.repos/nixos/config/polybar/config.ini";
+			ALAC = "nano ~/.repos/nixos/config/alacritty/alacritty.toml";
+			DUNST = "nano ~/.repos/nixos/config/dunst/dunstrc";
 			CURSOR = "nano ~/.icons/default/index.theme";
-			PCOM = "nano ~/.repos/nixos/user/tquilla/config/picom/picom.conf";
-			ANIMA = "nano ~/.repos/nixos/user/tquilla/config/picom/picom-animations.conf";
-			POWERMENU = "nano ~/.repos/nixos/user/tquilla/config/rofi/files/powermenu/type-4/style-1.rasi";
-			ROFI = "nano ~/.repos/nixos/user/tquilla/config/rofi/files/launchers/type-7/style-4.rasi";
+			PCOM = "nano ~/.repos/nixos/config/picom/picom.conf";
+			ANIMA = "nano ~/.repos/nixos/config/picom/picom-animations.conf";
+			POWERMENU = "nano ~/.repos/nixos/config/rofi/files/powermenu/type-4/style-1.rasi";
+			ROFI = "nano ~/.repos/nixos/config/rofi/files/launchers/type-7/style-4.rasi";
 			
 			## Suckless Stuff
 			SUCKPULL = "mv config.h config.h.bak && git pull";
 			NSHELL = "cd shell && nix-shell && cd ..";
 			PATCH = "patch -p1 <";
-			STCONF = "cd ~/.repos/nixos/user/tquilla/config/st  && nano config.h";
-			DMENUCONF = "cd ~/.repos/nixos/user/tquilla/config/dmenu && nano config.h";
-			SLOCKCONF = "cd ~/.repos/nixos/user/tquilla/config/slock && nano config.h";
+			STCONF = "cd ~/.repos/nixos/config/st  && nano config.h";
+			DMENUCONF = "cd ~/.repos/nixos/config/dmenu && nano config.h";
+			SLOCKCONF = "cd ~/.repos/nixos/config/slock && nano config.h";
 			CONFSAVE = "mv config.h config.h.bak";
 			CONFDEL = "cp config.h.bak config.h";
 			MAKE = "make clean && make && make install PREFIX=$HOME/.local";

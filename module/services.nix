@@ -33,8 +33,18 @@ in
 		autoRepeatDelay = 300; 
 		autoRepeatInterval = 35;
 		videoDrivers = [ "intel" "modesetting" ];
-		displayManager.lightdm.enable = true;
+		displayManager = {
+			lightdm.enable = true; 
+			autoLogin.enable = true;
+			autoLogin.user = "whiskey";
+		};
 	};
+
+	getty.autologin = {
+		enable = true;
+		user = "whiskey";
+	}
+	
   	libinput = {
   		enable = true;
         touchpad = {
