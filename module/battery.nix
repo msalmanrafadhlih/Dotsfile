@@ -36,7 +36,10 @@ in
     Unit.Description = "Battery check notifier";
     Service = {
       ExecStart = "${batteryScript}";
-      Environment = "PATH=${pkgs.coreutils}/bin:${pkgs.dunst}/bin:${pkgs.libcanberra-gtk3}/bin:${pkgs.gtk3}/bin:/run/wrappers/bin:${pkgs.bash}/bin";
+      Environment = [
+      	"XDG_RUNTIME_DIR=%t"
+      	"PATH=${pkgs.coreutils}/bin:${pkgs.dunst}/bin:${pkgs.libcanberra-gtk3}/bin:${pkgs.gtk3}/bin:/run/wrappers/bin:${pkgs.bash}/bin"
+      	];
     };
   };
 

@@ -92,7 +92,7 @@
 
 			##  DOTSFILE CONNFIGURATION & BSPWM
 			CONFIG = "tree ~/.repos/nixos/config && cd ~/.repos/nixos/config";
-			POLYMODULE = "tree ~/.repos/nixos/config/polybar && cd ~/.repos/nixos/config/polybar/modules";			
+			POLYMODULE = "tree ~/.repos/nixos/config/polybar/modules && cd ~/.repos/nixos/config/polybar/modules";			
 			POLYSCRIPT =  "cd ~/.repos/nixos/config/polybar/script && tree";
 
 			TMUX = "nano ~/.repos/nixos/config/tmux/tmux.conf";

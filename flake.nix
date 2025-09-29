@@ -57,6 +57,7 @@
 			./module/ssh.nix
 			./module/sudo.nix
 			./module/user.nix
+			./module/audio.nix
 #			./module/acme.nix
 #			./module/nginx.nix
 		];

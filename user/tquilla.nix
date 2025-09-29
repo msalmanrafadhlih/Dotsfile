@@ -22,7 +22,7 @@
 		dmenu = "dmenu";
 		eww = "eww";
 		dwm = "dwm";
-		
+
   	  	"systemd/user/battery-notif.service" = "systemd/user/battery-notif.service";
   	  	"systemd/user/battery-notif.timer" = "systemd/user/battery-notif.timer";
     };

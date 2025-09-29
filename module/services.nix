@@ -68,11 +68,6 @@ in
   		enable = true;
   		package = pkgs.gnome.gvfs;
 	};
-	
-  	pipewire = {
-		enable = true;
-		pulse.enable = true;
-  	};  	
 
 	udev = {
 		enable = true;

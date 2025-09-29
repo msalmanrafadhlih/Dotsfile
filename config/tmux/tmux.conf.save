@@ -47,6 +47,7 @@ bind , command-prompt "rename-window %%"
 
 # Ganti window Alt + panah
 bind-key Right next-window
+bind -n M-Left previous-window
 bind-key Left previous-window
 unbind "p"
 unbind "l"

@@ -12,7 +12,7 @@ in
 #    group = "users";
 
     musicDirectory = "${local}/Musics";
-    playlistDirectory = "${local}/Musics";
+    playlistDirectory = "${local}/Playlists";
     dataDir = "${local}dataDir";
 
     network.listenAddress = "127.0.0.1";

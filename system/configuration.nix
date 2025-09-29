@@ -7,7 +7,7 @@
   	
 	networking.networkmanager.enable = true;
 	networking.hostName = "nixos";
-	networking.firewall.enable = false;
+	networking.firewall.enable = true;
 	
 	time.timeZone = "Asia/Jakarta";
 	
