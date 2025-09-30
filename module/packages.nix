@@ -9,21 +9,25 @@
       vivaldi
       neovim
       brave
+      kitty
+      yazi
       tmux
       feh
 
       nixpkgs-fmt
       nodejs
+      surf
       gcc
 
-      rmpc
       font-manager
       vesktop
+      picard      
       yt-dlp
       jellyfin-ffmpeg
     ])
     ++ (with pkgs.unstable; [
       # unstable packages
+      rmpc
       geany
     ]);
 }

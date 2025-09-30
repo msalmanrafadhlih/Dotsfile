@@ -4,38 +4,6 @@
 
   programs.bash = {
         enable = true;
-        initExtra = ''
-
-        	PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; 
-        	PS1='\[\e[92m\]\u\[\e[0m\] \[\e[38;5;244;2;5m\]\s\[\e[0m\]in \[\e[93m\]\w\[\e[0m\] \$ ~ \[\e[91m\]''${PS1_CMD1}\n\[\e[0m\]'
-
-			if [ -z "$TMUX" ]; then
-			    sessions=$(tmux list-sessions 2>/dev/null | wc -l)
-
-			    if [ "$sessions" -eq 0 ]; then
-			        tmux new-session
-			    else
-			        tmux attach-session \; choose-session
-			    fi
-			fi
-#
-#			[ -z "$TMUX" ] && tmux attach || tmux new
-#			[ -z "$TMUX" ] && tmux attach-session -t $(tmux ls -F '#S' 2>/dev/null | tail -n1) || tmux new-session
-
-			export HISTSIZE=5000
-		    export HISTFILESIZE=10000
-		    export HISTCONTROL=ignoredups:erasedups
-		    export PATH="$HOME/.local/bin:$PATH"
-#		    export PROMPT_COMMAND='echo -ne "\e]7;file://''${PWD}\a"'
-		    shopt -s histappend
-			shopt -s autocd
-	    	shopt -s cdspell
-	    	shopt -s nocaseglob
-	    	
-	    	REMOTE() {
-			    git remote set-url origin git@github.com:"$1"/"$2".git
-			}
-    	'';
         shellAliases = {
         
 			test = "echo 'i use NixOS btw!!'";	 
@@ -143,7 +111,7 @@
 
 			## productivities
 			CAM = "~/.local/bin/opencam";
-			DMUSIC = "yt-dlp --trim-filenames 80 --restrict-filenames -x --audio-format mp3 -S 'abr,codec' -o '~/.local/share/mpd/Musics/%(playlist|NA)s/%(title)s [%(id)s].%(ext)s'";
+			DMUSIC = "yt-dlp --trim-filenames 80 --restrict-filenames -x --audio-format mp3 -S 'abr,codec' -o '~/.config/mpd/Musics/%(playlist|NA)s/%(title)s [%(id)s].%(ext)s'";
 			DVIDEO = "yt-dlp --trim-filenames 80 --restrict-filenames -S 'res:720,codec,br,fps' -f 'bv*+ba/best' -o '~/Videos/%(playlist|NA)s/%(title)s [%(id)s].%(ext)s'";
 			DTAR = "~/.local/bin/tar.sh";
 			XYZ = "~/.local/bin/xyz.sh";
@@ -153,5 +121,30 @@
 			REBOOT = "sudo reboot";
 			OFF = "poweroff";	  
         };
+
+        
+        initExtra = ''
+        	PROMPT_COMMAND='PS1_CMD1=''$(git branch --show-current 2>/dev/null)'; 
+        	PS1='\[\e[92m\]\u\[\e[0m\] \[\e[38;5;244;2;5m\]\s\[\e[0m\]in \[\e[93m\]\w\[\e[0m\] \$ ~ \[\e[91m\]''${PS1_CMD1}\n\[\e[0m\]'
+
+			if [ -z "$TMUX" ]; then
+			    sessions=''$(tmux list-sessions 2>/dev/null | wc -l)
+
+			    if [ "$sessions" -eq 0 ]; then
+			        tmux new-session
+			    else
+			        tmux attach-session \; choose-session
+			    fi
+			fi
+			
+			export HISTSIZE=5000
+		    export HISTFILESIZE=10000
+		    export HISTCONTROL=ignoredups:erasedups
+		    export PATH="$HOME/.local/bin:$PATH"
+		    shopt -s histappend
+			shopt -s autocd
+	    	shopt -s cdspell
+	    	shopt -s nocaseglob
+    	'';
   };
 }

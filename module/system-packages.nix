@@ -32,7 +32,6 @@
       xarchiver
       mpv
       acpi
-      mpc
       dunst
       # AUDIO
    ];

@@ -10,9 +10,12 @@ set -eu
 PERS_FILE="''${PERS_FILE:-$HOME/.config/bookmarks/personal.txt}"
 WORK_FILE="''${WORK_FILE:-$HOME/.config/bookmarks/work.txt}"
 
-# Browser: hanya Brave
-BRAVE="''$(command -v brave || command -v brave-browser || true)"
-FALLBACK="''$(command -v xdg-open || echo brave)"
+# Browser: gunakan $BROWSER kalau ada, fallback ke xdg-open
+BROWSER_CMD="''${BROWSER:-}"
+if [ -z "$BROWSER_CMD" ]; then
+    BROWSER_CMD="''$(command -v xdg-open || true)"
+fi
+FALLBACK="''${BROWSER_CMD:-echo}"
 
 # Ensure files exist
 mkdir -p "''$(dirname "$PERS_FILE")"
@@ -20,15 +23,14 @@ mkdir -p "''$(dirname "$PERS_FILE")"
 if [ ! -f "$PERS_FILE" ]; then
 cat >"$PERS_FILE" <<EOF
 # personal
-tonybtw :: https://tonybtw.com
-https://youtube.com
+Tquilla :: https://github.com/msalmanrafadhlih/Nixos-Dotsfile
 EOF
 fi
 
 if [ ! -f "$WORK_FILE" ]; then
 cat >"$WORK_FILE" <<EOF
 # work
-[docs] NixOS Manual :: https://nixos.org/manual/
+MochSal :: https://msalmanrafadhlih.github.io/My-portofolio/
 EOF
 fi
 
@@ -73,15 +75,14 @@ case "$raw" in
     *) url="https://$raw" ;;
 esac
 
-# Always use Brave if available
-if [ -n "$BRAVE" ]; then
-    nohup "$BRAVE" --new-tab "$url" >/dev/null 2>&1 &
+# Gunakan browser global
+if [ -n "$BROWSER_CMD" ]; then
+    nohup "$BROWSER_CMD" "$url" >/dev/null 2>&1 &
     exit 0
 fi
 
 # Fallback
-nohup $FALLBACK "$url" >/dev/null 2>&1 &
-
+nohup "$FALLBACK" "$url" >/dev/null 2>&1 &
     '';
     executable = true;
   };

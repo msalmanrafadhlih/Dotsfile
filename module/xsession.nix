@@ -3,9 +3,9 @@
 {
   
   home.sessionVariables = {
-    EDITOR = "nano";
+    EDITOR = "nvim";
     BROWSER = "brave";
-    TERMINAL = "ghostty";
+    TERMINAL = "st";
   };
 
   xsession = {
@@ -20,7 +20,6 @@
 		export XCURSOR_THEME=Kafka
 		export XCURSOR_SIZE=14
 		xsetroot -cursor_name left_ptr
-
     '';
   };
   

@@ -6,7 +6,6 @@
 		#!/bin/sh
 		BG=/home/tquilla/Pictures/Wallpaper/1360883.jpeg
 		
-#        feh --bg-scale --randomize "$BG"
         feh --bg-scale "$BG"
 	'';
 	executable = true;

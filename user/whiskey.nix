@@ -59,7 +59,6 @@
   	../module/volume.nix
   	../module/media.nix
   	../module/nanorc.nix
-  	../module/mpd.nix
   	../module/git-prompt.nix
   	../module/tar.nix
   	../module/xyz.nix
@@ -71,6 +70,7 @@
   	../module/github-repos.nix
   	../module/tmux-sessions.nix
   	../module/run.nix
+  	../module/mpd.nix
 #  	../module/suckless.nix  	
    ];
 }

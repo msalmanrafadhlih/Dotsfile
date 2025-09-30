@@ -52,15 +52,19 @@
 			./system/configuration.nix
 			./module/fonts.nix
 			./module/services.nix
-			./module/programs.nix
 			./module/system-packages.nix
 			./module/ssh.nix
 			./module/sudo.nix
 			./module/user.nix
 			./module/audio.nix
+			./module/touchpad.nix
+			./module/splash.nix
+			./module/window_manager.nix
+			./module/gtk.nix
 #			./module/acme.nix
 #			./module/nginx.nix
 		];
 	};
   };  
 }
+

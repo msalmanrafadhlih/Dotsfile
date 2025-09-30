@@ -12,7 +12,7 @@ ctrl + super + alt + Return
 	bspc wm -r
 # ---------------------------------------------------------  Btop++
 super + alt + b
-	st -e btop
+    st -T btop -e btop	
 # ---------------------------------------------------------  Powermenu
 super + Escape
 	~/.config/rofi/scripts/powermenu-t4.sh
@@ -29,7 +29,7 @@ super + @space
 	 ~/.config/rofi/scripts/launcher-t7.sh
 # ---------------------------------------------------------  Browser
 super + b
-	brave
+	vivaldi
 # ---------------------------------------------------------  Terminal
 super + c
 	thunar ~/.repos/nixos
@@ -45,15 +45,21 @@ super + g
 # ---------------------------------------------------------  Rmpc	
 super + m
     st -c floating_rmpc -e rmpc
+# ---------------------------------------------------------  Rmpc	
+super + v
+    picard
 # ---------------------------------------------------------  AstroNvim
 super + n
-    st -c Terminalnvim -e nvim 
+	kitty --class=Terminalnvim -e nvim
 # ---------------------------------------------------------  Terminal
 super + p
 	st -c TerminalPinned
 # ---------------------------------------------------------  Exit
 super + q
 	bspc node -c
+# ---------------------------------------------------------  Exit
+super + y
+	kitty --class=YaziTerm -e yazi
 ###########################################################
 # ---------------------- Workspaces --------------------- #
 ###########################################################

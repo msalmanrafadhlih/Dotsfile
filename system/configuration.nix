@@ -24,6 +24,7 @@
 		dates = "daily";
 		options = "--delete-older-than 3d";
 	};
+	
 
 	security.rtkit.enable = true;
 	system.stateVersion = "25.05";

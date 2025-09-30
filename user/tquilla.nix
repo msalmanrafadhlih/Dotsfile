@@ -8,21 +8,32 @@
 #	~/.config
     configs = {    
 		bspwm = "bspwm";
-  		alacritty = "alacritty";
   		polybar = "polybar";
 		sxhkd = "sxhkd";
 		nano = "nano";
 		rofi = "rofi";
-		ghostty = "ghostty";
 		picom = "picom";
 		st = "st";
 		nvim = "nvim";
 		tmux = "tmux";
+		rmpc = "rmpc";
+		fastfetch = "fastfetch";
+		ncmpcpp = "ncmpcpp";
+		zsh = "zsh";
+		bat = "bat";
+		btop = "btop";
 		dunst = "dunst";
-		dmenu = "dmenu";
 		eww = "eww";
-		dwm = "dwm";
+		geany = "geany";
+		yazi = "yazi";
+		
+#  		alacritty = "alacritty";		
+#		ghostty = "ghostty";		
+#		dmenu = "dmenu";
+#		dwm = "dwm";
 
+#		"gtk-3.0" = "gtk-3.0";
+		"vesktop/themes" = "vesktop";
   	  	"systemd/user/battery-notif.service" = "systemd/user/battery-notif.service";
   	  	"systemd/user/battery-notif.timer" = "systemd/user/battery-notif.timer";
     };
@@ -52,14 +63,12 @@
   	../module/bash.nix
   	../module/packages.nix
   	../module/bat.nix
-  	../module/xsession.nix	
+  	../module/xsession.nix
   	../module/battery.nix
   	../module/brightness.nix
-  	../module/toggle_touchpad.nix
   	../module/volume.nix
   	../module/media.nix
   	../module/nanorc.nix
-  	../module/mpd.nix
   	../module/git-prompt.nix
   	../module/tar.nix
   	../module/xyz.nix
@@ -71,6 +80,8 @@
   	../module/github-repos.nix
   	../module/tmux-sessions.nix
   	../module/run.nix
+  	../module/mpd.nix
+  	../module/thunar.nix
 #  	../module/suckless.nix  	
    ];
 }

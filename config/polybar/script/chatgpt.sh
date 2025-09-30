@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-brave --user-data-dir=$HOME/.config/BraveSoftware/local --app="https://chat.openai.com" --class=ChatAi &
+vivaldi --user-data-dir=$HOME/.config/vivaldi/local --app="https://chat.openai.com" --class=ChatAi &
 
 #surf "https://chat.openai.com"

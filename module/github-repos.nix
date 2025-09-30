@@ -6,13 +6,11 @@
 #!/bin/sh
 set -eu
 
-# Set your terminal:
-terminal="st"
+terminal="kitty"
 
-configs="''$(ls -1d "$HOME"/.repos/*/ 2>/dev/null | xargs -n1 basename)"
+configs="''$(ls -1d "$HOME"/.repos/*/ 2>/dev/null | xargs -n1 basename || true)"
 [ -n "$configs" ] || exit 0
 
-# Kalau tanpa argumen, print daftar repos
 if [ $# -eq 0 ]; then
     printf '%s\n' $configs
     exit 0
@@ -24,11 +22,10 @@ chosen="$1"
 dir="$HOME/.repos/$chosen"
 
 # Nuke any existing st (optional, kalau emang mau clean start)
-pkill -x $terminal 2>/dev/null || true
+pkill $terminal 2>/dev/null || true
 sleep 0.1
 
-# Launch a clean terminal: attach if exists, else create
-setsid "$terminal" -c Terminalnvim -e tmux new-session -As "$chosen" -c "$dir" >/dev/null 2>&1 nvim . & exit 0
+setsid "$terminal" --class=YaziTerm -e tmux new-session -As "$chosen" -c "$dir" yazi >/dev/null 2>&1 & exit 0
 	'';
 	executable = true;
   };
