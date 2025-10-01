@@ -81,6 +81,9 @@
   	../module/tmux-sessions.nix
   	../module/run.nix
   	../module/mpd.nix
-#  	../module/suckless.nix  	
+  	../module/textfox.nix
+#  	../module/suckless.nix
+
+	inputs.textfox.homeManagerModules.default
    ];
 }

@@ -20,6 +20,7 @@
 
       font-manager
       vesktop
+      kdocker
       picard      
       yt-dlp
       jellyfin-ffmpeg

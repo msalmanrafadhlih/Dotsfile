@@ -3,13 +3,14 @@
   inputs = {
 	nixpkgs.url = "nixpkgs/nixos-25.05";
 	nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+	textfox.url = "github:adriankarlen/textfox";
 	home-manager = {
 		url = "github:nix-community/home-manager/release-25.05";
 		inputs.nixpkgs.follows = "nixpkgs";
 	};
   };
   outputs =
-  { self, nixpkgs, nixpkgs-unstable, home-manager, ... }: let
+  { self, nixpkgs, nixpkgs-unstable, home-manager, ... } @ inputs: let
   	system = "x86_64-linux";
   	pkgs = import nixpkgs { inherit system; };
 	overlay-unstable = final: prev: {
@@ -35,6 +36,7 @@
   	};
   	
 	nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+		specialArgs = { inherit inputs; }
 		system = "x86_64-linux";
 		modules = [
 			home-manager.nixosModules.home-manager {
@@ -44,6 +46,9 @@
 				users = {
 					tquilla = import ./user/tquilla.nix;
 					whiskey = import ./user/whiskey.nix;
+				};
+				extraSpecialArgs = {
+					inherit inputs;
 				};
 				backupFileExtension = "backup";
 			  };
