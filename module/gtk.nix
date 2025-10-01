@@ -1,4 +1,4 @@
-{ pkgs, ... }
+{ pkgs, ... }:
 
 {
 	services = {
@@ -13,10 +13,26 @@
 	        dconf
 	    ];
 	};
-	programs.dconf.enable = true
-	xdg.portal.enable = true;
+	programs.dconf.enable = true;
 	
-	xdg.portal.extraPortals = [ 
-		pkgs.xdg-desktop-portal-gtk 
+	xdg.portal.enable = true;
+	xdg.portal.xdgOpenUsePortal = true;
+	xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+	xdg.portal.configPackages = [
+	  pkgs.gnome-session
+	  pkgs.xdg-desktop-portal-gtk
 	];
+	
+    xdg.portal.config = {
+	  common = {
+	    default = [ "gtk" ];
+	  };
+	  pantheon = {
+	    default = [ "pantheon" "gtk" ];
+	    "org.freedesktop.impl.portal.Secret" = [ "gnome-keyring" ];
+	  };
+	  x-cinnamon = {
+	    default = [ "xapp" "gtk" ];
+	  };
+	};
 }

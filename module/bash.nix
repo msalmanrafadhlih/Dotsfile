@@ -54,8 +54,11 @@
 			TMUXSESSION = "nano ~/.repos/nixos/module/tmux-sessions.nix";			
 			
 			##  USER CONFIGURATIONS {SAVE}
-			BASHSAVE = "sudo chmod +x .bashrc";
 			UTILS = "chmod +x ~/.local/bin/*.sh";
+			
+			## LINK BOOKMARKS 
+			PERSONAL = "nano ~/.config/bookmarks/personal.txt";
+			WORK = "nano ~/.config/bookmarks/work.txt";
 			
 
 			##  DOTSFILE CONNFIGURATION & BSPWM

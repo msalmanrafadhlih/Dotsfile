@@ -1,6 +1,7 @@
 { config, pkgs, lib, ... }:
 
 {
+ services = {
 	libinput = {
 	    enable = true;
 	    touchpad = {
@@ -24,5 +25,6 @@
             ## 'SYNA3602:00 0911:5288 Touchpad' & "2.4G Mouse" is my touchpad and mouse name, check xinput list' in terminal!
         '';
     };
+  };
 }
 

@@ -81,7 +81,6 @@
   	../module/tmux-sessions.nix
   	../module/run.nix
   	../module/mpd.nix
-  	../module/thunar.nix
 #  	../module/suckless.nix  	
    ];
 }

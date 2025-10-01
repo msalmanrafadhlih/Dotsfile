@@ -55,7 +55,6 @@
   	../module/xsession.nix	
   	../module/battery.nix
   	../module/brightness.nix
-  	../module/toggle_touchpad.nix
   	../module/volume.nix
   	../module/media.nix
   	../module/nanorc.nix

@@ -8,7 +8,6 @@
       rofi
       vivaldi
       neovim
-      brave
       kitty
       yazi
       tmux

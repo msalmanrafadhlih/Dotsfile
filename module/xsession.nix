@@ -4,7 +4,6 @@
   
   home.sessionVariables = {
     EDITOR = "nvim";
-    BROWSER = "brave";
     TERMINAL = "st";
   };
 

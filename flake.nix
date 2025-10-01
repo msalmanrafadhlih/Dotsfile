@@ -61,6 +61,7 @@
 			./module/splash.nix
 			./module/window_manager.nix
 			./module/gtk.nix
+			./module/thunar.nix
 #			./module/acme.nix
 #			./module/nginx.nix
 		];
