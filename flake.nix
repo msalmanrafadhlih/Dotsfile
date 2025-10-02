@@ -4,13 +4,15 @@
 	nixpkgs.url = "nixpkgs/nixos-25.05";
 	nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 	textfox.url = "github:adriankarlen/textfox";
+	nur.url = "github:nix-community/NUR";
+	
 	home-manager = {
 		url = "github:nix-community/home-manager/release-25.05";
 		inputs.nixpkgs.follows = "nixpkgs";
 	};
   };
   outputs =
-  { self, nixpkgs, nixpkgs-unstable, home-manager, ... } @ inputs: let
+  { self, nixpkgs, nixpkgs-unstable, home-manager, nur, ... } @ inputs: let
   	system = "x86_64-linux";
   	pkgs = import nixpkgs { inherit system; };
 	overlay-unstable = final: prev: {
@@ -54,6 +56,7 @@
 			  };
 			}
 			{ nixpkgs.overlays = [ overlay-unstable ]; }
+			nur.modules.nixos.default
 			./system/configuration.nix
 			./module/fonts.nix
 			./module/services.nix

@@ -4,8 +4,7 @@
     enable = true;
 	package = pkgs.firefox-bin;
 
-    # pasang ekstensi
-    profiles.default.extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
+	profiles.textfox.extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
       ublock-origin
       bitwarden
       # textfox (kalau tersedia di NUR)
@@ -17,39 +16,20 @@
       enable = true;
       profile = "textfox";
       config = {
-        background = {
-#          color = "transparent";
-          color = "#c80e15";
-        };
-        border = {
-        color = "#f3e2e2";       
-        width = "3px";           
-        transition = "0.3s ease"; # Snappier animation
-        radius = "6px";
-        };
         tabs.horizontal.enable = false;
-        tabs.vertical.enable = true;
         displayWindowControls = true;
         displayNavButtons = true;
         displayUrlbarIcons = true;
-        displaySidebarTools = false;
-        displayTitles = false;
-        newtabLogo = "
-        ⠀⠀⠀⠀⠀⣀⣤⣴⣶⣶⣤⣄⠀⠀⠀⠀⠀
-        ⠀⠀⢀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀
-        ⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀
-        ⢸⣿⣿⣿⣿⣿ Textfox ⣿⣿⣿⣿⡇
-        ⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀
-        ⠀⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⡟⠁⠀⠀⠀
-        ⠀⠀⠀⠀⠈⠉⠛⠛⠉⠉⠀
-        ";
+        displaySidebarTools = true;
+        displayTitles = true;
+        newtabLogo = " __        __   _                            _                _      _   _                 _      _ _ 
+ \ \      / /__| | ___ ___  _ __ ___   ___  | |__   __ _  ___| | __ | | | | ___  _ __ ___ (_) ___| | |
+  \ \ /\ / / _ \ |/ __/ _ \| '_ ` _ \ / _ \ | '_ \ / _` |/ __| |/ / | |_| |/ _ \| '_ ` _ \| |/ _ \ | |
+   \ V  V /  __/ | (_| (_) | | | | | |  __/ | |_) | (_| | (__|   <  |  _  | (_) | | | | | | |  __/_|_|
+    \_/\_/ \___|_|\___\___/|_| |_| |_|\___| |_.__/ \__,_|\___|_|\_\ |_| |_|\___/|_| |_| |_|_|\___(_|_)";
         font = {
           family = "jetBrainsMono Nerd Font";
-          size = "12px";
-          accent = "#f2e9e9"; # Warm gold accent
-        };
-        tabs.vertical = {
-          margin = "0.8rem";
+          size = "14px";
         };
       };
   };

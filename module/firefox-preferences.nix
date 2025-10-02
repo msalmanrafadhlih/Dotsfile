@@ -1,7 +1,6 @@
 { inputs, pkgs, programs, ... }:
 
 {
-
   programs.firefox = {
     # about:config preferences
     preferencesStatus = "user";
