@@ -2,7 +2,7 @@
 {
   programs.firefox = {
     enable = true;
-	package = {}
+	package = pkgs.firefox-bin;
 
     # pasang ekstensi
     profiles.default.extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
