@@ -47,7 +47,7 @@
 				useUserPackages = true;
 				users = {
 					tquilla = import ./user/tquilla.nix;
-					whiskey = import ./user/whiskey.nix;
+#					whiskey = import ./user/whiskey.nix;
 				};
 				extraSpecialArgs = {
 					inherit inputs;

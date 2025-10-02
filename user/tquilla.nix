@@ -27,6 +27,7 @@
 		eww = "eww";
 		geany = "geany";
 		yazi = "yazi";
+		kitty = "kitty";
 		
 #  		alacritty = "alacritty";		
 #		ghostty = "ghostty";		
@@ -34,7 +35,7 @@
 #		dwm = "dwm";
 
 #		"gtk-3.0" = "gtk-3.0";
-		"vesktop/themes" = "vesktop";
+		"vesktop/themes" = "vesktop/themes";
   	  	"systemd/user/battery-notif.service" = "systemd/user/battery-notif.service";
   	  	"systemd/user/battery-notif.timer" = "systemd/user/battery-notif.timer";
     };
@@ -82,8 +83,8 @@
   	../module/tmux-sessions.nix
   	../module/run.nix
   	../module/mpd.nix
-#  	../module/firefox.nix
 #  	../module/suckless.nix
+#  	../module/firefox.nix
 
 	inputs.textfox.homeManagerModules.default
    ];

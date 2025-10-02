@@ -3,8 +3,8 @@
 {
   
   home.sessionVariables = {
-    EDITOR = "nvim";
-    BROWSER = "nvim";
+    EDITOR = "nano";
+    BROWSER = "vivaldi";
     TERMINAL = "st";
   };
 
