@@ -19,7 +19,6 @@
 			HNIX = "bat ~/.repos/nixos/system/hardware-configuration.nix";
 			FLAKE = "nano ~/.repos/nixos/flake.nix";
 			LOCK = "bat ~/.repos/nixos/flake.lock";
-			MODULE = "cd ~/.repos/nixos/module && tree";
 
 			FONTS = "nano ~/.repos/nixos/module/fonts.nix";
 			SYSINSTALL = "nano  ~/.repos/nixos/module/system-packages.nix";
@@ -33,8 +32,8 @@
 			GRAPH = "git log --oneline --decorate --graph --all";
 
 			##  USER CONFIGURATIONS {EDIT}
-			TQU = "cd ~/.repos/nixos/module && ls -la";
-			HOME = "nano ~/.repos/nixos/user/tquilla.nix";
+			MDL = "cd ~/.repos/nixos/module && ls -la";
+			HOME = "cd ~/.repos/nixos/user && nano ~/.repos/nixos/user/$USER.nix ";
 			BASH = "source ~/.bashrc && nano ~/.repos/nixos/module/bash.nix";
 			INSTALL = "nano ~/.repos/nixos/module/packages.nix";
 			BAT = "nano ~/.repos/nixos/module/bat.nix";

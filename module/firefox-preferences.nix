@@ -19,6 +19,7 @@
       "toolkit.telemetry.shutdownPingSender.enabled" = false;
       "toolkit.telemetry.bhrPing.enabled" = false;
       "toolkit.telemetry.firstShutdownPing.enabled" = false;
+      "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
 
       "datareporting.healthreport.uploadEnabled" = false;
       "datareporting.policy.dataSubmissionEnabled" = false;
@@ -32,6 +33,7 @@
       "browser.shell.checkDefaultBrowser" = false;
       "browser.disableResetPrompt" = true;
       "signon.rememberSignons" = false;
+      
     };
 
     # policies.json equivalent (bisa enforce policy Mozilla)
