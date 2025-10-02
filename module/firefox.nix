@@ -1,11 +1,11 @@
-{ inputs, pkgs, ... }:
+{ inputs, pkgs, programs, ... }:
 
 {
   programs.firefox = {
     enable = true;
 
     # pilih paket Firefox
-    package = pkgs.firefox-unwrapped;
+#    package = pkgs.firefox-unwrapped;
 
     # pasang ekstensi
 #    profiles.default.extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [

@@ -1,7 +1,6 @@
-{ pkgs, inputs, lib, ... }:
-
+{ pkgs, ... }:
 {
-## TEXTFOX
+  ## TEXTFOX
   textfox = {
       enable = true;
       profile = "textfox";
