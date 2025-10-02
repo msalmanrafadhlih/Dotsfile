@@ -67,7 +67,7 @@
 			./module/window_manager.nix
 			./module/gtk.nix
 			./module/thunar.nix
-			./module/firefox.nix
+			./module/firefox-preferences.nix
 #			./module/acme.nix
 #			./module/nginx.nix
 		];
