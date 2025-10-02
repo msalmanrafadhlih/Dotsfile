@@ -3,6 +3,7 @@
   let
     create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
     home = config.home.homeDirectory;
+    USER = config.home.username;
     dots = "/home/tquilla/.repos/nixos";
 
 #	~/.config
@@ -81,7 +82,7 @@
   	../module/tmux-sessions.nix
   	../module/run.nix
   	../module/mpd.nix
-  	../module/firefox.nix
+#  	../module/firefox.nix
 #  	../module/suckless.nix
 
 	inputs.textfox.homeManagerModules.default

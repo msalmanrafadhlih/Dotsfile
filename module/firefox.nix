@@ -1,10 +1,13 @@
-{ pkgs, ... }:
+{ config,  pkgs, ... }:
+let
+	USER = config.home.username;
+in
 {
   programs.firefox = {
     enable = true;
 	package = pkgs.firefox-bin;
 
-	profiles.textfox.extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
+	profiles."${USER}".extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
       ublock-origin
       bitwarden
       # textfox (kalau tersedia di NUR)
@@ -14,11 +17,11 @@
   ## TEXTFOX
   textfox = {
       enable = true;
-      profile = "textfox";
+      profile = "${USER}";
       config = {
         tabs.horizontal.enable = false;
         displayWindowControls = true;
-        displayNavButtons = true;
+        displayNavButtons = false;
         displayUrlbarIcons = true;
         displaySidebarTools = true;
         displayTitles = true;

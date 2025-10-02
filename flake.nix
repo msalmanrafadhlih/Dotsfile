@@ -67,10 +67,10 @@
 			./module/audio.nix
 			./module/touchpad.nix
 			./module/splash.nix
-			./module/window_manager.nix
+			./module/window-manager.nix
 			./module/gtk.nix
 			./module/thunar.nix
-			./module/firefox-preferences.nix
+#			./module/firefox-preferences.nix
 #			./module/acme.nix
 #			./module/nginx.nix
 		];

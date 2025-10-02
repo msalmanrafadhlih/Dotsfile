@@ -15,7 +15,8 @@
 
         autoRepeatDelay = 300;
         autoRepeatInterval = 35;
-        videoDrivers = [ "intel" "modesetting" ];
+#        videoDrivers = [ "intel" "modesetting" ];
+        videoDrivers = [ "modesetting" ];
         displayManager = {
             lightdm.enable = true;
         };

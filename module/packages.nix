@@ -7,9 +7,6 @@
       fastfetch
       rofi
       vivaldi
-      neovim
-      kitty
-      yazi
       tmux
       feh
 
@@ -19,15 +16,19 @@
       gcc
 
       font-manager
-      vesktop
-      kdocker
       picard      
       yt-dlp
       jellyfin-ffmpeg
     ])
     ++ (with pkgs.unstable; [
       # unstable packages
+      nyaa
+      neovim
+      vesktop
+      kdocker
+      yazi
       rmpc
+      kitty
       geany
     ]);
 }
