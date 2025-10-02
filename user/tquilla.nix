@@ -1,4 +1,4 @@
-{ config, pkgs, libs, ... }:
+{ config, pkgs, libs, inputs, ... }:
 
   let
     create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;

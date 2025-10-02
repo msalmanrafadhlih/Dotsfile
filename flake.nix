@@ -36,7 +36,7 @@
   	};
   	
 	nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-		specialArgs = { inherit inputs; }
+		specialArgs = { inherit inputs; };
 		system = "x86_64-linux";
 		modules = [
 			home-manager.nixosModules.home-manager {
@@ -67,6 +67,7 @@
 			./module/window_manager.nix
 			./module/gtk.nix
 			./module/thunar.nix
+			./module/firefox.nix
 #			./module/acme.nix
 #			./module/nginx.nix
 		];
