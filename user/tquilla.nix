@@ -84,8 +84,8 @@
   	../module/run.nix
   	../module/mpd.nix
   	../module/xdg-home.nix
+  	
 #  	../module/suckless.nix
-#  	../module/firefox.nix
 
 	inputs.textfox.homeManagerModules.default
    ];
