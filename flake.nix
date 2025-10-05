@@ -23,19 +23,9 @@
 	};
   	in
   {
-  	devShells.${system}.suckless = pkgs.mkShell {
-  	  packages = with pkgs; [
-  	  	pkg-config
-  	  	xorg.libX11
-  	  	xorg.libXft
-  	  	xorg.libXinerama
-  	  	fontconfig
-  	  	freetype
-  	  	harfbuzz
-  	  	gcc
-  	  	gnumake
-  	  ];
-  	};
+	devShells.${system} = {
+      suckless = import ./devshells/suckless.nix { inherit pkgs; };
+    };
   	
 	nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 		specialArgs = { inherit inputs; };

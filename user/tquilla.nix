@@ -83,6 +83,7 @@
   	../module/tmux-sessions.nix
   	../module/run.nix
   	../module/mpd.nix
+  	../module/xdg-home.nix
 #  	../module/suckless.nix
 #  	../module/firefox.nix
 

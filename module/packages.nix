@@ -5,6 +5,7 @@
     (with pkgs; [
       # stable packages
       fastfetch
+      spotify
       rofi
       vivaldi
       tmux
@@ -24,6 +25,7 @@
       # unstable packages
       nyaa
       neovim
+      spicetify-cli
       vesktop
       kdocker
       yazi

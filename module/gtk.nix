@@ -1,6 +1,7 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
+	## DBUS SESSION
 	services = {
 		dbus.enable = true;
 		udisks2.enable = true;
@@ -14,25 +15,23 @@
 	    ];
 	};
 	programs.dconf.enable = true;
-	
-	xdg.portal.enable = true;
-	xdg.portal.xdgOpenUsePortal = true;
-	xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-	xdg.portal.configPackages = [
-	  pkgs.gnome-session
-	  pkgs.xdg-desktop-portal-gtk
-	];
-	
-    xdg.portal.config = {
-	  common = {
-	    default = [ "gtk" ];
-	  };
-	  pantheon = {
-	    default = [ "pantheon" "gtk" ];
-	    "org.freedesktop.impl.portal.Secret" = [ "gnome-keyring" ];
-	  };
-	  x-cinnamon = {
-	    default = [ "xapp" "gtk" ];
-	  };
+
+	## XDG PORTAL (X11 Only)
+	xdg.portal = {
+		enable = true;
+		xdgOpenUsePortal = true;
+		extraPortals = with pkgs; [
+		  xdg-desktop-portal-gtk
+		];
+		config = {
+		  common = {
+		    default = [ "gtk" ];
+		  };
+		};
+	};
+
+	environment.sessionVariables = {
+		XDG_CURRENT_DESKTOP = "gtk";
+		XDG_SESSION_TYPE = "x11"; # atau "wayland" bila pakai sway/hyprland
 	};
 }
