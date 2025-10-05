@@ -3,6 +3,6 @@ type = internal/xwindow
 label =| %title:0:50:...% |
 #label-maxlen = 50
 
-label-empty = Empty
+label-empty = %{T3}        %{T-}
 #label-empty-foreground = #ff00ff
 

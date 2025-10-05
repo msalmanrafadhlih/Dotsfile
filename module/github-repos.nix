@@ -25,7 +25,7 @@ dir="$HOME/.repos/$chosen"
 pkill $terminal 2>/dev/null || true
 sleep 0.1
 
-setsid "$terminal" --class=YaziTerm -e tmux new-session -As "$chosen" -c "$dir" yazi >/dev/null 2>&1 & exit 0
+"$terminal" --class=YaziTerm -e tmux new-session -As "$chosen" -c "$dir" yazi >/dev/null 2>&1 & exit 0
 	'';
 	executable = true;
   };
