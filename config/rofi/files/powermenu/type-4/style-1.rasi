@@ -54,7 +54,6 @@ mainbox {
     padding:					 50px;
     border-radius:				 20px;
     background-image:            url("~/Pictures/Wallpaper/1360883.jpeg", height);
-//    background-color:            #ff000014;
     background-color:            transparent;
     children:                    [ "dummy", "inputbar", "listview", "message", "dummy" ];
 }

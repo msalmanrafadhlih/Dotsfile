@@ -24,9 +24,9 @@
 	};
   	in
   {
-	devShells.${system} = {
-      suckless = import ./devshells/suckless.nix { inherit pkgs; };
-    };
+#	devShells.${system} = {
+#      suckless = import ./devshells/suckless.nix { inherit pkgs; };
+#    };
   	
 	nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 		specialArgs = { inherit inputs; };

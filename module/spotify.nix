@@ -1,4 +1,4 @@
-{ inputs, pkgs, extensions, apps, snippets, ... }:
+{ inputs, pkgs, ... }:
 
 let
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
@@ -9,19 +9,20 @@ in
 
 	  enabledExtensions = with spicePkgs.extensions; [
 	    adblock
-	    hidePodcasts
-	    shuffle
+	    
 	  ];
 	  enabledCustomApps = with spicePkgs.apps; [
 	    newReleases
+	    reddit
 	    ncsVisualizer
+	    marketplace
 	  ];
 	  enabledSnippets = with spicePkgs.snippets; [
 	    rotatingCoverart
 	    pointer
 	  ];
 
-	  theme = spicePkgs.themes.dribbblish;
-#	  colorScheme = "mocha";
-  }
+	  theme = spicePkgs.themes.dreary;
+	  colorScheme = "Psycho";
+  };
 }

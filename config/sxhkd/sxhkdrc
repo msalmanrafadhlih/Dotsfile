@@ -26,10 +26,10 @@ super + Return
 	st -c TerminalDefault
 # ---------------------------------------------------------  Menu Apps
 super + @space
-	 ~/.config/rofi/scripts/launcher-t7.sh
+	~/.config/rofi/scripts/launcher-t7.sh
 # ---------------------------------------------------------  Browser
 super + b
-	vivaldi
+	kdocker -f -q vivaldi
 # ---------------------------------------------------------  Terminal
 super + c
 	thunar ~/.repos/nixos
@@ -50,10 +50,13 @@ super + v
     picard
 # ---------------------------------------------------------  AstroNvim
 super + n
-	kitty --class=Terminalnvim -e nvim
+	kdocker -f -q kitty --class=Terminalnvim -e nvim
 # ---------------------------------------------------------  Terminal
 super + p
 	st -c TerminalPinned
+# ---------------------------------------------------------  Terminal
+super + s
+	spotify
 # ---------------------------------------------------------  Exit
 super + q
 	bspc node -c

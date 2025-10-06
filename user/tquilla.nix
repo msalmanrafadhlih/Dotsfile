@@ -14,7 +14,7 @@
 		nano = "nano";
 		rofi = "rofi";
 		picom = "picom";
-		st = "st";
+#		st = "st";
 		nvim = "nvim";
 		tmux = "tmux";
 		rmpc = "rmpc";
@@ -41,7 +41,9 @@
     };
 
     locals = {
-    	".icons" = "icons";
+    	".icons" = "Assets/cursors";
+    	"Pictures/iconApps" = "Assets/IconApps";
+    	"Pictures/Wallpaper" = "Assets/Wallpapers";
     };
     in
 

@@ -6,10 +6,10 @@
  **/
 
 * {
-	background:     #0A0A1AFF;   /* RGB #1A0A0A → BGR */
-	background-alt: #111133FF;   /* RGB #331111 → BGR */
-	foreground:     #ECECFFFF;   /* RGB #FFECEC → BGR */
-	selected:       #3B3BFFFF;   /* RGB #FF3B3B → BGR */
-	active:         #2424B3FF;   /* RGB #B32424 → BGR */
-	urgent:         #335CFFFF;   /* RGB #FF5C33 → BGR */
+	background:     #1A0A0AFF;   /* RGB #0A0A1A → BGR */
+	background-alt: #331111FF;   /* RGB #111133 → BGR */
+	foreground:     #FFECECFF;   /* RGB #ECECFF → BGR */
+	selected:       #FF3B3BFF;   /* RGB #3B3BFF → BGR */
+	active:         #B32424FF;   /* RGB #2424B3 → BGR */
+	urgent:         #FF5C33FF;   /* RGB #335CFF → BGR */
 }
