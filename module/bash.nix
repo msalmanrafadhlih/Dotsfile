@@ -115,6 +115,7 @@
 			CAM = "~/.local/bin/opencam";
 			DMUSIC = "yt-dlp --trim-filenames 80 --restrict-filenames -x --audio-format mp3 -S 'abr,codec' -o '~/.config/mpd/Musics/%(playlist|NA)s/%(title)s [%(id)s].%(ext)s'";
 			DVIDEO = "yt-dlp --trim-filenames 80 --restrict-filenames -S 'res:720,codec,br,fps' -f 'bv*+ba/best' -o '~/Videos/%(playlist|NA)s/%(title)s [%(id)s].%(ext)s'";
+			IMGCOMPRESS="~/.local/bin/compress-images.sh";
 			DTAR = "~/.local/bin/tar.sh";
 			XYZ = "~/.local/bin/xyz.sh";
 			MPG = "ffmpeg -i";

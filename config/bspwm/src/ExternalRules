@@ -9,8 +9,8 @@ result() {
 }
 
 case "$class" in
-    FloaTerm)
-		result "state=floating center=on rectangle=696x399+0+0"
+    YaziTerm)
+		result "state=floating center=on rectangle=900x442+0+0"
         ;;
     Updating)
 		result "state=floating sticky=on center=on rectangle=390x405+0+0"
