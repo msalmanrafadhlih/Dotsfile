@@ -43,7 +43,7 @@
     locals = {
     	".icons" = "Assets/cursors";
     	"Pictures/iconApps" = "Assets/IconApps";
-    	"Pictures/Wallpaper" = "Assets/Wallpapers";
+    	"Pictures/Wallpaper" = "Assets/Wallpaper";
     };
     in
 
