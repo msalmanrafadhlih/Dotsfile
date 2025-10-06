@@ -10,7 +10,6 @@ in
 	profiles."${USER}".extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
       ublock-origin
       bitwarden
-      # textfox (kalau tersedia di NUR)
     ];
   };
   

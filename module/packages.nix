@@ -5,15 +5,14 @@
     (with pkgs; [
       # stable packages
       fastfetch
-      spotify
       rofi
+      gimp
       vivaldi
       tmux
-      feh
 
       nixpkgs-fmt
       nodejs
-      surf
+      feh
       gcc
 
       font-manager
@@ -25,7 +24,6 @@
       # unstable packages
       nyaa
       neovim
-      spicetify-cli
       vesktop
       kdocker
       yazi

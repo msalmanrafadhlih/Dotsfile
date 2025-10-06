@@ -84,9 +84,9 @@
   	../module/run.nix
   	../module/mpd.nix
   	../module/xdg-home.nix
+  	../module/spotify.nix
   	
 #  	../module/suckless.nix
-
-	inputs.textfox.homeManagerModules.default
+	inputs.spicetify-nix.homeManagerModules.default
    ];
 }

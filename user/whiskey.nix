@@ -71,6 +71,8 @@
   	../module/run.nix
   	../module/mpd.nix
   	../module/firefox.nix
+  	
 #  	../module/suckless.nix  	
+    inputs.textfox.homeManagerModules.default
    ];
 }

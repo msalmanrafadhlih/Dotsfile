@@ -9,7 +9,7 @@
       picom
       eww
  
-      nodePackages.prettier
+      ungoogled-chromium
       wget
       btop
       git

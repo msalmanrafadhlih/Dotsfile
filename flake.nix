@@ -3,6 +3,7 @@
   inputs = {
 	nixpkgs.url = "nixpkgs/nixos-25.05";
 	nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+	spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 	textfox.url = "github:adriankarlen/textfox";
 	nur.url = "github:nix-community/NUR";
 	
@@ -47,6 +48,7 @@
 			}
 			{ nixpkgs.overlays = [ overlay-unstable ]; }
 			nur.modules.nixos.default
+			
 			./system/configuration.nix
 			./module/fonts.nix
 			./module/services.nix
@@ -60,6 +62,7 @@
 			./module/window-manager.nix
 			./module/gtk.nix
 			./module/thunar.nix
+			
 #			./module/firefox-preferences.nix
 #			./module/acme.nix
 #			./module/nginx.nix
@@ -67,4 +70,3 @@
 	};
   };  
 }
-

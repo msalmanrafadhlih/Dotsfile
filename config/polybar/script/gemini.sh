@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
-vivaldi --user-data-dir=$HOME/.config/vivaldi/local/gemini --app="https://gemini.google.com" --class=ChatAi &
+chromium --user-data-dir=$HOME/.config/vivaldi/local --app="https://gemini.google.com" --class=ChatAi &
 
-#surf "https://gemini.google.com"
+
+surf -K "https://gemini.google.com"
