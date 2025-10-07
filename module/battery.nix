@@ -30,7 +30,6 @@ let
   '';
 in
 {
-
   home.file.".local/bin/battery-notify.sh".source = batteryScript;
 
   systemd.user.services.battery-check = {
