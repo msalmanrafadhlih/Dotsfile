@@ -53,6 +53,7 @@
 			./module/fonts.nix
 			./module/services.nix
 			./module/system-packages.nix
+			./module/hardware-acceleration.nix
 			./module/ssh.nix
 			./module/sudo.nix
 			./module/user.nix

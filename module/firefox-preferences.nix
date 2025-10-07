@@ -33,7 +33,10 @@
       "browser.shell.checkDefaultBrowser" = false;
       "browser.disableResetPrompt" = true;
       "signon.rememberSignons" = false;
-      
+
+      "media.ffmpeg.vaapi.enabled" = true
+	  "media.hardware-video-decoding.enabled" = true
+	  "gfx.webrender.all" = true
     };
 
     # policies.json equivalent (bisa enforce policy Mozilla)
