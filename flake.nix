@@ -53,7 +53,7 @@
 			./module/fonts.nix
 			./module/services.nix
 			./module/system-packages.nix
-#			./module/hardware-acceleration.nix
+			./module/hardware-acceleration.nix
 			./module/ssh.nix
 			./module/sudo.nix
 			./module/user.nix
@@ -62,7 +62,7 @@
 			./module/splash.nix
 			./module/window-manager.nix
 			./module/gtk.nix
-			./module/power.nix
+#			./module/power.nix
 			./module/thunar.nix
 			
 #			./module/firefox-preferences.nix
