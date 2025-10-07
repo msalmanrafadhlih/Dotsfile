@@ -87,6 +87,7 @@
   	../module/mpd.nix
   	../module/xdg-home.nix
   	../module/spotify.nix
+  	../module/picom.nix
   	
 #  	../module/suckless.nix
 	inputs.spicetify-nix.homeManagerModules.default

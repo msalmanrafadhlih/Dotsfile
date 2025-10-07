@@ -62,6 +62,7 @@
 			./module/splash.nix
 			./module/window-manager.nix
 			./module/gtk.nix
+			./module/power.nix
 			./module/thunar.nix
 			
 #			./module/firefox-preferences.nix
