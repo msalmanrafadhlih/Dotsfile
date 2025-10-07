@@ -56,7 +56,7 @@ super + p
 	st -c TerminalPinned
 # ---------------------------------------------------------  Terminal
 super + s
-	spotify
+	kdocker -q -f spotify --disable-accelerated-video-decode --no-zygote
 # ---------------------------------------------------------  Exit
 super + q
 	bspc node -c

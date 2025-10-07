@@ -9,13 +9,10 @@ in
 
 	  enabledExtensions = with spicePkgs.extensions; [
 	    adblock
-	    
 	  ];
 	  enabledCustomApps = with spicePkgs.apps; [
 	    newReleases
 	    reddit
-	    ncsVisualizer
-	    marketplace
 	  ];
 	  enabledSnippets = with spicePkgs.snippets; [
 	    rotatingCoverart

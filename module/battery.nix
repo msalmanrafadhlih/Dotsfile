@@ -30,11 +30,6 @@ let
   '';
 in
 {
-  services.tlp.enable = true;
-  powerManagement = {
-    enable = true;
-    powertop.enable = true;
-  };
 
   home.file.".local/bin/battery-notify.sh".source = batteryScript;
 

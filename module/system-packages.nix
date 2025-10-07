@@ -19,6 +19,7 @@
       killall
       unzip
       imlib2
+      python3
       xorg.xinit
       xorg.xsetroot
       xorg.xrandr

@@ -55,7 +55,7 @@ emit() {
 # Kalau tidak ada argumen: keluarkan list ke Rofi
 if [ $# -eq 0 ]; then
     {
-		echo "            🔹 === BOOKMARKS === 🔹"
+		echo "          🔹 === BOOKMARKS === 🔹"
 
         emit personal "$PERS_FILE"
         emit work     "$WORK_FILE"

@@ -86,10 +86,12 @@
   	../module/run.nix
   	../module/mpd.nix
   	../module/xdg-home.nix
-  	../module/spotify.nix
   	../module/picom.nix
   	
 #  	../module/suckless.nix
-	inputs.spicetify-nix.homeManagerModules.default
+
+	 ## add this if you want to use spotify with custom theme (spicetify)
+#  	../module/spotify.nix
+#	inputs.spicetify-nix.homeManagerModules.default
    ];
 }

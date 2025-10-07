@@ -10,6 +10,8 @@
 	set tabsize 	4
 #	set tabstospaces
 	set autoindent
+	set titlecolor brightwhite,blue
+	set statuscolor brightwhite,green
     
 	set softwrap
 #	set mouse
