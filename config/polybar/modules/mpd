@@ -36,7 +36,7 @@ bar-progress-empty-foreground = #44
 inherit = mpd
 format-online = <label-song>
 
-left-click = alacritty --class floating_rmpc -e rmpc
+left-click = st -c floating_rmpc -e rmpc
 
 [module/mpd-progress]
 inherit = mpd
@@ -45,7 +45,7 @@ format-online = <icon-prev> <icon-stop> <toggle> <icon-next>  <icon-repeat> <ico
 [module/spotify]
 type = custom/script
 interval = 2
-exec = playerctl metadata --format "{{ artist }} - {{ title }}" 2>/dev/null || echo "No song playing"
+exec = playerctl metadata --format "{{ artist }} - {{ title }}" 2>/dev/null || echo ""
 click-left = playerctl play-pause
 click-right = playerctl next
 scroll-up = playerctl next

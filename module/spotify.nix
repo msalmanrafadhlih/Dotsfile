@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ inputs, pkgs, services, ... }:
 
 let
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
@@ -31,6 +31,7 @@ in
         username_cmd = "cat ~/.config/spotify/username";
         password_cmd = "cat ~/.config/spotify/credentials";
         backend = "alsa"; # atau "alsa" kalau kamu pakai ALSA saja
+        use_mpris = true;
         device_name = "NixOS-Spotify";
         bitrate = 160;
         volume_normalisation = true;

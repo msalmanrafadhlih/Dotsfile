@@ -13,7 +13,7 @@
       "image/png" = [ "com.interversehq.qView.desktop" ];
       "image/jpeg" = [ "com.interversehq.qView.desktop" ];
       "image/svg+xml" = [ "com.interversehq.qView.desktop" ];
-      "application/x-zerosize" = [ "gimp.desktop" ];
+      "application/x-zerosize" = [ "geany.desktop" ];
     };
 
     # Asosiasi tambahan (tidak menggantikan default)
@@ -23,7 +23,7 @@
       "image/png" = [ "com.interversehq.qView.desktop" ];
       "image/jpeg" = [ "com.interversehq.qView.desktop" ];
       "image/svg+xml" = [ "com.interversehq.qView.desktop" ];
-      "application/x-zerosize" = [ "geany.desktop" "gimp.desktop" ];
+      "application/x-zerosize" = [ "geany.desktop" ];
     };
 
     # Kamu juga bisa hapus asosiasi tertentu (optional)
