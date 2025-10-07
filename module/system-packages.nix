@@ -28,6 +28,7 @@
       brightnessctl
       libcanberra-gtk3
       sound-theme-freedesktop
+      playerctl
       pamixer
       xdotool
       xarchiver

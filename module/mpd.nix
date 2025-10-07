@@ -26,10 +26,10 @@ in
             name "PipeWire pulse"
         }
     '';
-  };
-  
+  };  
 	home.packages = with pkgs; [
 		mpc
 	];
+ 
 }
 

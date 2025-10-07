@@ -91,7 +91,7 @@
 #  	../module/suckless.nix
 
 	 ## add this if you want to use spotify with custom theme (spicetify)
-#  	../module/spotify.nix
-#	inputs.spicetify-nix.homeManagerModules.default
+  	../module/spotify.nix
+	inputs.spicetify-nix.homeManagerModules.default
    ];
 }

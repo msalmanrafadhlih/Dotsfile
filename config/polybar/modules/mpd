@@ -41,3 +41,12 @@ left-click = alacritty --class floating_rmpc -e rmpc
 [module/mpd-progress]
 inherit = mpd
 format-online = <icon-prev> <icon-stop> <toggle> <icon-next>  <icon-repeat> <icon-random>  <bar-progress> <label-time>
+
+[module/spotify]
+type = custom/script
+interval = 2
+exec = playerctl metadata --format "{{ artist }} - {{ title }}" 2>/dev/null || echo "No song playing"
+click-left = playerctl play-pause
+click-right = playerctl next
+scroll-up = playerctl next
+scroll-down = playerctl previous
