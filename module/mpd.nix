@@ -28,16 +28,16 @@ in
     '';
   };
   
-  services.librespot = {
-    enable = false;
-    deviceName = "MPD Spotify";
-    backend = "alsa"; # atau "alsa" jika tidak pakai PulseAudio/PipeWire
-    cache = "/home/tquilla/.cache/librespot";
-    # optional: gunakan token akun Spotify Premium
-    username_cmd = "cat ~/.config/spotify/username";
-    password_cmd = "cat ~/.config/spotify/credentials";
-  };
-  # agar bisa dikontrol lewat playerctl dan polybar
+#  services.librespot = {
+#    enable = false;
+#    deviceName = "MPD Spotify";
+#    backend = "alsa"; # atau "alsa" jika tidak pakai PulseAudio/PipeWire
+#    cache = "/home/tquilla/.cache/librespot";
+#    # optional: gunakan token akun Spotify Premium
+#    username_cmd = "cat ~/.config/spotify/username";
+#    password_cmd = "cat ~/.config/spotify/credentials";
+#  };
+#  # agar bisa dikontrol lewat playerctl dan polybar
 
   home.packages = with pkgs; [
 		playerctl
