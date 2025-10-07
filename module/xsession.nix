@@ -2,11 +2,11 @@
 
 {
   
-#  home.sessionVariables = {
-#    EDITOR = "nano";
-#    BROWSER = "vivaldi";
-#    TERMINAL = "st";
-#  };
+  home.sessionVariables = {
+    EDITOR = "nano";
+    BROWSER = "vivaldi";
+    TERMINAL = "st";
+  };
 
   xsession = {
     enable = true;

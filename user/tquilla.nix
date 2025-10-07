@@ -44,6 +44,7 @@
     	".icons" = "Assets/cursors";
     	"Pictures/iconApps" = "Assets/IconApps";
     	"Pictures/Wallpaper" = "Assets/Wallpaper";
+    	".local/share/applications/*" = "apps/*";
     };
     in
 

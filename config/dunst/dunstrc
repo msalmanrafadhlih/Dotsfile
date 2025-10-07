@@ -23,8 +23,8 @@ padding = 15
 horizontal_padding = 15
 text_icon_padding = 0
 
-frame_width = 0
-frame_color = "#222330"
+frame_width = 2
+frame_color = "#222330cd"
 
 sort = no
 idle_threshold = 0
@@ -79,15 +79,15 @@ class = Dunst
 
 [urgency_low]
 timeout = 3
-background = "#1a1b2614"
+background = "#1a1b26cd"
 foreground = "#9ece6a"
 
 [urgency_normal]
 timeout = 5
-background = "#1a1b2614"
+background = "#1a1b26cd"
 foreground = "#a9b1d6"
 
 [urgency_critical]
 timeout = 0
-background = "#1a1b2614"
+background = "#1a1b26cd"
 foreground = "#f7768e"
