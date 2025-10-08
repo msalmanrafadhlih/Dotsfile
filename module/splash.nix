@@ -4,6 +4,9 @@
   boot = {
     plymouth = {
         enable = true;
+        theme = "tribar";
+#        logo = "";
+#        extraConfig = "";
     };
     consoleLogLevel = 0; # set level log kernel (0=sepi, 7=verbose)
     initrd.verbose = false; # matikan output initrd

@@ -1,6 +1,6 @@
-#![enable(implicit_some)]
-#![enable(unwrap_newtypes)]
-#![enable(unwrap_variant_newtypes)]
+//#![enable(implicit_some)]
+//#![enable(unwrap_newtypes)]
+//#![enable(unwrap_variant_newtypes)]
 (
     default_album_art_path: None,
     show_song_table_header: true,
@@ -190,3 +190,4 @@
         ),
     ],
 )
+

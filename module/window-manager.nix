@@ -5,20 +5,14 @@
     xserver = {
         enable = true;
         windowManager = {
-#           dwl = {
-#               enable = true;
-#           };
-            bspwm = {
-                enable = true;
-            };
+            bspwm.enable = true;
         };
-
         autoRepeatDelay = 300;
         autoRepeatInterval = 35;
-#        videoDrivers = [ "intel" "modesetting" ];
+#       videoDrivers = [ "intel" "modesetting" ];
         videoDrivers = [ "modesetting" ];
         displayManager = {
-            lightdm.enable = true;
+        	lightdm.greeters.tiny.enable = true;
         };
     };
     

@@ -79,15 +79,15 @@ class = Dunst
 
 [urgency_low]
 timeout = 3
-background = "#1a1b26cd"
-foreground = "#9ece6a"
+background = "#331111cd"
+foreground = "#c80e15"
 
 [urgency_normal]
 timeout = 5
-background = "#1a1b26cd"
-foreground = "#a9b1d6"
+background = "#331111cd"
+foreground = "#c80e15"
 
 [urgency_critical]
 timeout = 0
-background = "#1a1b26cd"
-foreground = "#f7768e"
+background = "#331111cd"
+foreground = "#c80e15"
