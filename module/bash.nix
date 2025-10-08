@@ -109,6 +109,7 @@
 			PKG = "nix search nixpkgs";
 			SRC = "fc-list | grep -i";
 			FONTLIST = "fc-match -s";
+			GETHASH = "nix store prefetch-file";
 			PKGLIST = "nix-store --query --requisites /run/current-system | cut -d- -f2- | sort | uniq";
 
 			## productivities

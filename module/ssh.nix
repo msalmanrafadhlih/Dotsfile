@@ -5,12 +5,12 @@
 #	services.tailscale.enable = true;	
 	services.openssh = {
 		startWhenNeeded = true;
-		settings.PasswordAuthentication = false;
+		settings.PasswordAuthentication = true;
 		settings.PermitRootLogin = "no";
-		settings.KbdInteractiveAuthentication = false;
+		settings.KbdInteractiveAuthentication = true;
 	};
 	networking.firewall = {
-		enable = false;
+		enable = true;
 #		allowedTCPPorts = [ 22 ];
 	};
 }

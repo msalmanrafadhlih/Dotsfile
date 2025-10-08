@@ -1,4 +1,4 @@
-{ pkgs, services, ...  }:
+{ pkgs, services, config, ...  }:
 
 {
   services = {
@@ -9,10 +9,16 @@
         };
         autoRepeatDelay = 300;
         autoRepeatInterval = 35;
-#       videoDrivers = [ "intel" "modesetting" ];
         videoDrivers = [ "modesetting" ];
         displayManager = {
-        	lightdm.greeters.tiny.enable = true;
+        	startx.enable = true;
+        	lightdm = {
+        		enable = true;
+		        background = builtins.fetchurl {
+		          url = "https://raw.githubusercontent.com/msalmanrafadhlih/Nixos-Dotsfile/refs/heads/main/config/Assets/Wallpaper/wallpaper8.png";
+		          sha256 = "sha256-VZp1wy2N0GApt48ILRY+pIAhAjCt02GmqmxHRTWAEoA=";
+		        };
+        	};
         };
     };
     
