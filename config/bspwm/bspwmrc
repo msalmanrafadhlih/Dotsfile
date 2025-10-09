@@ -54,8 +54,8 @@ bspc rule -a qView state=floating center=on sticky=off rectangle=470x350+0+0
 bspc rule -a St state=floating rectangle=1120x820+3+30
 bspc rule -a YaziTerm state=floating center=on rectangle=900x442+0+0
 bspc rule -a Spotify desktop=^4
-bspc rule -a vesktop desktop=^5
-bspc rule -a Vivaldi-stable desktop=^2
+bspc rule -a vesktop desktop=^2
+bspc rule -a Vivaldi-stable desktop=^5
 
 # picom
 pkill picom

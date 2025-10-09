@@ -40,12 +40,7 @@
   	  	"systemd/user/battery-notif.timer" = "systemd/user/battery-notif.timer";
     };
 
-    locals = {
-    	".icons" = "Assets/cursors";
-    	"Pictures/iconApps" = "Assets/IconApps";
-    	"Pictures/Wallpaper" = "Assets/Wallpaper";
-    	".local/share/applications/*" = "apps/*";
-    };
+    locals = import ../module/locals.nix;
     in
 
 {
