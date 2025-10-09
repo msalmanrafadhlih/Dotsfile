@@ -11,20 +11,19 @@ scale = 0
 
 notification_limit = 20
 indicate_hidden = yes
-
 transparency = 0.5
 corner_radius = 6
 
 gap_size = 4
 separator_height = 1
-separator_color = "#abb2bf"
+separator_color = "#ffffff"
 
 padding = 15
 horizontal_padding = 15
 text_icon_padding = 0
 
 frame_width = 2
-frame_color = "#222330cd"
+frame_color = "#ff0000b0"
 
 sort = no
 idle_threshold = 0
@@ -33,7 +32,7 @@ font = JetBrainsMono NF Medium 9
 line_height = 0
 
 markup = full
-format = "<span size='xx-large' font_desc='Cantarell 9' weight='bold' foreground='#7aa2f7'>%s</span>\n%b"
+format = "<span size='xx-large' font_desc='Cantarell 9' weight='bold' foreground='#ff0000'>%s</span>\n%b"
 alignment = center
 vertical_alignment = center
 
@@ -79,15 +78,15 @@ class = Dunst
 
 [urgency_low]
 timeout = 3
-background = "#331111cd"
-foreground = "#c80e15"
+background = "#8B0000cd"
+foreground = "#ffffff"
 
 [urgency_normal]
 timeout = 5
-background = "#331111cd"
-foreground = "#c80e15"
+background = "#8B0000cd"
+foreground = "#ffffff"
 
 [urgency_critical]
 timeout = 0
-background = "#331111cd"
-foreground = "#c80e15"
+background = "#8B0000cd"
+foreground = "#ffffff"

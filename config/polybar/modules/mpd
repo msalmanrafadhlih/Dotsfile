@@ -50,3 +50,11 @@ click-left = playerctl play-pause
 click-right = playerctl next
 scroll-up = playerctl next
 scroll-down = playerctl previous
+
+[module/music]
+type = custom/script
+interval = 2
+exec = ~/.config/polybar/scripts/playerctl-status.sh
+click-left = playerctl play-pause
+click-right = playerctl next
+click-middle = playerctl previous
