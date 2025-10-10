@@ -7,8 +7,8 @@
 DIR_COLORSCRIPTS="$HOME/.local/share/asciiart"
 
 # Load scripts into an array
-color_scripts=$(ls "$DIR_COLORSCRIPTS" 2>/dev/null)
-length_colorscripts=$(printf '%s\n' "$color_scripts" | wc -l)
+color_scripts=''$(ls "$DIR_COLORSCRIPTS" 2>/dev/null)
+length_colorscripts=''$(printf '%s\n' "$color_scripts" | wc -l)
 
 _help() {
     echo "Description: A collection of terminal color scripts."
@@ -27,13 +27,13 @@ _list() {
     i=1
     for script in $color_scripts; do
         printf "%d\t%s\n" "$i" "$script"
-        i=$((i + 1))
+        i=''$((i + 1))
     done
 }
 
 _random() {
-    random_index=$(od -An -N2 -tu2 /dev/urandom | awk -v max="$length_colorscripts" '{print ($1 % max) + 1}')
-    chosen_script=$(printf '%s\n' $color_scripts | sed -n "${random_index}p")
+    random_index=''$(od -An -N2 -tu2 /dev/urandom | awk -v max="$length_colorscripts" '{print ($1 % max) + 1}')
+    chosen_script=''$(printf '%s\n' $color_scripts | sed -n "''${random_index}p")
     exec "$DIR_COLORSCRIPTS/$chosen_script"
 }
 
@@ -44,7 +44,7 @@ _run_colorscript() {
             echo "Error: Invalid index '$input'. Use 1-$length_colorscripts." >&2
             exit 1
         fi
-        script_name=$(printf '%s\n' $color_scripts | sed -n "${input}p")
+        script_name=''$(printf '%s\n' $color_scripts | sed -n "''${input}p")
     else
         if [ ! -f "$DIR_COLORSCRIPTS/$input" ]; then
             echo "Error: The '$input' script does not exist." >&2

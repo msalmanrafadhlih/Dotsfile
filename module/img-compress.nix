@@ -50,7 +50,7 @@ case "$MODE" in
     echo "🔹 Mode: LOSSY (kompresi dengan sedikit penurunan kualitas)"
     mkdir -p "$DIR/compressed"
     for img in "$DIR"/*.{png,jpg,jpeg,JPG,PNG,JPEG}; do
-      base=$(basename "$img")
+      base=''$(basename "$img")
       out="$DIR/compressed/$base"
       case "$img" in
         *.png|*.PNG)
