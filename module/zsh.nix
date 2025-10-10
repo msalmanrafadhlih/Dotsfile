@@ -42,8 +42,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-export VISUAL="${EDITOR}"
-export EDITOR='geany'
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 export SUDO_PROMPT="Deploying root access for %u. Password pls: "
 if [ -d "$HOME/.local/bin" ] ;

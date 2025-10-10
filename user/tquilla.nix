@@ -35,8 +35,6 @@
 
 #		"gtk-3.0" = "gtk-3.0";
 		"vesktop/themes" = "vesktop/themes";
-  	  	"systemd/user/battery-notif.service" = "systemd/user/battery-notif.service";
-  	  	"systemd/user/battery-notif.timer" = "systemd/user/battery-notif.timer";
     };
 
     locals = import ../module/locals.nix;
