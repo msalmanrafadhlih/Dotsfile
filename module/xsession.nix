@@ -20,6 +20,7 @@
 		export XCURSOR_THEME=Kafka
 		export XCURSOR_SIZE=14
 		xsetroot -cursor_name left_ptr
+		mpDris2 &
     '';
   };
   

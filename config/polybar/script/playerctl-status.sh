@@ -1,6 +1,16 @@
 #!/usr/bin/env bash
 
-player=$(playerctl -l 2>/dev/null | grep -E 'mpd|spotify' | head -n 1)
+# Daftar prioritas player
+players=(spotify mpd)
+
+for p in "${players[@]}"; do
+    if playerctl -p "$p" status &>/dev/null; then
+        player="$p"
+        break
+    fi
+done
+
+# Kalau tak ada player aktif
 [[ -z "$player" ]] && echo "🎵" && exit
 
 status=$(playerctl -p "$player" status 2>/dev/null)
@@ -14,4 +24,4 @@ else
     icon=""
 fi
 
-echo "$icon $meta"
+echo "$meta"

@@ -27,20 +27,33 @@ in
         }
     '';
   };
-  
-#  services.librespot = {
-#    enable = false;
-#    deviceName = "MPD Spotify";
-#    backend = "alsa"; # atau "alsa" jika tidak pakai PulseAudio/PipeWire
-#    cache = "/home/tquilla/.cache/librespot";
-#    # optional: gunakan token akun Spotify Premium
-#    username_cmd = "cat ~/.config/spotify/username";
-#    password_cmd = "cat ~/.config/spotify/credentials";
-#  };
-#  # agar bisa dikontrol lewat playerctl dan polybar
 
   home.packages = with pkgs; [
 		playerctl
 		mpc
+#		mpdris2
   ];
+
+   home.file.".config/mpDris2/mpDris2.conf" = {
+   	text = ''
+[Connection]
+host = 127.0.0.1
+port = 6600
+music_dir = ${home}/Musics/
+
+[Bling]
+notify = True
+notify_paused = True
+mmkeys = True
+cdprev = True
+
+[Notify]
+urgency = 0
+timeout = -1
+summary =
+body =
+paused_summary =
+paused_body =
+   	'';
+   };
 }

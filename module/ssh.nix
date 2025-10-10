@@ -13,4 +13,6 @@
 		enable = true;
 #		allowedTCPPorts = [ 22 ];
 	};
+	## using mosh
+	programs.mosh.enable = true;
 }

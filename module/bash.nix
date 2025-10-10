@@ -1,7 +1,6 @@
 { config, pkgs, nixpkgs-unstable, pkgs-stable, ... }:
 
 {
-
   programs.bash = {
         enable = true;
         shellAliases = {
@@ -23,7 +22,8 @@
 			FONTS = "nano ~/.repos/nixos/module/fonts.nix";
 			SYSINSTALL = "nano  ~/.repos/nixos/module/system-packages.nix";
 			SERVICE = "nano  ~/.repos/nixos/module/services.nix";
-			PROGRAMS = "nano  ~/.repos/nixos/module/programs.nix";
+			SPLASH = "~/.repos/nixos/module/splash.nix";			
+
 
 			## GIT INTEGRATION
 			GIT = "git add . && git commit -m";
@@ -34,7 +34,8 @@
 			##  USER CONFIGURATIONS {EDIT}
 			MDL = "cd ~/.repos/nixos/module && ls -la";
 			HOME = "cd ~/.repos/nixos/user && nano ~/.repos/nixos/user/$USER.nix ";
-			BASH = "source ~/.bashrc && nano ~/.repos/nixos/module/bash.nix";
+			BASH = "nano ~/.repos/nixos/module/zsh.nix";
+			ZSH = "nano ~/.repos/nixos/module/bash.nix";
 			INSTALL = "nano ~/.repos/nixos/module/packages.nix";
 			BAT = "nano ~/.repos/nixos/module/bat.nix";
 			XSESSION = "nano ~/.repos/nixos/module/xsession.nix";
@@ -51,6 +52,7 @@
 			BOOKMARK = "nano ~/.repos/nixos/module/bookmarks.nix";
 			REPOS = "nano ~/.repos/nixos/module/github-repos.nix";
 			TMUXSESSION = "nano ~/.repos/nixos/module/tmux-sessions.nix";			
+			LOCAL = "~/.repos/nixos/module/locals.nix";
 			
 			##  USER CONFIGURATIONS {SAVE}
 			UTILS = "chmod +x ~/.local/bin/*.sh";
@@ -88,14 +90,14 @@
 			CONFSAVE = "mv config.h config.h.bak";
 			CONFDEL = "cp config.h.bak config.h";
 			MAKE = "make clean && make && make install PREFIX=$HOME/.local";
-			SUCKLESS = "nano ~/.repos/nixos/module/sucless.nix";
+			SUCKLESS = "nano ~/.repos/nixos/module/suckless.nix";
 
 			## Tmux
 			TMUXSAVE = "tmux source-file ~/.config/tmux/tmux.conf";
 			TMUXDEL = "tmux kill-server";
 						  
 			##  OTHER
-			SAVE = "source ~/.bashrc && dunstify 'bash saved'";
+			SAVE = "source ~/.bashrc && source ~/.zshrc  && dunstify 'All SHELL saved'";
 			SAVEFLAKE = "sudo nixos-rebuild switch --flake ~/.repos/nixos#nixos";
 
 			OLD = "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";
@@ -109,7 +111,7 @@
 			PKG = "nix search nixpkgs";
 			SRC = "fc-list | grep -i";
 			FONTLIST = "fc-match -s";
-			GETHASH = "nix store prefetch-file";
+			GETHASH = "nix store prefetch-file"; ## GETHASH <link>
 			PKGLIST = "nix-store --query --requisites /run/current-system | cut -d- -f2- | sort | uniq";
 
 			## productivities
@@ -117,9 +119,10 @@
 			DMUSIC = "yt-dlp --trim-filenames 80 --restrict-filenames -x --audio-format mp3 -S 'abr,codec' -o '~/Musics/%(playlist|NA)s/%(title)s [%(id)s].%(ext)s'";
 			DVIDEO = "yt-dlp --trim-filenames 80 --restrict-filenames -S 'res:720,codec,br,fps' -f 'bv*+ba/best' -o '~/Videos/%(playlist|NA)s/%(title)s [%(id)s].%(ext)s'";
 			IMGCOMPRESS="~/.local/bin/compress-images.sh";
-			DTAR = "~/.local/bin/tar.sh";
+			DTAR = "~/.local/bin/tar.sh"; ## overwite folder to folder.tar.gz
 			XYZ = "~/.local/bin/xyz.sh";
-			MPG = "ffmpeg -i";
+			MPG = "ffmpeg -i"; ## MPG <path/to/img.png> <overwrite/img/file>
+			
 			
 			## POWER
 			REBOOT = "sudo reboot";
@@ -128,27 +131,27 @@
 
         
         initExtra = ''
-        	PROMPT_COMMAND='PS1_CMD1=''$(git branch --show-current 2>/dev/null)'; 
-        	PS1='\[\e[92m\]\u\[\e[0m\] \[\e[38;5;244;2;5m\]\s\[\e[0m\]in \[\e[93m\]\w\[\e[0m\] \$ ~ \[\e[91m\]''${PS1_CMD1}\n\[\e[0m\]'
+PROMPT_COMMAND='PS1_CMD1=''$(git branch --show-current 2>/dev/null)'; 
+PS1='\[\e[92m\]\u\[\e[0m\] \[\e[38;5;244;2;5m\]\s\[\e[0m\]in \[\e[93m\]\w\[\e[0m\] \$ ~ \[\e[91m\]''${PS1_CMD1}\n\[\e[0m\]'
 
-			if [ -z "$TMUX" ]; then
-			    sessions=''$(tmux list-sessions 2>/dev/null | wc -l)
+if [ -z "$TMUX" ]; then
+    sessions=''$(tmux list-sessions 2>/dev/null | wc -l)
 
-			    if [ "$sessions" -eq 0 ]; then
-			        tmux new-session
-			    else
-			        tmux attach-session \; choose-session
-			    fi
-			fi
-			
-			export HISTSIZE=5000
-		    export HISTFILESIZE=10000
-		    export HISTCONTROL=ignoredups:erasedups
-		    export PATH="$HOME/.local/bin:$PATH"
-		    shopt -s histappend
-			shopt -s autocd
-	    	shopt -s cdspell
-	    	shopt -s nocaseglob
+    if [ "$sessions" -eq 0 ]; then
+        tmux new-session
+    else
+        tmux attach-session \; choose-session
+    fi
+fi
+
+export HISTSIZE=5000
+export HISTFILESIZE=10000
+export HISTCONTROL=ignoredups:erasedups
+export PATH="$HOME/.local/bin:$PATH"
+shopt -s histappend
+shopt -s autocd
+shopt -s cdspell
+shopt -s nocaseglob
     	'';
   };
 }

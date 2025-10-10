@@ -45,16 +45,18 @@ format-online = <icon-prev> <icon-stop> <toggle> <icon-next>  <icon-repeat> <ico
 [module/spotify]
 type = custom/script
 interval = 2
-exec = playerctl metadata --format "{{ artist }} - {{ title }}" 2>/dev/null || echo ""
+exec = playerctl -p spotify metadata --format "{{ artist }} - {{ title }}" 2>/dev/null || echo ""
 click-left = playerctl play-pause
 click-right = playerctl next
 scroll-up = playerctl next
 scroll-down = playerctl previous
 
+
+# add pkgs.mpDris2 if want to mix mpd + playerctl
 [module/music]
 type = custom/script
 interval = 2
-exec = ~/.config/polybar/scripts/playerctl-status.sh
+exec = ~/.config/polybar/script/playerctl-status.sh
 click-left = playerctl play-pause
 click-right = playerctl next
 click-middle = playerctl previous
