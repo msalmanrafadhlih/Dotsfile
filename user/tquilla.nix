@@ -80,6 +80,8 @@
   	../module/mpd.nix
   	../module/xdg-home.nix
   	../module/picom.nix
+  	../module/img-compress.nix
+  	../module/colorscript.nix
   	
 #  	../module/suckless.nix
 #  	../module/firefox.nix ## This is for Whiskey, not for me! ~ Tquilla

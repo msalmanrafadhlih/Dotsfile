@@ -7,10 +7,10 @@
 	  shellAliases = import ./aliases.nix;
 	  syntaxHighlighting.enable = true;
 	  history = {
-		path = "${config.xdg.configHome}/zsh/zhistory";
-		size = 5000;
-		save = 5000;
-		ignoreDups = true; # setara dengan HISTDUP=erase
+		  path = "/etc/zsh/zhistory";
+		  size = 5000;
+		  save = 5000;
+		  ignoreDups = true; # setara dengan HISTDUP=erase
 	  };
       setOptions = [
         "APPEND_HISTORY"
