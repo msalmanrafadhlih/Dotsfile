@@ -1,11 +1,11 @@
-{ progra ms, libs, pkgs, ... }:
+{ programs, libs, pkgs, ... }:
 
 {
     programs.zsh = {
       enable = true;
-      initExtra = ''
+      initContent = ''
 # If not running interactively, don't do anything
-#[[ $- != *i* ]] && return
+[[ $- != *i* ]] && return
 
 if [ -d "$HOME/.local/bin" ] ;
   then PATH="$HOME/.local/bin:$PATH"

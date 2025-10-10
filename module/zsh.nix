@@ -1,4 +1,4 @@
-{ progra ms, libs, pkgs, ... }:
+{ programs, libs, pkgs, ... }:
 
 {
 	programs.zsh = {
@@ -9,11 +9,11 @@
 	  history.size = 10000;
 	  
 	## ADD PLUGINS FROM ohmyzsh
-	  oh-my-zsh = { # "ohMyZsh" without Home Manager
-	    enable = true;
-	    plugins = [ "git" "thefuck" ];
+#	  oh-my-zsh = { # "ohMyZsh" without Home Manager
+#	    enable = true;
+#	    plugins = [ "git" "" ];
 #	    theme = "robbyrussell";
-	  };
+#	  };
 	  
 	## ADD CUSTOM  PLUGINS
 #	  plugins = [
@@ -38,16 +38,16 @@
 #	      };
 #	    }
 #	  ];
-	  initExtra = ''
-if [ -z "$TMUX" ]; then
-    sessions=''$(tmux list-sessions 2>/dev/null | wc -l)
+	  initContent = ''
+		if [ -z "$TMUX" ]; then
+		    sessions=''$(tmux list-sessions 2>/dev/null | wc -l)
 
-    if [ "$sessions" -eq 0 ]; then
-        tmux new-session
-    else
-        tmux attach-session \; choose-session
-    fi
-fi
+		    if [ "$sessions" -eq 0 ]; then
+		        tmux new-session
+		    else
+		        tmux attach-session \; choose-session
+		    fi
+		fi
 	  '';
 	  shellAliases = import ./aliases.nix;
 	};

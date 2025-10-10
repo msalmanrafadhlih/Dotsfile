@@ -34,7 +34,6 @@
 #		dwm = "dwm";
 
 #		"gtk-3.0" = "gtk-3.0";
-		"zsh/zcompdump" = "zsh/zcompdump";
 		"vesktop/themes" = "vesktop/themes";
   	  	"systemd/user/battery-notif.service" = "systemd/user/battery-notif.service";
   	  	"systemd/user/battery-notif.timer" = "systemd/user/battery-notif.timer";
@@ -61,7 +60,7 @@
    
    imports = [
   	../module/bash.nix
-  	../module/zsh2.nix
+  	../module/zsh.nix
   	../module/packages.nix
   	../module/bat.nix
   	../module/xsession.nix
