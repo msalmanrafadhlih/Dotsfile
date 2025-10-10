@@ -14,7 +14,6 @@
 		nano = "nano";
 		rofi = "rofi";
 		picom = "picom";
-#		st = "st";
 		nvim = "nvim";
 		tmux = "tmux";
 		rmpc = "rmpc";
@@ -29,11 +28,12 @@
 		kitty = "kitty";
 		
 #  		alacritty = "alacritty";		
+#		"gtk-3.0" = "gtk-3.0";
 #		ghostty = "ghostty";		
 #		dmenu = "dmenu";
 #		dwm = "dwm";
+#		st = "st";
 
-#		"gtk-3.0" = "gtk-3.0";
 		"vesktop/themes" = "vesktop/themes";
     };
 
@@ -58,7 +58,6 @@
    
    imports = [
   	../module/bash.nix
-  	../module/zsh.nix
   	../module/packages.nix
   	../module/bat.nix
   	../module/xsession.nix
@@ -83,6 +82,7 @@
   	../module/picom.nix
   	
 #  	../module/suckless.nix
+#  	../module/firefox.nix ## This is for Whiskey, not for me! ~ Tquilla
 
 	 ## add this if you want to use spotify with custom theme (spicetify)
   	../module/spotify.nix

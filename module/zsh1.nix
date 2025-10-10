@@ -1,18 +1,20 @@
-{ programs, libs, pkgs, ... }:
+{ programs, config, pkgs, ... }:
 
 {
-    programs.zsh = {
-      enable = true;
-      initContent = ''
+	programs.zsh = {
+
+	  initContent = ''
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
+export SUDO_PROMPT="Deploying root access for %u. Password pls: "
 if [ -d "$HOME/.local/bin" ] ;
   then PATH="$HOME/.local/bin:$PATH"
 fi
-
+## TMUX
 if [ -z "$TMUX" ]; then
-    sessions=''$(tmux list-sessions 2>/dev/null | wc -l)
+    sessions=''''$(tmux list-sessions 2>/dev/null | wc -l)
 
     if [ "$sessions" -eq 0 ]; then
         tmux new-session
@@ -20,6 +22,7 @@ if [ -z "$TMUX" ]; then
         tmux attach-session \; choose-session
     fi
 fi
+
 
 #  ┬  ┌─┐┌─┐┌┬┐  ┌─┐┌┐┌┌─┐┬┌┐┌┌─┐
 #  │  │ │├─┤ ││  ├┤ ││││ ┬││││├┤
@@ -77,27 +80,7 @@ bindkey "^I" expand-or-complete-with-dots
 #  ┬ ┬┬┌─┐┌┬┐┌─┐┬─┐┬ ┬
 #  ├─┤│└─┐ │ │ │├┬┘└┬┘
 #  ┴ ┴┴└─┘ ┴ └─┘┴└─ ┴
-HISTFILE=~/.config/zsh/zhistory
-HISTSIZE=5000
-SAVEHIST=5000
 HISTDUP=erase
-setopt appendhistory
-setopt sharehistory
-setopt hist_ignore_space
-setopt hist_ignore_all_dups
-setopt hist_save_no_dups
-setopt hist_ignore_dups
-setopt hist_find_no_dups
-
-#  ┌─┐┌─┐┬ ┬  ┌─┐┌─┐┌─┐┬    ┌─┐┌─┐┌┬┐┬┌─┐┌┐┌┌─┐
-#  ┌─┘└─┐├─┤  │  │ ││ ││    │ │├─┘ │ ││ ││││└─┐
-#  └─┘└─┘┴ ┴  └─┘└─┘└─┘┴─┘  └─┘┴   ┴ ┴└─┘┘└┘└─┘
-setopt AUTOCD              # change directory just by typing its name
-setopt PROMPT_SUBST        # enable command substitution in prompt
-setopt MENU_COMPLETE       # Automatically highlight first element of completion menu
-setopt LIST_PACKED		   # The completion menu takes less space.
-setopt AUTO_LIST           # Automatically list choices on ambiguous completion.
-setopt COMPLETE_IN_WORD    # Complete from both ends of a word.
 
 #  ┌┬┐┬ ┬┌─┐  ┌─┐┬─┐┌─┐┌┬┐┌─┐┌┬┐
 #   │ ├─┤├┤   ├─┘├┬┘│ ││││├─┘ │
@@ -149,7 +132,6 @@ fi
 #  ┴ ┴└─┘ ┴ └─┘  └─┘ ┴ ┴ ┴┴└─ ┴
 $HOME/.local/bin/colorscript -r
 #disable-fzf-tab
-      '';
-      shellAliases = import ./aliases.nix;
-    };
+	  '';
+	};
 }

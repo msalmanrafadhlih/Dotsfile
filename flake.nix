@@ -55,7 +55,7 @@
 			./module/system-packages.nix
 			./module/hardware-acceleration.nix
 			./module/ssh.nix
-			./module/shell.nix
+			./module/zsh.nix
 			./module/sudo.nix
 			./module/user.nix
 			./module/audio.nix
@@ -63,10 +63,10 @@
 			./module/splash.nix
 			./module/window-manager.nix
 			./module/gtk.nix
-#			./module/power.nix
 			./module/thunar.nix
 			
 #			./module/firefox-preferences.nix
+#			./module/power.nix
 #			./module/acme.nix
 #			./module/nginx.nix
 		];

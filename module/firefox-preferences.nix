@@ -2,6 +2,7 @@
 
 {
   programs.firefox = {
+  	enable = true;
     # about:config preferences
     preferencesStatus = "user";
     preferences = {

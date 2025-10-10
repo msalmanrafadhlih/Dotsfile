@@ -120,7 +120,6 @@ DTAR = "~/.local/bin/tar.sh"; ## overwite folder to folder.tar.gz
 XYZ = "~/.local/bin/xyz.sh";
 MPG = "ffmpeg -i"; ## MPG <path/to/img.png> <overwrite/img/file>
 
-
 ## POWER
 REBOOT = "sudo reboot";
 OFF = "poweroff";
