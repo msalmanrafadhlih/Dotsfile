@@ -49,7 +49,7 @@ if [ -d "$HOME/.local/bin" ] ;
 fi
 ## TMUX
 if [ -z "$TMUX" ]; then
-    sessions=''$(tmux list-sessions 2>/dev/null | wc -l)
+    sessions=''''$(tmux list-sessions 2>/dev/null | wc -l)
 
     if [ "$sessions" -eq 0 ]; then
         tmux new-session
@@ -72,7 +72,7 @@ else
     compinit -C -d "$zcompdump"
 fi
 
-if [[ ! -f "${zcompdump}.zwc" || "$zcompdump" -nt "${zcompdump}.zwc" ]]; then
+if [[ ! -f "''${zcompdump}.zwc" || "$zcompdump" -nt "''${zcompdump}.zwc" ]]; then
     zcompile -U "$zcompdump"
 fi
 
@@ -84,7 +84,7 @@ _comp_options+=(globdots)
 
 zstyle ':completion:*' menu select
 zstyle ':completion:*:descriptions' format '[%d]'
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' list-colors ''${(s.:.)LS_COLORS}
 zstyle ':completion:*' matcher-list \
 		'm:{a-zA-Z}={A-Za-z}' \
 		'+r:|[._-]=* r:|=*' \
@@ -146,7 +146,7 @@ function dir_icon {
   fi
 }
 
-PS1='%B%F{blue}%f%b  %B%F{magenta}%n%f%b $(dir_icon)  %B%F{red}%~%f%b${vcs_info_msg_0_} %(?.%B%F{green}.%F{red})%f%b '
+PS1='%B%F{blue}%f%b  %B%F{magenta}%n%f%b ''$(dir_icon)  %B%F{red}%~%f%b''${vcs_info_msg_0_} %(?.%B%F{green}.%F{red})%f%b '
 
 #  ┌─┐┬  ┬ ┬┌─┐┬┌┐┌┌─┐
 #  ├─┘│  │ ││ ┬││││└─┐
@@ -171,8 +171,8 @@ function xterm_title_precmd () {
 }
 
 function xterm_title_preexec () {
-	print -Pn -- '\e]2;%n@%m %~ %# ' && print -n -- "${(q)1}\a"
-	[[ "$TERM" == 'screen'* ]] && { print -Pn -- '\e_\005{g}%n\005{-}@\005{m}%m\005{-} \005{B}%~\005{-} %# ' && print -n -- "${(q)1}\e\\"; }
+	print -Pn -- '\e]2;%n@%m %~ %# ' && print -n -- "''${(q)1}\a"
+	[[ "$TERM" == 'screen'* ]] && { print -Pn -- '\e_\005{g}%n\005{-}@\005{m}%m\005{-} \005{B}%~\005{-} %# ' && print -n -- "''${(q)1}\e\\"; }
 }
 
 if [[ "$TERM" == (kitty*|alacritty*|tmux*|screen*|xterm*) ]]; then
