@@ -31,7 +31,7 @@ MDL = "cd ~/.repos/nixos/module && ls -la";
 HOME = "cd ~/.repos/nixos/user && nano ~/.repos/nixos/user/$USER.nix ";
 ALIAS = "nano ~/.repos/nixos/module/aliases.nix";
 BASH = "nano ~/.repos/nixos/module/bash.nix";
-ZSH = " nano ~/.repos/nixos/module/zsh.nix";
+ZSH = " nano ~/.repos/nixos/module/zshrc.nix";
 INSTALL = "nano ~/.repos/nixos/module/packages.nix";
 BAT = "nano ~/.repos/nixos/module/bat.nix";
 XSESSION = "nano ~/.repos/nixos/module/xsession.nix";
@@ -93,7 +93,6 @@ TMUXSAVE = "tmux source-file ~/.config/tmux/tmux.conf";
 TMUXDEL = "tmux kill-server";
 
 ##  OTHER
-ZSHSAVE = "source ~/.zshrc && dunstify 'Zsh saved'";
 BASHSAVE = "source ~/.bashrc && dunstify 'Bash saved'";
 SAVEFLAKE = "sudo nixos-rebuild switch --flake ~/.repos/nixos#nixos";
 
