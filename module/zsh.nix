@@ -7,7 +7,7 @@
 	  shellAliases = import ./aliases.nix;
 	  syntaxHighlighting.enable = true;
 	  histSize = 2000;
-	  histFile = /etc/zsh/.zsh_history;
+	  histFile = "$HOME/.config/zsh/.zsh_history";
 #	  histSize = 5000;
 #		  path = "/etc/zsh/zhistory";
 #		  size = 5000;

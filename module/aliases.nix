@@ -1,7 +1,7 @@
 # ./aliases.nix
 
 {
-test = "echo 'i use NixOS btw!!'";
+tquilla = "cat ~/.config/fastfetch/ascii/miku";
 NIXOS = "tree ~/.repos/nixos && cd ~/.repos/nixos";
 RUNNING = "systemctl --user list-units --state=running";
 SYSRUNNING = "systemctl list-units --state=running";
