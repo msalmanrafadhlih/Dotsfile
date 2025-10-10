@@ -2,7 +2,6 @@
 
 {
 	programs.zsh = {
-	  enable = true;
       setOptions = [
         "APPEND_HISTORY"
         "SHARE_HISTORY"

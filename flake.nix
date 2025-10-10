@@ -55,6 +55,7 @@
 			./module/system-packages.nix
 			./module/hardware-acceleration.nix
 			./module/ssh.nix
+			./module/shell.nix
 			./module/sudo.nix
 			./module/user.nix
 			./module/audio.nix
