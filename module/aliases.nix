@@ -93,7 +93,8 @@ TMUXSAVE = "tmux source-file ~/.config/tmux/tmux.conf";
 TMUXDEL = "tmux kill-server";
 
 ##  OTHER
-SAVE = "source ~/.bashrc && source ~/.zshrc && dunstify 'all SHELL saved'";
+ZSHSAVE = "source ~/.zshrc && dunstify 'Zsh saved'";
+BASHSAVE = "source ~/.bashrc && dunstify 'Bash saved'";
 SAVEFLAKE = "sudo nixos-rebuild switch --flake ~/.repos/nixos#nixos";
 
 OLD = "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";

@@ -64,7 +64,7 @@ fi
 #  ┴─┘└─┘┴ ┴─┴┘  └─┘┘└┘└─┘┴┘└┘└─┘
 autoload -Uz compinit
 
-local zcompdump="$HOME/.config/zsh/zcompdump"
+local zcompdump="$HOME/.config/zsh/zcompdump/zcompdump"
 
 if [[ -n "$zcompdump"(#qN.mh+24) ]]; then
     compinit -i -d "$zcompdump"
