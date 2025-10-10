@@ -58,6 +58,7 @@
    
    imports = [
   	../module/bash.nix
+  	../module/zshrc.nix
   	../module/packages.nix
   	../module/bat.nix
   	../module/xsession.nix
