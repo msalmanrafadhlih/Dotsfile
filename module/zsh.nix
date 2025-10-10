@@ -8,12 +8,6 @@
 	  syntaxHighlighting.enable = true;
 	  histSize = 2000;
 	  histFile = "$HOME/.config/zsh/.zsh_history";
-#	  histSize = 5000;
-#		  path = "/etc/zsh/zhistory";
-#		  size = 5000;
-#		  save = 5000;
-#		  ignoreDups = true; # setara dengan HISTDUP=erase
-#	  };
       setOptions = [
         "APPEND_HISTORY"
         "SHARE_HISTORY"
@@ -63,5 +57,20 @@
 #	      };
 #	    }
 #	  ];
+	  shellInit = ''
+autoload -Uz compinit
+
+local zcompdump="$HOME/.config/zsh/zcompdump"
+
+if [[ -n "$zcompdump"(#qN.mh+24) ]]; then
+    compinit -i -d "$zcompdump"
+else
+    compinit -C -d "$zcompdump"
+fi
+
+if [[ ! -f "''${zcompdump}.zwc" || "$zcompdump" -nt "''${zcompdump}.zwc" ]]; then
+    zcompile -U "$zcompdump"
+fi
+	  '';
 	};
 }

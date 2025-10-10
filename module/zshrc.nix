@@ -17,23 +17,6 @@ if [ -d "$HOME/.local/bin" ] ;
   then PATH="$HOME/.local/bin:$PATH"
 fi
 
-#  ┬  ┌─┐┌─┐┌┬┐  ┌─┐┌┐┌┌─┐┬┌┐┌┌─┐
-#  │  │ │├─┤ ││  ├┤ ││││ ┬││││├┤
-#  ┴─┘└─┘┴ ┴─┴┘  └─┘┘└┘└─┘┴┘└┘└─┘
-autoload -Uz compinit
-
-local zcompdump="$HOME/.config/zsh/zcompdump"
-
-if [[ -n "$zcompdump"(#qN.mh+24) ]]; then
-    compinit -i -d "$zcompdump"
-else
-    compinit -C -d "$zcompdump"
-fi
-
-if [[ ! -f "''${zcompdump}.zwc" || "$zcompdump" -nt "''${zcompdump}.zwc" ]]; then
-    zcompile -U "$zcompdump"
-fi
-
 SAVEHIST=5000
 HISTDUP=erase
 
