@@ -27,7 +27,7 @@ _comp_options+=(globdots)
 
 zstyle ':completion:*' menu select
 zstyle ':completion:*:descriptions' format '[%d]'
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' list-colors ''${(s.:.)LS_COLORS}
 zstyle ':completion:*' matcher-list \
 		'm:{a-zA-Z}={A-Za-z}' \
 		'+r:|[._-]=* r:|=*' \
@@ -71,7 +71,7 @@ function dir_icon {
 autoload -Uz vcs_info
 precmd() { vcs_info }
 
-PS1='%B%F{blue} %f%b %B%F{magenta}%n%f%b $(dir_icon) %B%F{red}%~%f%b${vcs_info_msg_0_} %(?.%B%F{green}.%F{red})%f%b '
+PS1='%B%F{blue} %f%b %B%F{magenta}%n%f%b $(dir_icon) %B%F{red}%~%f%b''${vcs_info_msg_0_} %(?.%B%F{green}.%F{red})%f%b '
 
 #  ┌─┐┬  ┬ ┬┌─┐┬┌┐┌┌─┐
 #  ├─┘│  │ ││ ┬││││└─┐
