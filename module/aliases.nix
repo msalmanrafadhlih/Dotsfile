@@ -48,7 +48,7 @@ OPENCAM = "nano ~/.repos/nixos/module/opencam.nix";
 BOOKMARK = "nano ~/.repos/nixos/module/bookmarks.nix";
 REPOS = "nano ~/.repos/nixos/module/github-repos.nix";
 TMUXSESSION = "nano ~/.repos/nixos/module/tmux-sessions.nix";
-LOCAL = "~/.repos/nixos/module/locals.nix";
+LOCAL = "nano ~/.repos/nixos/module/locals.nix";
 
 ##  USER CONFIGURATIONS {SAVE}
 UTILS = "chmod +x ~/.local/bin/*.sh";

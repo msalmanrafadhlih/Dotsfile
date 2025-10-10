@@ -27,5 +27,5 @@ in
   ".icons" = "Assets/cursors";
   "Pictures/iconApps" = "Assets/IconApps";
   "Pictures/Wallpaper" = "Assets/Wallpaper";
-  ".config/zsh/zcompdump" = ".config/zsh/zcompdump";
+  "zsh/.zZ" = ".config/zsh/zcompdump";
 } // appMappings

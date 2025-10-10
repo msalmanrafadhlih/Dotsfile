@@ -5,7 +5,29 @@
 	  enable = true;
 	  syntaxHighlighting.enable = true;
 	  history.size = 5000;
-	  	  
+	  shellAliases = import ./aliases.nix;
+	  history = {
+		path = "${config.xdg.configHome}/zsh/zhistory";
+		size = 5000;
+		save = 5000;
+		ignoreDups = true; # setara dengan HISTDUP=erase
+	  };
+	  shellOptions = [
+		"APPEND_HISTORY"
+		"SHARE_HISTORY"
+		"HIST_IGNORE_SPACE"
+		"HIST_IGNORE_ALL_DUPS"
+		"HIST_SAVE_NO_DUPS"
+		"HIST_IGNORE_DUPS"
+		"HIST_FIND_NO_DUPS"
+		"AUTOCD"
+		"PROMPT_SUBST"
+		"MENU_COMPLETE"
+		"LIST_PACKED"
+		"AUTO_LIST"
+		"COMPLETE_IN_WORD"
+	  ];
+	  
 	## ADD PLUGINS FROM ohmyzsh
 #	  oh-my-zsh = { # "ohMyZsh" without Home Manager
 #	    enable = true;
@@ -64,7 +86,7 @@ fi
 #  ┴─┘└─┘┴ ┴─┴┘  └─┘┘└┘└─┘┴┘└┘└─┘
 autoload -Uz compinit
 
-local zcompdump="$HOME/.config/zsh/zcompdump/zcompdump"
+local zcompdump="$HOME/.config/zsh/zcompdump"
 
 if [[ -n "$zcompdump"(#qN.mh+24) ]]; then
     compinit -i -d "$zcompdump"
@@ -115,25 +137,7 @@ bindkey "^I" expand-or-complete-with-dots
 #  ┬ ┬┬┌─┐┌┬┐┌─┐┬─┐┬ ┬
 #  ├─┤│└─┐ │ │ │├┬┘└┬┘
 #  ┴ ┴┴└─┘ ┴ └─┘┴└─ ┴
-HISTFILE=~/.config/zsh/zhistory
 HISTDUP=erase
-setopt appendhistory
-setopt sharehistory
-setopt hist_ignore_space
-setopt hist_ignore_all_dups
-setopt hist_save_no_dups
-setopt hist_ignore_dups
-setopt hist_find_no_dups
-
-#  ┌─┐┌─┐┬ ┬  ┌─┐┌─┐┌─┐┬    ┌─┐┌─┐┌┬┐┬┌─┐┌┐┌┌─┐
-#  ┌─┘└─┐├─┤  │  │ ││ ││    │ │├─┘ │ ││ ││││└─┐
-#  └─┘└─┘┴ ┴  └─┘└─┘└─┘┴─┘  └─┘┴   ┴ ┴└─┘┘└┘└─┘
-setopt AUTOCD              # change directory just by typing its name
-setopt PROMPT_SUBST        # enable command substitution in prompt
-setopt MENU_COMPLETE       # Automatically highlight first element of completion menu
-setopt LIST_PACKED		   # The completion menu takes less space.
-setopt AUTO_LIST           # Automatically list choices on ambiguous completion.
-setopt COMPLETE_IN_WORD    # Complete from both ends of a word.
 
 #  ┌┬┐┬ ┬┌─┐  ┌─┐┬─┐┌─┐┌┬┐┌─┐┌┬┐
 #   │ ├─┤├┤   ├─┘├┬┘│ ││││├─┘ │
@@ -179,9 +183,7 @@ if [[ "$TERM" == (kitty*|alacritty*|tmux*|screen*|xterm*) ]]; then
 	add-zsh-hook -Uz precmd xterm_title_precmd
 	add-zsh-hook -Uz preexec xterm_title_preexec
 fi
-
 #disable-fzf-tab
 	  '';
-	  shellAliases = import ./aliases.nix;
 	};
 }
