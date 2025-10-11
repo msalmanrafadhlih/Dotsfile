@@ -49,6 +49,7 @@ BOOKMARK = "nano ~/.repos/nixos/module/bookmarks.nix";
 REPOS = "nano ~/.repos/nixos/module/github-repos.nix";
 TMUXSESSION = "nano ~/.repos/nixos/module/tmux-sessions.nix";
 LOCAL = "nano ~/.repos/nixos/module/locals.nix";
+SSH = "nano ~/.repos/nixos/module/ssh.nix";
 
 ##  USER CONFIGURATIONS {SAVE}
 UTILS = "chmod +x ~/.local/bin/*.sh";
@@ -93,7 +94,8 @@ TMUXSAVE = "tmux source-file ~/.config/tmux/tmux.conf";
 TMUXDEL = "tmux kill-server";
 
 ##  OTHER
-BASHSAVE = "source ~/.bashrc && dunstify 'Bash saved'";
+BASHSAVE = "source ~/.bashrc && dunstify 'BASHRC saved'";
+ZSHSAVE = "source ~/.zshrc && dunstify 'ZSHRC saved'";
 SAVEFLAKE = "sudo nixos-rebuild switch --flake ~/.repos/nixos#nixos";
 
 OLD = "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";
@@ -103,6 +105,8 @@ OPTIMISE = "nix-store --optimise";
 GC = "nix-store --gc";
 CLEANER = "rm -rf ~/.cache/nix && rm -rf /tmp/nix-build-* && rm -rf ~/.local/share/Trash/*";
 CLEAR = "clear";
+CLS = "clear";
+cls = "clear";
 
 PKG = "nix search nixpkgs";
 SRC = "fc-list | grep -i";

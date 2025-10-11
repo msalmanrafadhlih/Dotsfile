@@ -17,17 +17,7 @@ if [ -z "$TMUX" ]; then
 fi
 
 autoload -Uz compinit
-local zcompdump="$HOME/.config/zsh/zcompdump-$ZSH_VERSION"
-
-if [[ -n "$zcompdump"(#qN.mh+24) ]]; then
-    compinit -i -d "$zcompdump"
-else
-    compinit -C -d "$zcompdump"
-fi
-
-if [[ ! -f "''${zcompdump}.zwc" || "$zcompdump" -nt "''${zcompdump}.zwc" ]]; then
-    zcompile -U "$zcompdump"
-fi
+compinit -d ~/.config/zsh/zcompdump
 
 #  ┬  ┬┌─┐┬─┐┌─┐
 #  └┐┌┘├─┤├┬┘└─┐

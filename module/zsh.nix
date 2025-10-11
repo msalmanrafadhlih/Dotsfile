@@ -59,8 +59,7 @@
 #	  ];
 	  shellInit = ''
 autoload -Uz compinit
-
-local zcompdump="$HOME/.config/zsh/zcompdump"
+local zcompdump="$HOME/.config/zsh/zcompdump-$ZSH_VERSION"
 
 if [[ -n "$zcompdump"(#qN.mh+24) ]]; then
     compinit -i -d "$zcompdump"
