@@ -19,6 +19,7 @@
       picard      
       yt-dlp
       jellyfin-ffmpeg
+	  ungoogled-chromium
     ])
     ++ (with pkgs.unstable; [
       # unstable packages

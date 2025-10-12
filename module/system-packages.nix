@@ -9,7 +9,7 @@
       picom
       eww
  
-      ungoogled-chromium
+      cachix
       wget
       btop
       git
