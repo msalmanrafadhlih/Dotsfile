@@ -16,10 +16,10 @@
     ];
 
     trusted-public-keys = [
-      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-      "nix-community.cachix.org-1:JvG/Kz4Jz5zGyt6AY8cmGephkXMrdHk5q9aR0u/poXY="
-      "nixpkgs-wayland.cachix.org-1:DpRUyj7h7V730dp57RZQtKAlGjgnt+1xOoWr8vPCHBo="
-      "spicetify-nix.cachix.org-1:4+HZ8sOElsP5AOjsUn9CFEm6W7M0iJwNUagEqqhjWZY="
+	  "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+	  "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+	  "nixpkgs-wayland.cachix.org-1:3lwxaILxMRkVhehr5StQprHdEo4IrE8sRho9R9HOLYA="
+	  "spicetify-nix.cachix.org-1:jjnwULkvMdu0E5KGBbtgrISEfDdJTGSZ4ATkiFzZn5I="
     ];
   };
 
@@ -120,9 +120,9 @@
 
             trusted-public-keys = [
               "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-              "nix-community.cachix.org-1:JvG/Kz4Jz5zGyt6AY8cmGephkXMrdHk5q9aR0u/poXY="
-              "nixpkgs-wayland.cachix.org-1:DpRUyj7h7V730dp57RZQtKAlGjgnt+1xOoWr8vPCHBo="
-              "spicetify-nix.cachix.org-1:4+HZ8sOElsP5AOjsUn9CFEm6W7M0iJwNUagEqqhjWZY="
+              "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+              "nixpkgs-wayland.cachix.org-1:3lwxaILxMRkVhehr5StQprHdEo4IrE8sRho9R9HOLYA="
+              "spicetify-nix.cachix.org-1:jjnwULkvMdu0E5KGBbtgrISEfDdJTGSZ4ATkiFzZn5I="
             ];
 
             auto-optimise-store = true;
