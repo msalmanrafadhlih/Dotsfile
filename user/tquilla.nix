@@ -26,6 +26,7 @@
 		geany = "geany";
 		yazi = "yazi";
 		kitty = "kitty";
+		com.kdocker = "com.kdocker";
 		
 #  		alacritty = "alacritty";		
 #		"gtk-3.0" = "gtk-3.0";

@@ -6,8 +6,8 @@
  //      "width": 28,
  //      "height": 20,
         "padding": {
-            "top": 1,
-            "left": 1
+            "top": 0,
+            "right": 0
         }
     },
     "display": {
@@ -68,11 +68,11 @@
             "key": "│           │\u001b[11D\u001b[35m memory",
             "type": "memory"
         },
-        {
-            "key": "│           │\u001b[11D\u001b[36m󰩟 network",
-            "type": "localip",
-            "format": "{1} ({4})"
-        },
+//        {
+//            "key": "│           │\u001b[11D\u001b[36m󰩟 network",
+//            "type": "localip",
+//            "format": "{1} ({4})"
+//        },
 
         // Tambahan 6 module
         {

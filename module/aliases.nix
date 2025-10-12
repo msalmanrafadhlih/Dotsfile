@@ -1,7 +1,7 @@
 # ./aliases.nix
 
 {
-tquilla = "cat ~/.config/fastfetch/ascii/miku";
+tquilla = "colorscript -r";
 NIXOS = "tree ~/.repos/nixos && cd ~/.repos/nixos";
 RUNNING = "systemctl --user list-units --state=running";
 SYSRUNNING = "systemctl list-units --state=running";
@@ -92,6 +92,7 @@ SUCKLESS = "nano ~/.repos/nixos/module/suckless.nix";
 ## Tmux
 TMUXSAVE = "tmux source-file ~/.config/tmux/tmux.conf";
 TMUXDEL = "tmux kill-server";
+MOSH = "mosh --ssh='ssh -p 8022'";
 
 ##  OTHER
 BASHSAVE = "source ~/.bashrc && dunstify 'BASHRC saved'";

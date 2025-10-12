@@ -22,8 +22,8 @@
     ])
     ++ (with pkgs.unstable; [
       # unstable packages
-      nyaa
       neovim
+      timg
       vesktop
       kdocker
       yazi

@@ -5,8 +5,8 @@
     address: "127.0.0.1:6600",
     password: None,
     theme: Some("mocha"),
-    cache_dir: None,
-    on_song_change: None,
+//  cache_dir: None,
+    on_song_change: ["~/.config/rmpc/increment_play_count"], 
     volume_step: 5,
     max_fps: 30,
     scrolloff: 0,
@@ -151,8 +151,8 @@
             name: "Lyrics",
             pane: Split(
                 direction: Horizontal,
-                panes: [(size: "100%", borders: "ALL", pane: Pane(Lyrics))],
-            ),
+                panes: [(size: "40%", pane: Pane(AlbumArt)), (size: "100%", borders: "ALL", pane: Pane(Lyrics), vertical_align: Bottom)],
+            ),	
         ),
     ],
 )
