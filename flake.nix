@@ -6,7 +6,6 @@
   ###########################
   nixConfig = {
     auto-optimise-store = true;
-
     substituters = [
       "https://cache.nixos.org"
       "https://nix-community.cachix.org"
@@ -109,6 +108,7 @@
         ###################################
         {
           nix.settings = {
+			extra-experimental-features = [ "nix-command" "flakes" ];
             # pastikan sama seperti di nixConfig
             substituters = [
               "https://cache.nixos.org"
