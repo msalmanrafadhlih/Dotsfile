@@ -32,7 +32,7 @@
     textfox.url = "github:adriankarlen/textfox";
     nur.url = "github:nix-community/NUR";
     yazellix-hm = {
-    	url = "./config/yazelix/home_manager";
+    	url = "./config/yazelix/homemanager";
     	inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
