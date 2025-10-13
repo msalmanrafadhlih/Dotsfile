@@ -8,7 +8,6 @@
       rofi
       gimp
       vivaldi
-      nushell
       tmux
 
       nixpkgs-fmt
@@ -24,7 +23,7 @@
     ])
     ++ (with pkgs.unstable; [
       # unstable packages
-      neovim
+      nvim
       timg
       vesktop
       kdocker

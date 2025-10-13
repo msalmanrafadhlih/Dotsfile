@@ -14,7 +14,6 @@
 		nano = "nano";
 		rofi = "rofi";
 		picom = "picom";
-		nvim = "nvim";
 		tmux = "tmux";
 		rmpc = "rmpc";
 		fastfetch = "fastfetch";

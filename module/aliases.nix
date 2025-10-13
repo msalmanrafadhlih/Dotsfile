@@ -2,7 +2,7 @@
 
 {
 tquilla = "colorscript -r";
-NIXOS = "tree ~/.repos/nixos && cd ~/.repos/nixos";
+NIXOS = "ls ~/.repos/nixos && cd ~/.repos/nixos";
 RUNNING = "systemctl --user list-units --state=running";
 SYSRUNNING = "systemctl list-units --state=running";
 USAGELOG = "sudo journalctl --disk-usage";
@@ -27,7 +27,7 @@ NAME = "xprop | grep NAME";
 GRAPH = "git log --oneline --decorate --graph --all";
 
 ##  USER CONFIGURATIONS {EDIT}
-MDL = "cd ~/.repos/nixos/module && ls -la";
+MDL = "cd ~/.repos/nixos/module && ls -a";
 HOME = "cd ~/.repos/nixos/user && nano ~/.repos/nixos/user/$USER.nix ";
 ALIAS = "nano ~/.repos/nixos/module/aliases.nix";
 BASH = "nano ~/.repos/nixos/module/bash.nix";
@@ -60,7 +60,7 @@ WORK = "nano ~/.config/bookmarks/work.txt";
 
 
 ##  DOTSFILE CONNFIGURATION & BSPWM
-CONFIG = "tree ~/.repos/nixos/config && cd ~/.repos/nixos/config";
+CONFIG = "ls ~/.repos/nixos/config && cd ~/.repos/nixos/config";
 POLYMODULE = "tree ~/.repos/nixos/config/polybar/modules && cd ~/.repos/nixos/config/polybar/modules";
 POLYSCRIPT =  "cd ~/.repos/nixos/config/polybar/script && tree";
 
