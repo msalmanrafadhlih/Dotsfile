@@ -31,10 +31,6 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     textfox.url = "github:adriankarlen/textfox";
     nur.url = "github:nix-community/NUR";
-    yazellix-hm = {
-    	url = "./config/yazelix/home-manager";
-    	inputs.nixpkgs.follows = "nixpkgs";
-    };
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -44,7 +40,7 @@
   ###########################
   ##  ⚙️ Flake Outputs
   ###########################
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, nur, yazellix-hm ... } @ inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, nur, ... } @ inputs:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
@@ -81,7 +77,6 @@
         ###################################
         { nixpkgs.overlays = [ overlay-unstable ]; }
         nur.modules.nixos.default
-    	inputs.yazellix-hm.homeManagerModules.default
 
         ###################################
         ## 🧱 Local Modules
@@ -101,7 +96,6 @@
         ./module/window-manager.nix
         ./module/gtk.nix
         ./module/thunar.nix
-
         # ./module/firefox-preferences.nix
         # ./module/power.nix
         # ./module/acme.nix

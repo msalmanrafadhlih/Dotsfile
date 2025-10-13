@@ -8,6 +8,7 @@
       rofi
       gimp
       vivaldi
+      nushell
       tmux
 
       nixpkgs-fmt
