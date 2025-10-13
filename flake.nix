@@ -32,7 +32,7 @@
     textfox.url = "github:adriankarlen/textfox";
     nur.url = "github:nix-community/NUR";
     yazellix-hm = {
-    	url = "./config/yazelix/homemanager";
+    	url = "./config/yazelix/home-manager";
     	inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
@@ -44,7 +44,7 @@
   ###########################
   ##  ⚙️ Flake Outputs
   ###########################
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, nur, ... } @ inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, nur, yazellix-hm ... } @ inputs:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
