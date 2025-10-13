@@ -10,6 +10,7 @@
       eww
  
       cachix
+      ripgrep
       wget
       btop
       git

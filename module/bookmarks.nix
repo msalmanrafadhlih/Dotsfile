@@ -79,12 +79,12 @@ esac
 
 # Gunakan browser global
 if [ -n "$BROWSER_CMD" ]; then
-    nohup "$BROWSER_CMD" "$url" >/dev/null 2>&1 &
+    kdocker -f -q nohup "$BROWSER_CMD" "$url" >/dev/null 2>&1 &
     exit 0
 fi
 
 # Fallback
-nohup "$FALLBACK" "$url" >/dev/null 2>&1 &
+kdocker -q -f nohup "$FALLBACK" "$url" >/dev/null 2>&1 &
     '';
     executable = true;
   };
