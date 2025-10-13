@@ -81,7 +81,7 @@
         ###################################
         { nixpkgs.overlays = [ overlay-unstable ]; }
         nur.modules.nixos.default
-    	yazellix-hm.homeManagerModules.default
+    	inputs.yazellix-hm.homeManagerModules.default
 
         ###################################
         ## 🧱 Local Modules
