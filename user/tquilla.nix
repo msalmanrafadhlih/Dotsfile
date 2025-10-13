@@ -88,8 +88,10 @@
 #  	../module/suckless.nix
 #  	../module/firefox.nix ## This is for Whiskey, not for me! ~ Tquilla
 
-	 ## add this if you want to use spotify with custom theme (spicetify)
+	 ## comment "#" this if you don't want to use spotify with custom theme (spicetify)
   	../module/spotify.nix
 	inputs.spicetify-nix.homeManagerModules.default
+
+	yazellix-hm.homeManagerModules.default
    ];
 }

@@ -31,7 +31,10 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     textfox.url = "github:adriankarlen/textfox";
     nur.url = "github:nix-community/NUR";
-
+    yazellix-hm = {
+    	url = "./config/yazelix/home_manager";
+    	inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";

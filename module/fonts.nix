@@ -56,6 +56,7 @@
         # Monospace (coding / terminal)
         nerd-fonts.jetbrains-mono
         nerd-fonts.fira-code
+        nerd-fonts.symbols-only
         nerd-fonts.hack
         source-code-pro
 
