@@ -23,7 +23,7 @@
     ])
     ++ (with pkgs.unstable; [
       # unstable packages
-      nvim
+      neovim
       timg
       vesktop
       kdocker
