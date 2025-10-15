@@ -22,8 +22,8 @@ in
         log_level "verbose"
 
         audio_output {
-            type "alsa"
-            name "ALSA Output"
+	        type "pulse"
+	        name "PipeWire Pulse Output"
         }
     '';
   };

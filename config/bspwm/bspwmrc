@@ -85,4 +85,6 @@ if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
     eval "$(dbus-launch --sh-syntax)"
 fi
 
-daktilo --preset custom --variate-tempo 0.9,0.4 --variate-volume 0.1,0.5
+pkill daktilo
+daktilo --config ~/.config/daktilo/daktilo.toml --preset ducduggo -d pipewire
+
