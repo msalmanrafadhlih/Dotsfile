@@ -9,7 +9,6 @@
     extra-substituters = [
       "https://cache.nixos.org"
       "https://nix-community.cachix.org"
-      "https://cache.nixos.community"
       "https://nixpkgs-wayland.cachix.org"
       "https://spicetify-nix.cachix.org"
     ];
