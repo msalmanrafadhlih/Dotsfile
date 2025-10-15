@@ -93,7 +93,7 @@ function dir_icon {
 autoload -Uz vcs_info
 precmd() { vcs_info }
 
-PS1=$'%B%F{blue} %f%b %B%F{magenta}%n%f%b $(dir_icon) %B%F{yellow}%~%f%b''${vcs_info_msg_0_}\n %(?.%B%F{green}.%F{red})%f%b'
+PS1=$'%B%F{blue} %f%b %B%F{magenta}%n%f%b $(dir_icon) %B%F{yellow}%~%f%b''${vcs_info_msg_0_}\n%(?.%B%F{green}.%F{red})%f%b '
 
 #  ┌─┐┬  ┬ ┬┌─┐┬┌┐┌┌─┐
 #  ├─┘│  │ ││ ┬││││└─┐
