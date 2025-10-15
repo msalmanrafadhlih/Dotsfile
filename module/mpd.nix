@@ -34,26 +34,26 @@ in
 #		mpdris2
   ];
 
-   home.file.".config/mpDris2/mpDris2.conf" = {
-   	text = ''
-[Connection]
-host = 127.0.0.1
-port = 6600
-music_dir = ${home}/Musics/
-
-[Bling]
-notify = True
-notify_paused = True
-mmkeys = True
-cdprev = True
-
-[Notify]
-urgency = 0
-timeout = -1
-summary =
-body =
-paused_summary =
-paused_body =
-   	'';
-   };
+#   home.file.".config/mpDris2/mpDris2.conf" = {
+#   	text = ''
+#		[Connection]
+#		host = 127.0.0.1
+#		port = 6600
+#		music_dir = ${home}/Musics/
+#
+#		[Bling]
+#		notify = True
+#		notify_paused = True
+#		mmkeys = True
+#		cdprev = True
+#
+#		[Notify]
+#		urgency = 0
+#		timeout = -1
+#		summary =
+#		body =
+#		paused_summary =
+#		paused_body =
+#   	'';
+#   };
 }

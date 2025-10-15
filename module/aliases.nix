@@ -6,6 +6,7 @@ NIXOS = "ls ~/.repos/nixos && cd ~/.repos/nixos";
 RUNNING = "systemctl --user list-units --state=running";
 SYSRUNNING = "systemctl list-units --state=running";
 USAGELOG = "sudo journalctl --disk-usage";
+SYSTEMD = "systemctl list-unit-files --type=service";
 
 ##  SYSTEM CONFIGURATIONS
 HOSTS = "cd ~/.repos/nixos/host && tree ~/.repos/nixos/host";
