@@ -18,6 +18,7 @@
       bat
  
       killall
+      dpkg
       unzip
       imlib2
       python3
