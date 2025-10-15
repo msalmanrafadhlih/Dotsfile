@@ -11,7 +11,7 @@
       tmux
 
       nixpkgs-fmt
-      daktilo
+#      daktilo
       nodejs
       feh
       gcc
