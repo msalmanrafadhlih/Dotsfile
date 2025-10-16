@@ -99,7 +99,7 @@ PS1=$'%B%F{blue} %f%b %B%F{magenta}%n%f%b $(dir_icon) %B%F{yellow}%~%f%b''${v
 #  ├─┘│  │ ││ ┬││││└─┐
 #  ┴  ┴─┘└─┘└─┘┴┘└┘└─┘
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.config/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+#source ~/.config/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down

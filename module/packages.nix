@@ -5,6 +5,7 @@
     (with pkgs; [
       # stable packages
       fastfetch
+      android-studio
       rofi
       gimp
       vivaldi
