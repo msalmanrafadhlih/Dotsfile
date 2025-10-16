@@ -7,6 +7,7 @@ RUNNING = "systemctl --user list-units --state=running";
 SYSRUNNING = "systemctl list-units --state=running";
 USAGELOG = "sudo journalctl --disk-usage";
 SYSTEMD = "systemctl list-unit-files --type=service";
+PYTHON8080 = "python3 -m http.server 8080";
 
 ##  SYSTEM CONFIGURATIONS
 HOSTS = "cd ~/.repos/nixos/host && tree ~/.repos/nixos/host";
@@ -107,8 +108,9 @@ OPTIMISE = "nix-store --optimise";
 GC = "nix-store --gc";
 CLEANER = "rm -rf ~/.cache/nix && rm -rf /tmp/nix-build-* && rm -rf ~/.local/share/Trash/*";
 CLEAR = "clear";
-CLS = "clear";
-cls = "clear";
+clar = "clear";
+C = "clear";
+c = "clear";
 
 PKG = "nix search nixpkgs";
 SRC = "fc-list | grep -i";
