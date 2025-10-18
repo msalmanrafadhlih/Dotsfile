@@ -19,13 +19,13 @@ let
         -h int:value:"$CAPACITY" \
         -r 2001 \
         -u critical "Battery Low" "$CAPACITY % remaining"
-      canberra-gtk-play -f "$SOUND_LOW" -V 8.0
+      canberra-gtk-play -f "$SOUND_LOW" -V 3.0
     elif [[ "$STATUS" == "Full" || ( "$STATUS" == "Charging" && "$CAPACITY" -ge 95 ) ]]; then
       dunstify -i "$ICON_FULL" \
         -h int:value:"$CAPACITY" \
         -r 2002 \
         -u normal "Battery Full" "$CAPACITY % charged. You can unplug the charger."
-      canberra-gtk-play -f "$SOUND_FULL" -V 8.0
+      canberra-gtk-play -f "$SOUND_FULL" -V 3.0
     fi
   '';
 in

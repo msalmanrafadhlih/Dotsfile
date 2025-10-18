@@ -26,6 +26,7 @@
     ++ (with pkgs.unstable; [
       # unstable packages
       neovim
+      ani-cli
       timg
       vesktop
       kdocker
