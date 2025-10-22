@@ -117,7 +117,7 @@ SRC = "fc-list | grep -i";
 FONTLIST = "fc-match -s";
 GETHASH = "nix store prefetch-file"; ## GETHASH <link>
 PKGLIST = "nix-store --query --requisites /run/current-system | cut -d- -f2- | sort | uniq";
-
+connect = "sudo tailscale up --operator=$USER";
 ## productivities
 CAM = "~/.local/bin/opencam";
 DMUSIC = "yt-dlp --trim-filenames 80 --restrict-filenames -x --audio-format mp3 -S 'abr,codec' -o '~/Musics/%(playlist|NA)s/%(title)s [%(id)s].%(ext)s'";

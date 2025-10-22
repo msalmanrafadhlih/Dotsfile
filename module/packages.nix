@@ -22,6 +22,12 @@
       yt-dlp
       jellyfin-ffmpeg
 	  ungoogled-chromium
+	  libreoffice	  
+	  zathura
+	  zoom
+	  evince
+	  obs-studio
+	  flameshot
     ])
     ++ (with pkgs.unstable; [
       # unstable packages
