@@ -149,7 +149,10 @@ super + {_,shift + }q
 	bspc node -{c,k}
 # ---------------------------------------------------------  Balance Nodes
 super + shift + b
-  bspc node @/ -B
+  bspc node @/ -B}
+# ---------------------------------------------------------  Balance Nodes
+ctrl + shift + s
+  flameshot gui
 # ---------------------------------------------------------  Control Direction
 super + shift {Up,Down,Return}
 	bspc node -p {east,south,cancel}

@@ -115,6 +115,7 @@ c = "clear";
 PKG = "nix search nixpkgs";
 SRC = "fc-list | grep -i";
 FONTLIST = "fc-match -s";
+SVFONT = "fc-cache -fv";
 GETHASH = "nix store prefetch-file"; ## GETHASH <link>
 PKGLIST = "nix-store --query --requisites /run/current-system | cut -d- -f2- | sort | uniq";
 connect = "sudo tailscale up --operator=$USER";
