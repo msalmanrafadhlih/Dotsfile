@@ -79,7 +79,7 @@
   	../module/tmux-sessions.nix
   	../module/run.nix
   	../module/mpd.nix
-  	../module/xdg-home.nix
+#  	../module/xdg-home.nix
   	../module/picom.nix
   	../module/img-compress.nix
   	../module/colorscript.nix

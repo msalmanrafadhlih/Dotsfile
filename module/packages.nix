@@ -23,7 +23,6 @@
       jellyfin-ffmpeg
 	  ungoogled-chromium
 	  libreoffice	  
-	  zathura
 	  zoom
 	  evince
 	  obs-studio

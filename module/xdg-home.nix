@@ -14,6 +14,7 @@
       "image/jpeg" = [ "com.interversehq.qView.desktop" ];
       "image/svg+xml" = [ "com.interversehq.qView.desktop" ];
       "application/x-zerosize" = [ "geany.desktop" ];
+	  "application/pdf" = [ "org.gnome.Evince.desktop" ];
     };
 
     # Asosiasi tambahan (tidak menggantikan default)
