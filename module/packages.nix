@@ -19,7 +19,6 @@
 
       font-manager
       picard      
-      yt-dlp
       jellyfin-ffmpeg
 	  ungoogled-chromium
 	  libreoffice	  
@@ -32,6 +31,7 @@
       # unstable packages
       neovim
       ani-cli
+      yt-dlp
       timg
       vesktop
       kdocker
