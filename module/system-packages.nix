@@ -2,7 +2,7 @@
 { config, lib, pkgs, ... }:
 
 { 
-   environment.systemPackages = with pkgs; [
+   environment.systemPackages = (with pkgs; [
       # BSPWM Stuff
       polybarFull
       sxhkd
@@ -13,7 +13,6 @@
       ripgrep
       wget
       btop
-      git
       tree
       bat
  
@@ -21,7 +20,6 @@
       dpkg
       unzip
       imlib2
-      python3
       xorg.xinit
       xorg.xsetroot
       xorg.xrandr
@@ -37,5 +35,10 @@
       acpi
       dunst
       # AUDIO
-   ];
+   ])
+    ++ (with pkgs.unstable; [
+      # unstable packages
+      python3      
+      git
+    ]);
 }
