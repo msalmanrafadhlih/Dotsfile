@@ -5,7 +5,6 @@
     (with pkgs; [
       # stable packages
       fastfetch
-      android-studio
       rofi
       gimp
       vivaldi
@@ -13,6 +12,7 @@
 
       nixpkgs-fmt
 #      daktilo
+	  vscode
       nodejs
       feh
       gcc

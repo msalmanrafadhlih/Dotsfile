@@ -99,6 +99,7 @@ MOSH = "mosh --ssh='ssh -p 8022'";
 ##  OTHER
 BASHSAVE = "source ~/.bashrc && dunstify 'BASHRC saved'";
 ZSHSAVE = "source ~/.zshrc && dunstify 'ZSHRC saved'";
+UPDT = "nix flake update";
 SAVEFLAKE = "sudo nixos-rebuild switch --flake ~/.repos/nixos#nixos";
 
 OLD = "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";
