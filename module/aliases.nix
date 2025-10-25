@@ -104,9 +104,9 @@ SAVEFLAKE = "sudo nixos-rebuild switch --flake ~/.repos/nixos#nixos";
 
 OLD = "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";
 GBGOLD = "sudo nix-env -p /nix/var/nix/profiles/system --delete-generations +3";
-GBG = "nix-collect-garbage";
-OPTIMISE = "nix-store --optimise";
-GC = "nix-store --gc";
+GBG = "sudo nix-collect-garbage";
+OPTIMISE = "sudo nix-store --optimise";
+GC = "sudo nix-store --gc";
 CLEANER = "rm -rf ~/.cache/nix && rm -rf /tmp/nix-build-* && rm -rf ~/.local/share/Trash/*";
 CLEAR = "clear";
 clar = "clear";
