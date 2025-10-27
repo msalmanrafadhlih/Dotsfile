@@ -36,16 +36,7 @@
 	};
 
 	xdg.mime.enable = true;
-	xdg.mime.defaultApplications = {
-		# Set default browser for web links
-		"x-scheme-handler/http" = "firefox.desktop";
-		"x-scheme-handler/https" = "firefox.desktop";
-
-		# Set default image viewer for various image types
-		"image/png" = "qview.desktop";
-		"image/jpeg" = "qview.desktop";
-		"image/svg+xml" = "qview.desktop";
-	};
+#	xdg.mime.defaultApplications = {}
 
 	# Make sure the application packages are installed
 	environment.systemPackages = with pkgs; [
