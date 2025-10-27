@@ -29,7 +29,7 @@
     ])
     ++ (with pkgs.unstable; [
       # unstable packages
-      neovim
+      helix
       ani-cli
       yt-dlp
       timg

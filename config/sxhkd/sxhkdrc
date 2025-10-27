@@ -30,12 +30,15 @@ super + @space
 # ---------------------------------------------------------  Browser
 super + b
 	kdocker -f -q vivaldi
-# ---------------------------------------------------------  Terminal
+# ---------------------------------------------------------  VS Code
 super + c
-	thunar ~/.repos/nixos
+    code -n
 # ---------------------------------------------------------  Open Discord
 super + d
 	vesktop
+# ---------------------------------------------------------  VSCode
+super + e
+	thunar ~/.repos/nixos
 # ------o--------------------------------------------------  thunar
 super + f
 	thunar
@@ -110,7 +113,7 @@ super + shift + {plus,minus}
 
 # ========================================== FLOATING NODES
 # ---------------------------------------------------------  move floating window
-ctrl + shift + {Left,Down,Up,Right}
+alt + shift + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 # ---------------------------------------------------------  Increase/decrease floating window
 ctrl + shift + {plus,minus}
