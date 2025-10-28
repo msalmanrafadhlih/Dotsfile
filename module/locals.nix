@@ -20,6 +20,7 @@ let
     "Gemini"
     "Claude"
     "chromium-browser"
+    "youtube"
   ];
 
   appMappings =
