@@ -106,10 +106,10 @@ Comment[vi]=Truy cập Internet
 Comment[zh_CN]=访问互联网
 Comment[zh_HK]=連線到網際網路
 Comment[zh_TW]=連線到網際網路
-Exec=kdocker -f -q chromium  --user-data-dir=$HOME/.config/vivaldi/local --app="https://claude.ai/new" --class=ChatAi &
+Exec=/home/tquilla/.config/polybar/script/claude.sh
 StartupNotify=true
 Terminal=false
-Icon=/home/tquilla/Pictures/iconApps/claude.png
+Icon=~/Pictures/iconApps/claude.png
 Type=Application
 Categories=Network;WebBrowser;
 MimeType=application/pdf;application/rdf+xml;application/rss+xml;application/xhtml+xml;application/xhtml_xml;application/xml;image/gif;image/jpeg;image/png;image/webp;text/html;text/xml;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/webcal;x-scheme-handler/mailto;x-scheme-handler/about;x-scheme-handler/unknown

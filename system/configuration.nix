@@ -4,10 +4,7 @@
 	imports = [
 		./hardware-configuration.nix
 	];
-  	
-	networking.networkmanager.enable = true;
-	networking.hostName = "nixos";
-	
+  		
 	time.timeZone = "Asia/Jakarta";
 	
 	i18n.defaultLocale = "en_US.UTF-8";
@@ -15,9 +12,7 @@
 		font = "Lat2-Terminus16";
 		keyMap = "us";
 	};
-	boot.loader.systemd-boot.enable = true;
-	boot.loader.efi.canTouchEfiVariables = true;
-	
+		
 	nix.gc = {
 		automatic = true;
 		dates = "daily";

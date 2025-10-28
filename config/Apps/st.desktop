@@ -2,7 +2,7 @@
 Type=Application
 Name=suckless terminal
 Comment=simple-terminal emulator for X
-Icon=/home/tquilla/Pictures/iconApps/simple terminal.png
+Icon=~/Pictures/iconApps/simple terminal.png
 Exec=kdocker -f -q st
 Categories=System;TerminalEmulator
 Path=

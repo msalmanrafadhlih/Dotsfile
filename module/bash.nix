@@ -17,7 +17,7 @@ if [ -z "$TMUX" ]; then
         tmux attach-session \; choose-session
     fi
 fi
-
+eval "$(tv init bash)"
 export HISTSIZE=5000
 export HISTFILESIZE=10000
 export HISTCONTROL=ignoredups:erasedups
