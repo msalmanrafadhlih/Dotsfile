@@ -97,10 +97,11 @@
         ./module/user.nix
         ./module/audio.nix
         ./module/touchpad.nix
-        ./module/splash.nix
+        ./module/boot.nix
         ./module/window-manager.nix
         ./module/gtk.nix
         ./module/thunar.nix
+        ./module/network.nix
         # ./module/firefox-preferences.nix
         # ./module/power.nix
         # ./module/acme.nix
