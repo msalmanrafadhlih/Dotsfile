@@ -50,6 +50,7 @@ bspc rule -a ChatAi state=floating rectangle=470x665+1445+385
 bspc rule -a TerminalDefault state=floating sticky=off rectangle=750x665+3+385
 bspc rule -a TerminalPinned state=floating sticky=on rectangle=470x350+1445+30
 bspc rule -a Terminalnvim desktop=^3 state=floating sticky=off rectangle=1430x1020+3+30
+bspc rule -a Code desktop=^3 state=floating sticky=off rectangle=1430x1020+3+30
 bspc rule -a qView state=floating center=on sticky=off rectangle=470x350+0+0
 bspc rule -a St state=floating rectangle=1120x820+3+30
 bspc rule -a YaziTerm state=floating center=on rectangle=900x442+0+0

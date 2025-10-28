@@ -45,19 +45,19 @@ super + f
 # ------o--------------------------------------------------  Geany 
 super + g
 	geany
+# ---------------------------------------------------------  Helix
+super + h
+	kdocker -f -q kitty --class=Terminalnvim -e hx
 # ---------------------------------------------------------  Rmpc	
 super + m
     st -c floating_rmpc -e rmpc
 # ---------------------------------------------------------  Rmpc	
 super + v
     picard
-# ---------------------------------------------------------  AstroNvim
-super + n
-	kdocker -f -q kitty --class=Terminalnvim -e nvim
 # ---------------------------------------------------------  Terminal
 super + p
 	st -c TerminalPinned
-# ---------------------------------------------------------  Terminal
+h# ---------------------------------------------------------  Terminal
 super + s
 	kdocker -q -f spotify --disable-accelerated-video-decode --no-zygote
 # ---------------------------------------------------------  Exit
@@ -171,11 +171,11 @@ super + shift + k ; {x,k}
 # ---------------------------------------------------------  switch nodes
 super + Tab
     rofi \
-        -theme $HOME/.config/rofi/files/window.rasi \
         -show window \
+        -theme $HOME/.config/rofi/files/window.rasi \
 #        -window-thumbnail \
         -window-hide-active-window true \
-        -kb-accept-entry "!super-Tab,Return" \
+        -kb-accept-entry "!super-Tab,Tab" \
         -kb-element-next "super-Tab"
 
 

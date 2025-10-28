@@ -14,7 +14,11 @@ let
     "thunar-bulk-rename"
     "thunar-settings"
     "vesktop"
+    "discord"
     "vivaldi-stable"
+    "ChatGPT"
+    "Gemini"
+    "Claude"
   ];
 
   appMappings =
