@@ -12,15 +12,14 @@ in
 	  ];
 	  enabledCustomApps = with spicePkgs.apps; [
 	    newReleases
-	    reddit
 	  ];
 	  enabledSnippets = with spicePkgs.snippets; [
 	    rotatingCoverart
 	    pointer
 	  ];
 
-	  theme = spicePkgs.themes.dreary;
-	  colorScheme = "Psycho";
+#	  theme = spicePkgs.themes.dreary;
+#	  colorScheme = "Psycho";
   };
 
   services.spotifyd = {
