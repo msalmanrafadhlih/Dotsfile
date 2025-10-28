@@ -19,6 +19,7 @@ let
     "ChatGPT"
     "Gemini"
     "Claude"
+    "chromium-browser"
   ];
 
   appMappings =
