@@ -9,6 +9,7 @@ USAGELOG = "sudo journalctl --disk-usage";
 SYSTEMD = "systemctl list-unit-files --type=service";
 PYTHON8080 = "python3 -m http.server 8080";
 SYSAPPS = "thunar /run/current-system/sw/share/applications";
+TV = "nix run nixpkgs#television";
 
 ##  SYSTEM CONFIGURATIONS
 HOSTS = "cd ~/.repos/nixos/host && tree ~/.repos/nixos/host";
