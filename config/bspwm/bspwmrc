@@ -1,7 +1,8 @@
 #!/bin/sh
 #
 # monitor setup
-bspc monitor -d term web code music chat
+bspc monitor -d
+
 
 #bspc rule -a Alacritty desktop=^1
 #bspc rule -a code-oss desktop=^3
@@ -45,20 +46,22 @@ bspc config initial_polarity          	second_child
 bspc config removal_adjustment        	true
 
 bspc config external_rules_command "${HOME}"/.config/bspwm/src/ExternalRules
+
 bspc rule -a floating_rmpc state=floating rectangle=750x350+3+30
 bspc rule -a ChatAi state=floating rectangle=470x665+1445+385
 bspc rule -a TerminalDefault state=floating sticky=off rectangle=750x665+3+385
-bspc rule -a Spotify state=floating sticky=off rectangle=470x350+1445+30
 bspc rule -a TerminalPinned state=floating sticky=on rectangle=470x350+1445+30
 bspc rule -a Terminalnvim desktop=^3 state=floating sticky=off rectangle=1435x1020+3+30
 bspc rule -a Code desktop=^3 state=floating sticky=off rectangle=1435x1020+3+30
-bspc rule -a youtube desktop=^4 state=floating sticky=off rectangle=1435x1020+3+30
+bspc rule -a youtube desktop=^3 state=floating sticky=off rectangle=1435x1020+3+30
 bspc rule -a qView state=floating center=on sticky=off rectangle=470x350+0+0
 bspc rule -a St state=floating rectangle=1120x820+3+30
 bspc rule -a YaziTerm state=floating center=on rectangle=900x442+0+0
+bspc rule -a Thunar desktop=^1
 bspc rule -a Spotify desktop=^4
-bspc rule -a vesktop desktop=^2
-bspc rule -a Vivaldi-stable desktop=^5
+bspc rule -a vesktop desktop=^5
+bspc rule -a Vivaldi-stable desktop=^2
+
 
 # picom
 pkill picom

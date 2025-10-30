@@ -175,7 +175,7 @@ super + Tab
         -theme $HOME/.config/rofi/files/window.rasi \
 #        -window-thumbnail \
         -window-hide-active-window true \
-        -kb-accept-entry "!super-Tab,Tab" \
+        -kb-accept-entry "!super+Tab,Tab" \
         -kb-element-next "super-Tab"
 
 
